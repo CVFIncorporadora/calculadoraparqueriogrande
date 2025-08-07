@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mapa Interativo de Lotes</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+  <style> 
+    html, body {
+      margin: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    .painel {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 350px;
+      height: 100vh;
+      background-color: #f2f2f29c;
+      color: white;
+      padding: 20px;
+      box-sizing: border-box;
+      z-index: 10;
+    }
+
+    .painel h2 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+    .painel .info {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .conteudo {
+      margin-left: 400px;
+      height: 100vh;
+      overflow: auto;
+      position: relative;
+    }
+
+    .conteudo img {
+      width: 2000px;
+      height: auto;
+      display: block;
+    }
+
+    select {
+      margin-top: 10px;
+      padding: 5px;
+      width: 100%;
+      font-size: larger;
+    }
+  </style>
+</head>
+<body>
+
+<div class="painel">
+  <img src="logo_parque_riogrande.png" alt="logo" style="max-width: 100%; height: auto; margin-bottom: 10px;">
+  
+  <div class="info">
+    <div><strong>Nome:</strong> <span id="nomeLote">---</span></div>
+    <div><strong>Área:</strong> <span id="areaLote">---</span></div>
+    <div><strong>Valor:</strong> <span id="valorLote">---</span></div>
+
+    <label for="formaPagamento"><strong>Forma de Pagamento:</strong></label>
+    <select id="formaPagamento" onchange="atualizarPagamento()">
+      <option value="avista">À vista (25% de desconto)</option>
+      <option value="100x">Parcelado em 100x</option>
+      <option value="36x">Parcelado em 36x</option>
+    </select>
+
+    <div style="margin-top: 10px;">
+      <strong>Resumo Pagamento:</strong>
+      <div id="resumoPagamento">---</div>
+    </div>
+
+    <!-- ⬇️ Observações -->
+    <div style="margin-top: 20px; font-size: 11px; line-height: 1.4; color: #000000;">
+      <p>* Até a entrega das matrículas, as parcelas serão corrigidas mensalmente pelo INCC.</p>
+      <p>** Após a entrega, as parcelas serão corrigidas mensalmente pela variação positiva do IGP-M + 1%.</p>
+      <p>*** Caso o IGP-M seja negativo, será utilizado o valor do IPCA/IBGE.</p>
+      <p>**** Se ambos forem negativos, será utilizado o valor do mês anterior para correção.</p>
+    </div>
+  </div>
+</div>
+
+<div class="conteudo">
+    <img src="mapa.jpeg" alt="Mapa" />
+    <svg width="2000" height="2584" style="position: absolute; top: 0; left: 0;">
+      <polygon id="lote-_1_A_01" points="723,272,761,292,758,313,718,307" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_A_01')" />
+      <polygon id="lote-_1_A_02" points="716,311,756,318,754,334,716,328" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_A_02')" />
+      <polygon id="lote-_1_A_03" points="766,294,786,305,779,339,759,336" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_A_03')" />
+      <polygon id="lote-_1_A_04" points="790,307,805,316,795,386,777,384" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_A_04')" />
+      <polygon id="lote-_1_A_05" points="810,319,826,327,816,390,799,387" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_A_05')" />
+      <polygon id="lote-_1_A_06" points="831,330,847,338,838,393,821,391" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_A_06')" />
+      <polygon id="lote-_1_A_07" points="851,341,867,349,859,397,842,394" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_A_07')" />
+      <polygon id="lote-_1_A_08" points="871,351,888,360,877,422,860,420" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_A_08')" />
+      <polygon id="lote-_1_A_09" points="892,362,908,371,899,426,882,423" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_A_09')" />
+      <polygon id="lote-_1_A_10" points="912,373,929,382,920,430,904,427" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_A_10')" />
+      <polygon id="lote-_1_A_11" points="933,384,954,396,947,409,943,433,925,431" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_A_11')" />
+      <polygon id="lote-_1_A_12" points="924,435,942,438,935,483,917,480" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_A_12')" />
+      <polygon id="lote-_1_A_13" points="903,432,920,434,912,479,896,476" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_A_13')" />
+      <polygon id="lote-_1_A_14" points="881,428,898,431,891,475,874,471" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_A_14')" />
+      <polygon id="lote-_1_A_15" points="859,424,876,427,869,471,852,469" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_A_15')" />
+      <polygon id="lote-_1_A_16" points="841,399,858,402,848,468,830,465" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_A_16')" />
+      <polygon id="lote-_1_A_17" points="820,396,837,398,826,464,809,462" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_A_17')" />
+      <polygon id="lote-_1_A_18" points="798,392,815,395,804,460,788,458" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_A_18')" />
+      <polygon id="lote-_1_A_19" points="776,388,793,391,783,456,766,454" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_A_19')" />
+      <polygon id="lote-_1_A_20" points="750,407,768,409,761,454,744,450" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_A_20')" />
+      <polygon id="lote-_1_A_21" points="699,421,743,427,739,449,698,442" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_A_21')" />
+      <polygon id="lote-_1_A_22" points="702,398,746,405,744,422,699,416" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_A_22')" />
+      <polygon id="lote-_1_A_23" points="706,376,772,387,769,404,706,394" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_A_23')" />
+      <polygon id="lote-_1_A_24" points="709,355,774,365,772,382,707,372" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_A_24')" />
+      <polygon id="lote-_1_A_25" points="713,333,778,344,775,361,710,350" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_A_25')" />
+      <polygon id="lote-_1_B_01" points="618,738,650,800,649,810,607,803" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_B_02')" />
+      <polygon id="lote-_1_B_02" points="606,806,647,814,645,831,603,825" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_B_02')" />
+      <polygon id="lote-_1_B_03" points="602,829,644,836,640,853,600,846" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_B_03')" />
+      <polygon id="lote-_1_B_04" points="599,850,640,857,638,874,596,868" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_B_04')" />
+      <polygon id="lote-_1_B_05" points="595,872,637,880,634,897,593,890" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_B_05')" />
+      <polygon id="lote-_1_B_06" points="592,893,634,901,631,919,589,911" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_B_06')" />
+      <polygon id="lote-_1_B_07" points="588,915,630,923,626,940,585,933" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_B_07')" />
+      <polygon id="lote-_1_B_08" points="585,937,626,944,624,961,582,954" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_B_08')" />
+      <polygon id="lote-_1_B_09" points="581,959,623,966,620,983,578,976" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_B_09')" />
+      <polygon id="lote-_1_B_10" points="578,980,620,987,617,1005,574,998" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_B_10')" />
+      <polygon id="lote-_1_B_11" points="574,1001,615,1009,613,1026,568,1021" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_B_11')" />
+      <polygon id="lote-_1_B_12" points="570,1023,612,1031,609,1049,567,1041" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_B_12')" />
+      <polygon id="lote-_1_B_13" points="567,1045,607,1052,606,1070,562,1062" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_B_13')" />
+      <polygon id="lote-_1_B_14" points="563,1066,604,1074,602,1091,560,1085" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_B_14')" />
+      <polygon id="lote-_1_B_15" points="559,1089,601,1095,599,1113,557,1106" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_B_15')" />
+      <polygon id="lote-_1_B_16" points="556,1110,597,1117,595,1135,552,1128" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_B_16')" />
+      <polygon id="lote-_1_B_17" points="552,1132,593,1138,591,1162,548,1155" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_B_17')" />
+      <polygon id="lote-_1_C_01" points="543,1183,586,1191,581,1221,538,1214" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_C_01')" />
+      <polygon id="lote-_1_C_02" points="538,1218,580,1225,577,1243,535,1236" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_C_02')" />
+      <polygon id="lote-_1_C_03" points="534,1240,576,1247,573,1265,531,1258" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_C_03')" />
+      <polygon id="lote-_1_C_04" points="531,1261,572,1269,570,1286,528,1279" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_C_04')" />
+      <polygon id="lote-_1_C_05" points="526,1283,569,1290,566,1308,524,1301" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_C_05')" />
+      <polygon id="lote-_1_C_06" points="523,1304,565,1312,563,1330,520,1323" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_C_06')" />
+      <polygon id="lote-_1_C_07" points="520,1326,562,1333,559,1351,517,1344" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_C_07')" />
+      <polygon id="lote-_1_C_08" points="517,1348,558,1355,555,1373,513,1366" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_C_08')" />
+      <polygon id="lote-_1_C_09" points="512,1370,555,1377,552,1395,509,1388" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_C_09')" />
+      <polygon id="lote-_1_C_10" points="509,1391,551,1398,548,1416,505,1409" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_C_10')" />
+      <polygon id="lote-_1_C_11" points="505,1413,548,1420,545,1437,502,1431" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_C_11')" />
+      <polygon id="lote-_1_C_12" points="501,1434,544,1442,541,1459,499,1453" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_C_12')" />
+      <polygon id="lote-_1_C_13" points="498,1457,540,1463,538,1482,495,1474" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_C_13')" />
+      <polygon id="lote-_1_C_14" points="494,1478,537,1485,533,1509,490,1501" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_C_14')" />
+      <polygon id="lote-_1_D_14" points="486,1531,528,1537,523,1567,482,1562" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_D_14')" />
+      <polygon id="lote-_1_E_01" points="643,1200,667,1204,660,1246,636,1242" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_E_01')" />
+      <polygon id="lote-_1_E_02" points="671,1205,689,1208,682,1250,664,1247" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_E_02')" />
+      <polygon id="lote-_1_E_03" points="692,1208,710,1211,704,1253,686,1250" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_E_03')" />
+      <polygon id="lote-_1_E_04" points="714,1212,732,1215,725,1257,708,1254" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_E_04')" />
+      <polygon id="lote-_1_E_05" points="736,1216,754,1219,747,1260,729,1257" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_E_05')" />
+      <polygon id="lote-_1_E_06" points="757,1219,775,1222,768,1264,751,1261" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_E_06')" />
+      <polygon id="lote-_1_E_07" points="779,1223,797,1226,791,1268,772,1264" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_E_07')" />
+      <polygon id="lote-_1_E_08" points="799,1226,819,1229,812,1271,794,1269" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_E_08')" />
+      <polygon id="lote-_1_E_09" points="822,1230,840,1233,834,1274,817,1272" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_E_09')" />
+      <polygon id="lote-_1_E_10" points="844,1234,863,1237,855,1278,838,1275" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_E_10')" />
+      <polygon id="lote-_1_E_11" points="866,1237,883,1240,877,1282,859,1279" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_E_11')" />
+      <polygon id="lote-_1_E_12" points="888,1241,905,1244,899,1286,881,1282" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_E_12')" />
+      <polygon id="lote-_1_E_13" points="910,1245,928,1248,921,1289,903,1286" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_E_13')" />
+      <polygon id="lote-_1_E_14" points="931,1248,967,1254,944,1293,924,1290" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_E_14')" />
+      <polygon id="lote-_1_E_15" points="902,1290,943,1296,920,1335,895,1332" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_E_15')" />
+      <polygon id="lote-_1_E_16" points="880,1286,898,1289,892,1331,873,1327" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_E_16')" />
+      <polygon id="lote-_1_E_17" points="858,1282,876,1285,870,1327,851,1324" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_E_17')" />
+      <polygon id="lote-_1_E_18" points="837,1279,856,1282,848,1323,830,1320" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_E_18')" />
+      <polygon id="lote-_1_E_19" points="815,1275,833,1278,827,1320,808,1317" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_E_19')" />
+      <polygon id="lote-_1_E_20" points="793,1271,811,1275,804,1316,787,1313" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_E_20')" />
+      <polygon id="lote-_1_E_21" points="771,1268,790,1271,784,1313,765,1310" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_E_21')" />
+      <polygon id="lote-_1_E_22" points="748,1266,768,1268,761,1309,743,1306" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_E_22')" />
+      <polygon id="lote-_1_E_23" points="728,1261,746,1264,740,1306,722,1302" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_E_23')" />
+      <polygon id="lote-_1_E_24" points="707,1257,724,1260,718,1302,700,1299" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_E_24')" />
+      <polygon id="lote-_1_E_25" points="685,1254,703,1257,696,1298,679,1295" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_E_25')" />
+      <polygon id="lote-_1_E_26" points="663,1250,681,1253,675,1295,657,1292" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_E_26')" />
+      <polygon id="lote-_1_E_27" points="636,1245,660,1249,653,1291,629,1287" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_E_27')" />
+      <polygon id="lote-_1_F_01" points="624,1316,648,1320,641,1362,617,1358" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_F_01')" />
+      <polygon id="lote-_1_F_02" points="651,1321,670,1324,663,1365,645,1363" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_F_02')" />
+      <polygon id="lote-_1_F_03" points="674,1324,692,1327,685,1369,667,1366" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_F_03')" />
+      <polygon id="lote-_1_F_04" points="695,1328,713,1331,706,1372,688,1369" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_F_04')" />
+      <polygon id="lote-_1_F_05" points="717,1331,734,1334,728,1376,710,1373" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_F_05')" />
+      <polygon id="lote-_1_F_06" points="738,1335,757,1338,750,1380,732,1377" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_F_06')" />
+      <polygon id="lote-_1_F_07" points="760,1338,777,1341,772,1383,753,1380" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_F_07')" />
+      <polygon id="lote-_1_F_08" points="781,1342,800,1345,793,1387,775,1384" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_F_08')" />
+      <polygon id="lote-_1_F_09" points="803,1345,821,1348,815,1390,797,1387" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_F_09')" />
+      <polygon id="lote-_1_F_10" points="825,1349,843,1352,837,1394,818,1391" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_F_10')" />
+      <polygon id="lote-_1_F_11" points="847,1353,865,1356,858,1398,840,1394" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_F_11')" />
+      <polygon id="lote-_1_F_12" points="868,1356,887,1360,880,1401,862,1398" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_F_12')" />
+      <polygon id="lote-_1_F_13" points="890,1360,913,1364,907,1406,884,1402" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_F_13')" />
+      <polygon id="lote-_1_F_14" points="883,1405,906,1409,900,1450,876,1447" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_F_14')" />
+      <polygon id="lote-_1_F_15" points="861,1402,879,1405,873,1446,855,1443" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_F_15')" />
+      <polygon id="lote-_1_F_16" points="839,1398,857,1401,851,1443,832,1439" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_F_16')" />
+      <polygon id="lote-_1_F_17" points="818,1394,836,1398,829,1439,811,1436" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_F_17')" />
+      <polygon id="lote-_1_F_18" points="796,1391,814,1394,808,1435,789,1433" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_F_18')" />
+      <polygon id="lote-_1_F_19" points="773,1387,792,1390,785,1432,767,1429" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_F_19')" />
+      <polygon id="lote-_1_F_20" points="753,1384,770,1387,766,1417,763,1428,746,1425" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_F_20')" />
+      <polygon id="lote-_1_F_21" points="731,1380,748,1383,743,1425,724,1421" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_F_21')" />
+      <polygon id="lote-_1_F_22" points="709,1377,727,1380,721,1421,703,1418" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_F_22')" />
+      <polygon id="lote-_1_F_23" points="687,1373,705,1376,699,1417,681,1414" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_F_23')" />
+      <polygon id="lote-_1_F_24" points="666,1370,684,1372,677,1413,659,1411" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_F_24')" />
+      <polygon id="lote-_1_F_25" points="644,1366,663,1369,655,1410,637,1407" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_F_25')" />
+      <polygon id="lote-_1_F_26" points="616,1361,640,1365,634,1406,610,1403" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_F_26')" />
+      <polygon id="lote-_1_G_01" points="605,1431,629,1435,622,1477,598,1473" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_G_01')" />
+      <polygon id="lote-_1_G_02" points="633,1436,650,1439,644,1481,626,1478" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_G_02')" />
+      <polygon id="lote-_1_G_03" points="654,1439,672,1442,666,1485,648,1481" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_G_03')" />
+      <polygon id="lote-_1_G_04" points="676,1443,693,1446,687,1488,669,1485" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_G_04')" />
+      <polygon id="lote-_1_G_05" points="698,1447,716,1449,709,1491,691,1488" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_G_05')" />
+      <polygon id="lote-_1_G_06" points="719,1450,737,1453,731,1495,713,1492" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_G_06')" />
+      <polygon id="lote-_1_G_07" points="741,1450,758,1457,752,1499,734,1496" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_G_07')" />
+      <polygon id="lote-_1_G_08" points="762,1458,781,1461,774,1502,756,1500" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_G_08')" />
+      <polygon id="lote-_1_G_09" points="784,1461,802,1465,796,1506,777,1503" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_G_09')" />
+      <polygon id="lote-_1_G_10" points="806,1465,824,1468,818,1509,799,1507" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_G_10')" />
+      <polygon id="lote-_1_G_11" points="827,1469,846,1472,839,1513,821,1510" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_G_11')" />
+      <polygon id="lote-_1_G_12" points="849,1472,867,1475,861,1517,842,1514" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_G_12')" />
+      <polygon id="lote-_1_G_13" points="871,1476,894,1480,888,1521,864,1517" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_G_13')" />
+      <polygon id="lote-_1_G_14" points="864,1521,887,1525,880,1566,857,1562" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_G_14')" />
+      <polygon id="lote-_1_G_15" points="860,1521,842,1518,835,1558,853,1562" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_G_15')" />
+      <polygon id="lote-_1_G_16" points="820,1514,838,1517,832,1558,814,1555" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_G_16')" />
+      <polygon id="lote-_1_G_17" points="798,1510,817,1513,810,1554,792,1551" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_G_17')" />
+      <polygon id="lote-_1_G_18" points="777,1507,795,1509,788,1551,770,1548" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_G_18')" />
+      <polygon id="lote-_1_G_19" points="754,1502,773,1506,767,1547,748,1544" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_G_19')" />
+      <polygon id="lote-_1_G_20" points="733,1499,751,1502,745,1544,727,1541" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_G_20')" />
+      <polygon id="lote-_1_G_21" points="711,1496,730,1498,724,1540,705,1537" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_G_21')" />
+      <polygon id="lote-_1_G_22" points="690,1492,708,1495,702,1537,684,1534" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_G_22')" />
+      <polygon id="lote-_1_G_23" points="668,1489,686,1492,680,1533,662,1530" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_G_23')" />
+      <polygon id="lote-_1_G_24" points="647,1485,665,1488,658,1529,640,1526" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_G_24')" />
+      <polygon id="lote-_1_G_25" points="625,1481,644,1484,637,1526,619,1523" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_G_25')" />
+      <polygon id="lote-_1_G_26" points="597,1476,622,1481,615,1522,591,1518" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_G_26')" />
+      <polygon id="lote-_1_H_01" points="586,1548,609,1554,603,1592,580,1588" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_H_01')" />
+      <polygon id="lote-_1_H_02" points="613,1552,632,1555,625,1596,606,1594" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_H_02')" />
+      <polygon id="lote-_1_H_03" points="635,1555,653,1558,647,1600,629,1597" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_H_03')" />
+      <polygon id="lote-_1_H_04" points="657,1559,674,1562,669,1603,650,1601" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_H_04')" />
+      <polygon id="lote-_1_H_05" points="679,1563,696,1566,690,1607,672,1604" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_H_05')" />
+      <polygon id="lote-_1_H_06" points="700,1566,718,1569,712,1611,693,1609" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_H_06')" />
+      <polygon id="lote-_1_H_07" points="722,1570,740,1572,734,1614,715,1611" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_H_07')" />
+      <polygon id="lote-_1_H_08" points="744,1573,761,1576,755,1618,737,1615" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_H_08')" />
+      <polygon id="lote-_1_H_09" points="766,1577,783,1580,777,1621,758,1619" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_H_09')" />
+      <polygon id="lote-_1_H_10" points="787,1580,805,1583,798,1625,780,1621" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_H_10')" />
+      <polygon id="lote-_1_H_11" points="808,1584,827,1587,821,1629,801,1626" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_H_11')" />
+      <polygon id="lote-_1_H_12" points="830,1588,848,1590,842,1632,824,1630" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_H_12')" />
+      <polygon id="lote-_1_H_13" points="852,1591,875,1595,869,1637,845,1633" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_H_13')" />
+      <polygon id="lote-_1_J_01" points="658,689,699,695,693,737,682,736" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_J_01')" />
+      <polygon id="lote-_1_J_02" points="703,696,721,699,715,741,696,738" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_J_02')" />
+      <polygon id="lote-_1_J_03" points="724,700,742,703,736,744,718,742" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_J_03')" />
+      <polygon id="lote-_1_J_04" points="746,703,765,707,758,748,740,745" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_J_04')" />
+      <polygon id="lote-_1_J_05" points="768,707,786,710,780,752,761,749" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_J_05')" />
+      <polygon id="lote-_1_J_06" points="790,711,808,714,801,755,783,752" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_J_06')" />
+      <polygon id="lote-_1_J_07" points="811,714,829,717,823,759,805,756" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_J_07')" />
+      <polygon id="lote-_1_J_08" points="833,718,851,721,845,763,827,760" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_J_08')" />
+      <polygon id="lote-_1_J_09" points="855,722,873,725,866,766,848,764" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_J_09')" />
+      <polygon id="lote-_1_J_10" points="876,725,894,728,888,770,870,767" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_J_10')" />
+      <polygon id="lote-_1_J_11" points="684,740,757,751,754,770,695,760" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_J_11')" />
+      <polygon id="lote-_1_J_12" points="696,764,753,773,749,797,716,791,709,788" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_J_12')" />
+      <polygon id="lote-_1_J_13" points="760,752,779,755,772,801,753,798" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_J_13')" />
+      <polygon id="lote-_1_J_14" points="782,756,800,759,793,804,775,801" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_J_14')" />
+      <polygon id="lote-_1_J_15" points="804,759,822,763,815,808,797,805" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_J_15')" />
+      <polygon id="lote-_1_J_16" points="825,763,844,766,837,811,818,808" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_J_16')" />
+      <polygon id="lote-_1_J_17" points="847,766,866,770,858,815,840,811" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_J_17')" />
+      <polygon id="lote-_1_J_18" points="869,770,887,773,880,819,862,816" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_J_18')" />
+      <polygon id="lote-_1_J_19" points="892,764,909,774,902,822,883,819" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_J_19')" />
+      <polygon id="lote-_1_J_20" points="912,775,943,791,923,829,913,824,905,823" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_J_20')" />
+      <polygon id="lote-_1_J_21" points="946,793,962,802,942,839,925,830" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_J_21')" />
+      <polygon id="lote-_1_J_22" points="966,803,982,812,962,850,945,841" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_J_22')" />
+      <polygon id="lote-_1_J_23" points="985,813,1001,822,981,860,965,851" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_J_23')" />
+      <polygon id="lote-_1_J_24" points="1004,824,1020,833,1000,870,984,861" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_J_24')" />
+      <polygon id="lote-_1_J_25" points="1023,834,1039,843,1020,880,1004,872" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_J_25')" />
+      <polygon id="lote-_1_J_26" points="1043,844,1071,860,1044,894,1023,882" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_J_26')" />
+      <polygon id="lote-_1_K_01" points="705,827,746,833,741,869,699,863" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_K_01')" />
+      <polygon id="lote-_1_K_02" points="750,834,772,838,767,874,745,871" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_K_02')" />
+      <polygon id="lote-_1_K_03" points="775,838,804,843,799,879,770,875" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_K_03')" />
+      <polygon id="lote-_1_K_04" points="756,876,798,883,795,900,754,894" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_K_04')" />
+      <polygon id="lote-_1_K_05" points="753,898,794,905,792,923,750,916" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_K_05')" />
+      <polygon id="lote-_1_K_06" points="749,919,791,926,788,945,746,938" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_K_06')" />
+      <polygon id="lote-_1_K_07" points="746,941,787,948,784,966,743,959" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_K_07')" />
+      <polygon id="lote-_1_K_08" points="742,963,783,969,781,988,739,981" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_K_08')" />
+      <polygon id="lote-_1_K_09" points="738,985,780,991,777,1009,735,1002" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_K_09')" />
+      <polygon id="lote-_1_K_10" points="735,1006,776,1013,774,1031,732,1024" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_K_10')" />
+      <polygon id="lote-_1_K_11" points="731,1027,772,1034,770,1053,728,1046" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_K_11')" />
+      <polygon id="lote-_1_K_12" points="728,1049,770,1056,767,1075,724,1068" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_K_12')" />
+      <polygon id="lote-_1_K_13" points="724,1071,766,1078,763,1096,721,1089" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_K_13')" />
+      <polygon id="lote-_1_K_14" points="720,1092,762,1099,760,1118,717,1111" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_K_14')" />
+      <polygon id="lote-_1_K_15" points="717,1114,759,1122,756,1139,714,1133" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_K_15')" />
+      <polygon id="lote-_1_K_16" points="713,1136,755,1142,752,1161,710,1154" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_K_16')" />
+      <polygon id="lote-_1_K_17" points="710,1158,752,1165,748,1188,706,1181" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_K_17')" />
+      <polygon id="lote-_1_K_18" points="652,1148,706,1157,702,1180,648,1171" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_K_18')" />
+      <polygon id="lote-_1_K_19" points="655,1126,710,1135,707,1154,652,1145" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_K_19')" />
+      <polygon id="lote-_1_K_20" points="659,1105,713,1114,711,1132,656,1123" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_K_20')" />
+      <polygon id="lote-_1_K_21" points="663,1083,717,1092,714,1110,659,1102" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_K_21')" />
+      <polygon id="lote-_1_K_22" points="666,1061,720,1070,718,1089,663,1079" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_K_22')" />
+      <polygon id="lote-_1_K_23" points="670,1040,724,1048,721,1067,667,1058" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_K_23')" />
+      <polygon id="lote-_1_K_24" points="674,1018,728,1027,725,1046,670,1037" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_K_24')" />
+      <polygon id="lote-_1_K_25" points="677,996,732,1005,729,1024,674,1014" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_K_25')" />
+      <polygon id="lote-_1_K_26" points="680,975,735,984,732,1002,677,993" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_K_26')" />
+      <polygon id="lote-_1_K_27" points="684,953,738,962,736,980,681,971" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_K_27')" />
+      <polygon id="lote-_1_K_28" points="688,932,742,940,740,959,685,949" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_K_28')" />
+      <polygon id="lote-_1_K_29" points="691,910,746,918,743,937,688,928" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_K_29')" />
+      <polygon id="lote-_1_K_30" points="695,888,749,897,746,915,692,906" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_K_30')" />
+      <polygon id="lote-_1_K_31" points="698,866,752,875,750,893,696,885" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_K_31')" />
+      <polygon id="lote-_1_L_01" points="833,848,862,852,857,889,827,884" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_L_01')" />
+      <polygon id="lote-_1_L_02" points="866,853,887,856,882,893,860,889" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_L_02')" />
+      <polygon id="lote-_1_L_03" points="891,857,903,859,918,868,914,898,885,894" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_L_03')" />
+      <polygon id="lote-_1_L_04" points="871,895,914,902,911,921,869,914" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_L_04')" />
+      <polygon id="lote-_1_L_05" points="868,917,910,924,907,942,865,935" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_L_05')" />
+      <polygon id="lote-_1_L_06" points="864,938,906,945,903,964,862,957" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_L_06')" />
+      <polygon id="lote-_1_L_07" points="861,960,902,967,900,984,858,978" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_L_07')" />
+      <polygon id="lote-_1_L_08" points="857,982,899,988,897,1007,855,1001" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_L_08')" />
+      <polygon id="lote-_1_L_09" points="854,1003,895,1010,893,1029,850,1021" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_L_09')" />
+      <polygon id="lote-_1_L_10" points="850,1024,892,1031,889,1050,847,1044" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_L_10')" />
+      <polygon id="lote-_1_L_11" points="846,1046,889,1054,886,1072,843,1065" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_L_11')" />
+      <polygon id="lote-_1_L_12" points="843,1068,885,1075,882,1094,840,1087" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_L_12')" />
+      <polygon id="lote-_1_L_13" points="839,1090,881,1097,878,1115,836,1109" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_L_13')" />
+      <polygon id="lote-_1_L_14" points="835,1111,878,1118,875,1138,833,1130" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_L_14')" />
+      <polygon id="lote-_1_L_15" points="832,1134,874,1141,871,1159,829,1152" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_L_15')" />
+      <polygon id="lote-_1_L_16" points="828,1155,870,1162,867,1180,825,1174" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_L_16')" />
+      <polygon id="lote-_1_L_17" points="825,1176,867,1184,863,1207,821,1200" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_L_17')" />
+      <polygon id="lote-_1_L_18" points="779,1169,822,1176,818,1200,776,1193" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_L_18')" />
+      <polygon id="lote-_1_L_19" points="783,1147,825,1155,822,1173,780,1166" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_L_19')" />
+      <polygon id="lote-_1_L_20" points="787,1126,829,1133,826,1152,785,1144" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_L_20')" />
+      <polygon id="lote-_1_L_21" points="790,1104,832,1111,829,1129,787,1123" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_L_21')" />
+      <polygon id="lote-_1_L_22" points="794,1082,836,1089,833,1108,791,1101" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_L_22')" />
+      <polygon id="lote-_1_L_23" points="797,1061,840,1068,836,1087,795,1079" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_L_23')" />
+      <polygon id="lote-_1_L_24" points="801,1039,843,1046,840,1065,798,1058" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_L_24')" />
+      <polygon id="lote-_1_L_25" points="805,1018,847,1024,844,1043,801,1033" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_L_25')" />
+      <polygon id="lote-_1_L_26" points="808,995,850,1003,848,1021,806,1014" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_L_26')" />
+      <polygon id="lote-_1_L_27" points="812,974,854,981,851,1000,809,993" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_L_27')" />
+      <polygon id="lote-_1_L_28" points="816,953,858,959,855,978,813,971" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_L_28')" />
+      <polygon id="lote-_1_L_29" points="820,931,861,938,858,956,816,950" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_L_29')" />
+      <polygon id="lote-_1_L_30" points="823,909,865,916,862,935,821,928" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_L_30')" />
+      <polygon id="lote-_1_L_31" points="826,887,868,894,866,913,824,906" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_L_31')" />
+      <polygon id="lote-_1_M_01" points="911,1601,956,1608,953,1632,909,1625" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_M_01')" />
+      <polygon id="lote-_1_M_02" points="907,1628,952,1636,949,1655,903,1647" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_M_02')" />
+      <polygon id="lote-_1_N_01" points="946,882,986,904,981,932,939,925" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_N_01')" />
+      <polygon id="lote-_1_N_02" points="988,905,1028,926,1023,961,981,954" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_N_02')" />
+      <polygon id="lote-_1_N_03" points="980,957,1022,964,1019,983,977,976" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_N_03')" />
+      <polygon id="lote-_1_N_04" points="976,979,1018,986,1015,1005,973,998" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_N_04')" />
+      <polygon id="lote-_1_N_05" points="973,1001,1014,1008,1012,1026,970,1019" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_N_05')" />
+      <polygon id="lote-_1_N_06" points="969,1022,1011,1029,1008,1048,966,1041" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_N_06')" />
+      <polygon id="lote-_1_N_07" points="966,1044,1007,1051,1004,1070,963,1063" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_N_07')" />
+      <polygon id="lote-_1_N_08" points="962,1066,1003,1072,1001,1091,959,1084" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_N_08')" />
+      <polygon id="lote-_1_N_09" points="958,1087,1000,1094,997,1113,955,1106" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_N_09')" />
+      <polygon id="lote-_1_N_10" points="955,1109,997,1116,994,1135,952,1128" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_N_10')" />
+      <polygon id="lote-_1_N_11" points="951,1130,993,1137,990,1156,948,1150" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_N_11')" />
+      <polygon id="lote-_1_N_12" points="948,1152,990,1159,987,1178,945,1171" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_N_12')" />
+      <polygon id="lote-_1_N_13" points="944,1174,986,1181,983,1199,942,1193" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_N_13')" />
+      <polygon id="lote-_1_N_14" points="941,1196,983,1202,979,1227,937,1220" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_N_14')" />
+      <polygon id="lote-_1_N_15" points="895,1188,938,1195,934,1220,892,1212" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_N_15')" />
+      <polygon id="lote-_1_N_16" points="899,1166,941,1173,938,1192,896,1186" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_N_16')" />
+      <polygon id="lote-_1_N_17" points="902,1145,945,1152,942,1171,899,1164" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_N_17')" />
+      <polygon id="lote-_1_N_18" points="906,1123,948,1130,945,1149,904,1142" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_N_18')" />
+      <polygon id="lote-_1_N_19" points="910,1102,952,1108,949,1127,906,1120" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_N_19')" />
+      <polygon id="lote-_1_N_20" points="913,1079,956,1087,953,1106,910,1099" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_N_20')" />
+      <polygon id="lote-_1_N_21" points="916,1058,959,1065,957,1084,914,1077" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_N_21')" />
+      <polygon id="lote-_1_N_22" points="920,1037,963,1043,960,1062,917,1055" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_N_22')" />
+      <polygon id="lote-_1_N_23" points="924,1014,966,1021,964,1041,922,1034" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_N_23')" />
+      <polygon id="lote-_1_N_24" points="927,993,970,1000,967,1019,924,1012" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_N_24')" />
+      <polygon id="lote-_1_N_25" points="931,971,974,978,971,997,928,990" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_N_25')" />
+      <polygon id="lote-_1_N_26" points="934,950,977,956,974,976,932,969" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_N_26')" />
+      <polygon id="lote-_1_N_27" points="937,928,981,935,978,954,935,947" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_N_27')" />
+      <polygon id="lote-_1_P_01" points="1062,940,1100,951,1096,980,1058,975" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_P_01')" />
+      <polygon id="lote-_1_P_02" points="1102,952,1122,958,1114,1007,1095,1005" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_P_02')" />
+      <polygon id="lote-_1_P_03" points="1125,958,1148,966,1142,1012,1117,1008" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_P_03')" />
+      <polygon id="lote-_1_P_04" points="1098,1008,1141,1014,1138,1033,1096,1028" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_P_04')" />
+      <polygon id="lote-_1_P_05" points="1094,1030,1137,1036,1135,1055,1092,1049" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_P_05')" />
+      <polygon id="lote-_1_P_06" points="1091,1051,1134,1058,1131,1077,1089,1071" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_P_06')" />
+      <polygon id="lote-_1_P_07" points="1088,1073,1130,1079,1128,1099,1085,1092" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_P_07')" />
+      <polygon id="lote-_1_P_08" points="1084,1095,1127,1101,1125,1120,1082,1114" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_P_08')" />
+      <polygon id="lote-_1_P_09" points="1081,1116,1124,1122,1121,1145,1116,1152,1078,1141" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_P_09')" />
+      <polygon id="lote-_1_P_10" points="1036,1109,1078,1116,1075,1140,1034,1128" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_P_10')" />
+      <polygon id="lote-_1_P_11" points="1039,1088,1082,1094,1079,1113,1037,1107" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_P_11')" />
+      <polygon id="lote-_1_P_12" points="1043,1066,1085,1072,1083,1092,1040,1086" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_P_12')" />
+      <polygon id="lote-_1_P_13" points="1046,1045,1089,1051,1086,1070,1044,1063" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_P_13')" />
+      <polygon id="lote-_1_P_14" points="1050,1023,1092,1029,1089,1048,1047,1042" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_P_14')" />
+      <polygon id="lote-_1_P_15" points="1053,1001,1096,1007,1093,1026,1050,1020" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_P_15')" />
+      <polygon id="lote-_1_P_16" points="1056,977,1096,983,1093,1004,1054,998" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_P_16')" />
+      <polygon id="lote-_1_O_01" points="1108,872,1132,879,1120,920,1080,908" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_O_01')" />
+      <polygon id="lote-_1_O_02" points="1135,880,1154,885,1142,926,1123,921" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_O_02')" />
+      <polygon id="lote-_1_O_03" points="1156,886,1175,892,1162,933,1144,927" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_O_03')" />
+      <polygon id="lote-_1_O_04" points="1177,892,1196,898,1183,939,1165,934" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_O_04')" />
+      <polygon id="lote-_1_O_05" points="1198,899,1216,905,1204,945,1186,939" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_O_05')" />
+      <polygon id="lote-_1_O_06" points="1219,905,1238,911,1225,952,1207,946" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_O_06')" />
+      <polygon id="lote-_1_O_07" points="1240,911,1259,917,1247,958,1228,953" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_O_07')" />
+      <polygon id="lote-_1_O_08" points="1261,918,1280,923,1267,964,1249,959" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_O_08')" />
+      <polygon id="lote-_1_O_09" points="1282,924,1301,930,1288,970,1270,965" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_O_09')" />
+      <polygon id="lote-_1_O_10" points="1303,930,1322,936,1310,977,1291,971" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_O_10')" />
+      <polygon id="lote-_1_O_11" points="1325,937,1343,942,1331,983,1313,977" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_O_11')" />
+      <polygon id="lote-_1_O_12" points="1345,943,1381,954,1368,995,1333,984" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_O_12')" />
+      <polygon id="lote-_1_Q_01" points="1009,1252,953,1350,994,1357" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_Q_01')" />
+      <polygon id="lote-_1_Q_02" points="952,1353,993,1360,990,1379,949,1372" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_Q_02')" />
+      <polygon id="lote-_1_Q_03" points="949,1375,990,1381,987,1401,945,1394" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_Q_03')" />
+      <polygon id="lote-_1_Q_04" points="945,1397,986,1403,985,1423,942,1416" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_Q_04')" />
+      <polygon id="lote-_1_Q_05" points="941,1418,985,1425,982,1444,938,1438" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_Q_05')" />
+      <polygon id="lote-_1_Q_06" points="937,1440,981,1447,979,1465,934,1459" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_Q_06')" />
+      <polygon id="lote-_1_Q_07" points="934,1462,978,1469,975,1488,931,1481" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_Q_07')" />
+      <polygon id="lote-_1_Q_08" points="930,1483,974,1490,972,1509,928,1502" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_Q_08')" />
+      <polygon id="lote-_1_Q_09" points="927,1505,971,1512,968,1531,924,1524" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_Q_09')" />
+      <polygon id="lote-_1_Q_10" points="923,1527,967,1534,964,1553,920,1546" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_Q_10')" />
+      <polygon id="lote-_1_Q_11" points="919,1548,964,1555,960,1580,916,1573" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_Q_11')" />
+      <polygon id="lote-_1_R_01" points="1408,962,1396,1002,1436,1016,1506,1023,1558,1046,1585,1016" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_R_01')" />
+      <polygon id="lote-_1_R_02" points="1439,1020,1505,1026,1557,1047,1546,1061,1546,1142" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_1_R_02')" />
+      <polygon id="lote-_2_A_01" points="381,2154,418,2157,416,2205,373,2203" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_A_01')" />
+      <polygon id="lote-_2_A_02" points="421,2158,440,2158,438,2206,418,2205" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_A_02')" />
+      <polygon id="lote-_2_A_03" points="443,2159,462,2160,459,2207,440,2206" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_A_03')" />
+      <polygon id="lote-_2_A_04" points="465,2161,484,2162,481,2209,462,2208" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_A_04')" />
+      <polygon id="lote-_2_A_05" points="487,2162,506,2163,503,2210,484,2209" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_A_05')" />
+      <polygon id="lote-_2_A_06" points="509,2164,527,2165,525,2211,506,2210" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_A_06')" />
+      <polygon id="lote-_2_A_07" points="530,2165,550,2166,547,2213,528,2212" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_A_07')" />
+      <polygon id="lote-_2_A_08" points="553,2167,572,2168,569,2214,549,2213" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_A_08')" />
+      <polygon id="lote-_2_A_09" points="575,2169,593,2169,590,2215,572,2214" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_A_09')" />
+      <polygon id="lote-_2_A_10" points="596,2170,616,2171,613,2217,593,2216" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_A_10')" />
+      <polygon id="lote-_2_A_11" points="619,2172,637,2172,634,2218,615,2217" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_A_11')" />
+      <polygon id="lote-_2_A_12" points="640,2173,658,2174,656,2220,637,2219" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_A_12')" />
+      <polygon id="lote-_2_A_13" points="663,2175,681,2176,679,2221,659,2220" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_A_13')" />
+      <polygon id="lote-_2_A_14" points="684,2176,703,2177,700,2223,681,2222" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_A_14')" />
+      <polygon id="lote-_2_A_15" points="706,2178,725,2179,723,2224,703,2223" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_A_15')" />
+      <polygon id="lote-_2_A_16" points="728,2179,747,2180,744,2225,725,2224" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_A_16')" />
+      <polygon id="lote-_2_A_17" points="750,2181,779,2182,786,2227,747,2226" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_A_17')" />
+      <polygon id="lote-_2_B_01" points="546,2022,798,2064,783,2154,516,2135,520,2067,543,2069" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_B_01')" />
+      <polygon id="lote-_2_B_02" points="497,2088,516,2089,514,2135,494,2133" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_B_02')" />
+      <polygon id="lote-_2_B_03" points="475,2086,494,2087,492,2134,472,2132" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_B_03')" />
+      <polygon id="lote-_2_B_04" points="453,2085,472,2086,469,2132,451,2131" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_B_04')" />
+      <polygon id="lote-_2_B_05" points="431,2083,451,2085,448,2131,428,2129" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_B_05')" />
+      <polygon id="lote-_2_B_06" points="388,2111,418,2082,429,2083,425,2129,386,2126" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_B_06')" />
+      <polygon id="lote-_2_B_07" points="439,2062,518,2067,517,2086,421,2079" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_B_07')" />
+      <polygon id="lote-_2_B_08" points="460,2041,519,2045,518,2064,442,2059" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_B_08')" />
+      <polygon id="lote-_2_B_09" points="489,2013,521,2018,520,2042,462,2039" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_B_09')" />
+      <polygon id="lote-_2_B_10" points="523,2019,543,2022,540,2066,521,2064" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_B_10')" />
+      <polygon id="lote-_2_C_01" points="546,2022,798,2064,783,2154,516,2135,520,2067,543,2069" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_C_01')" />
+      <polygon id="lote-_2_C_02" points="497,2088,516,2089,514,2135,494,2133" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_C_02')" />
+      <polygon id="lote-_2_C_03" points="475,2086,494,2087,492,2134,472,2132" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_C_03')" />
+      <polygon id="lote-_2_C_04" points="453,2085,472,2086,469,2132,451,2131" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_C_04')" />
+      <polygon id="lote-_2_D_01" points="431,1848,476,1856,480,1831,436,1824" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_D_01')" />
+      <polygon id="lote-_2_D_02" points="440,1803,483,1810,480,1829,437,1822" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_D_02')" />
+      <polygon id="lote-_2_D_03" points="443,1780,487,1788,484,1808,440,1800" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_D_03')" />
+      <polygon id="lote-_2_D_04_05" points="450,1738,494,1744,488,1785,443,1778" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_D_04_05')" />
+      <polygon id="lote-_2_D_06" points="454,1716,498,1723,495,1742,451,1735" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_D_06')" />
+      <polygon id="lote-_2_D_07" points="458,1694,501,1702,498,1720,454,1714" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_D_07')" />
+      <polygon id="lote-_2_D_08" points="461,1672,505,1680,502,1698,458,1691" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_D_08')" />
+      <polygon id="lote-_2_D_09" points="465,1650,508,1658,506,1677,461,1670" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_D_09')" />
+      <polygon id="lote-_2_D_10" points="468,1629,512,1636,509,1655,465,1648" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_D_10')" />
+      <polygon id="lote-_2_D_11" points="472,1607,516,1615,512,1633,468,1627" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_D_11')" />
+      <polygon id="lote-_2_D_12" points="475,1585,519,1593,516,1612,472,1605" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_D_12')" />
+      <polygon id="lote-_2_D_13" points="479,1564,523,1572,520,1590,476,1583" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_D_13')" />
+      <polygon id="lote-_2_E_01" points="527,1901,552,1905,545,1947,520,1943" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_E_01')" />
+      <polygon id="lote-_2_E_02" points="554,1905,574,1908,567,1951,547,1948" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_E_02')" />
+      <polygon id="lote-_2_E_03" points="576,1909,595,1912,588,1954,570,1951" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_E_03')" />
+      <polygon id="lote-_2_E_04" points="598,1912,616,1916,610,1958,591,1955" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_E_04')" />
+      <polygon id="lote-_2_E_05" points="619,1916,639,1919,632,1962,613,1958" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_E_05')" />
+      <polygon id="lote-_2_E_06" points="641,1920,660,1923,653,1965,635,1962" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_E_06')" />
+      <polygon id="lote-_2_E_07" points="663,1923,681,1926,676,1969,656,1966" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_E_07')" />
+      <polygon id="lote-_2_E_08" points="684,1927,704,1930,697,1972,678,1969" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_E_08')" />
+      <polygon id="lote-_2_E_09" points="706,1930,725,1934,719,1976,699,1973" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_E_09')" />
+      <polygon id="lote-_2_E_10" points="728,1935,747,1937,740,1979,721,1976" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_E_10')" />
+      <polygon id="lote-_2_E_11" points="749,1938,768,1941,763,1983,743,1980" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_E_11')" />
+      <polygon id="lote-_2_E_12" points="771,1941,790,1945,784,1986,764,1983" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_E_12')" />
+      <polygon id="lote-_2_E_13" points="793,1945,817,1949,810,1990,786,1987" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_E_13')" />
+      <polygon id="lote-_2_E_14" points="785,1990,810,1993,803,2036,779,2032" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_E_14')" />
+      <polygon id="lote-_2_E_15" points="764,1986,783,1989,776,2032,757,2028" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_E_15')" />
+      <polygon id="lote-_2_E_16" points="742,1983,761,1986,754,2028,736,2025" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_E_16')" />
+      <polygon id="lote-_2_E_17" points="720,1979,740,1982,733,2024,714,2021" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_E_17')" />
+      <polygon id="lote-_2_E_18" points="698,1975,718,1978,711,2021,691,2018" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_E_18')" />
+      <polygon id="lote-_2_E_19" points="677,1971,696,1975,689,2017,670,2014" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_E_19')" />
+      <polygon id="lote-_2_E_20" points="656,1969,674,1972,668,2013,649,2011" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_E_20')" />
+      <polygon id="lote-_2_E_21" points="633,1964,653,1967,646,2010,627,2006" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_E_21')" />
+      <polygon id="lote-_2_E_22" points="612,1961,631,1964,625,2006,606,2003" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_E_22')" />
+      <polygon id="lote-_2_E_23" points="590,1957,610,1961,603,2003,583,2000" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_E_23')" />
+      <polygon id="lote-_2_E_24" points="568,1954,587,1957,581,1999,562,1996" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_E_24')" />
+      <polygon id="lote-_2_E_25" points="547,1951,566,1953,559,1995,540,1992" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_E_25')" />
+      <polygon id="lote-_2_E_26" points="520,1946,544,1950,539,1992,513,1988" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_E_26')" />
+      <polygon id="lote-_2_F_01" points="547,1778,572,1782,565,1824,541,1820" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_F_01')" />
+      <polygon id="lote-_2_F_02" points="575,1783,593,1786,587,1828,568,1825" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_F_02')" />
+      <polygon id="lote-_2_F_03" points="596,1786,616,1789,609,1831,590,1828" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_F_03')" />
+      <polygon id="lote-_2_F_04" points="618,1790,637,1793,630,1835,611,1832" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_F_04')" />
+      <polygon id="lote-_2_F_05" points="639,1793,659,1796,652,1839,633,1836" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_F_05')" />
+      <polygon id="lote-_2_F_06" points="661,1797,681,1800,674,1842,655,1839" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_F_06')" />
+      <polygon id="lote-_2_F_07" points="683,1801,702,1804,695,1846,677,1843" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_F_07')" />
+      <polygon id="lote-_2_F_08" points="705,1804,724,1807,717,1849,698,1846" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_F_08')" />
+      <polygon id="lote-_2_F_09" points="726,1807,746,1811,739,1853,720,1850" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_F_09')" />
+      <polygon id="lote-_2_F_10" points="748,1811,767,1814,761,1857,741,1854" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_F_10')" />
+      <polygon id="lote-_2_F_11" points="770,1815,789,1818,782,1860,763,1857" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_F_11')" />
+      <polygon id="lote-_2_F_12" points="792,1818,811,1821,804,1864,785,1861" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_F_12')" />
+      <polygon id="lote-_2_F_13" points="813,1822,837,1825,831,1868,806,1864" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_F_13')" />
+      <polygon id="lote-_2_F_14" points="806,1867,829,1871,823,1913,799,1909" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_F_14')" />
+      <polygon id="lote-_2_F_15" points="784,1863,803,1867,797,1909,777,1906" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_F_15')" />
+      <polygon id="lote-_2_F_16" points="763,1860,781,1863,774,1905,756,1902" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_F_16')" />
+      <polygon id="lote-_2_F_17" points="741,1856,760,1856,753,1902,734,1899" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_F_17')" />
+      <polygon id="lote-_2_F_18" points="719,1852,738,1856,731,1898,712,1895" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_F_18')" />
+      <polygon id="lote-_2_F_19" points="696,1848,716,1852,710,1895,691,1891" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_F_19')" />
+      <polygon id="lote-_2_F_20" points="675,1846,694,1848,688,1891,669,1888" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_F_20')" />
+      <polygon id="lote-_2_F_21" points="654,1842,673,1845,666,1887,647,1884" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_F_21')" />
+      <polygon id="lote-_2_F_22" points="632,1838,652,1841,645,1884,626,1880" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_F_22')" />
+      <polygon id="lote-_2_F_23" points="611,1835,630,1838,623,1880,604,1877" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_F_23')" />
+      <polygon id="lote-_2_F_24" points="589,1831,608,1834,602,1876,583,1873" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_F_24')" />
+      <polygon id="lote-_2_F_25" points="567,1827,586,1830,580,1873,560,1870" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_F_25')" />
+      <polygon id="lote-_2_F_26" points="540,1823,565,1827,558,1869,533,1865" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_F_26')" />
+      <polygon id="lote-_2_G_01" points="567,1662,591,1666,584,1709,560,1705" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_G_01')" />
+      <polygon id="lote-_2_G_02" points="594,1667,613,1670,606,1713,587,1709" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_G_02')" />
+      <polygon id="lote-_2_G_03" points="616,1671,635,1674,627,1716,609,1713" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_G_03')" />
+      <polygon id="lote-_2_G_04" points="637,1674,656,1677,650,1720,630,1717" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_G_04')" />
+      <polygon id="lote-_2_G_05" points="659,1678,678,1681,671,1723,652,1720" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_G_05')" />
+      <polygon id="lote-_2_G_06" points="680,1681,699,1684,693,1727,674,1724" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_G_06')" />
+      <polygon id="lote-_2_G_07" points="702,1685,721,1688,715,1731,696,1727" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_G_07')" />
+      <polygon id="lote-_2_G_08" points="724,1689,743,1692,736,1734,717,1731" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_G_08')" />
+      <polygon id="lote-_2_G_09" points="746,1692,764,1695,758,1738,739,1735" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_G_09')" />
+      <polygon id="lote-_2_G_10" points="767,1695,786,1699,779,1741,761,1738" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_G_10')" />
+      <polygon id="lote-_2_G_11" points="789,1699,808,1702,801,1745,783,1742" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_G_11')" />
+      <polygon id="lote-_2_G_12" points="811,1703,830,1706,823,1748,805,1745" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_G_12')" />
+      <polygon id="lote-_2_G_13" points="832,1706,857,1710,850,1753,825,1749" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_G_13')" />
+      <polygon id="lote-_2_G_14" points="825,1752,849,1756,842,1798,818,1793" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_G_14')" />
+      <polygon id="lote-_2_G_15" points="803,1748,822,1751,815,1793,796,1790" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_G_15')" />
+      <polygon id="lote-_2_G_16" points="781,1744,801,1747,794,1790,775,1786" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_G_16')" />
+      <polygon id="lote-_2_G_17" points="760,1741,779,1744,772,1786,753,1783" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_G_17')" />
+      <polygon id="lote-_2_G_18" points="739,1737,757,1740,751,1782,732,1780" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_G_18')" />
+      <polygon id="lote-_2_G_19" points="716,1733,736,1737,729,1779,710,1775" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_G_19')" />
+      <polygon id="lote-_2_G_20" points="695,1730,713,1733,708,1775,688,1772" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_G_20')" />
+      <polygon id="lote-_2_G_21" points="673,1726,692,1730,685,1772,666,1769" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_G_21')" />
+      <polygon id="lote-_2_G_22" points="651,1723,670,1726,664,1768,645,1765" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_G_22')" />
+      <polygon id="lote-_2_G_23" points="630,1720,649,1722,642,1764,623,1761" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_G_23')" />
+      <polygon id="lote-_2_G_24" points="608,1716,627,1719,620,1761,601,1758" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_G_24')" />
+      <polygon id="lote-_2_G_25" points="586,1712,606,1715,599,1758,580,1754" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_G_25')" />
+      <polygon id="lote-_2_G_26" points="559,1707,584,1711,577,1754,552,1750" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_G_26')" />
+      <polygon id="lote-_2_H_14" points="844,1635,868,1639,862,1682,837,1680'" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_H_14')" />
+      <polygon id="lote-_2_H_15" points="822,1632,841,1635,834,1677,816,1675" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_H_15')" />
+      <polygon id="lote-_2_H_16" points="801,1628,819,1631,813,1674,794,1671" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_H_16')" />
+      <polygon id="lote-_2_H_17" points="779,1625,798,1628,791,1671,772,1667" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_H_17')" />
+      <polygon id="lote-_2_H_18" points="757,1621,776,1625,770,1667,750,1664" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_H_18')" />
+      <polygon id="lote-_2_H_19" points="735,1618,755,1621,748,1663,729,1660" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_H_19')" />
+      <polygon id="lote-_2_H_20" points="714,1615,733,1617,726,1659,707,1656" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_H_20')" />
+      <polygon id="lote-_2_H_21" points="692,1611,711,1614,705,1656,685,1653" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_H_21')" />
+      <polygon id="lote-_2_H_22" points="671,1607,690,1610,683,1652,664,1649" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_H_22')" />
+      <polygon id="lote-_2_H_23" points="649,1604,669,1607,661,1649,642,1646" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_H_23')" />
+      <polygon id="lote-_2_H_24" points="627,1600,647,1603,640,1646,620,1642" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_H_24')" />
+      <polygon id="lote-_2_H_25" points="605,1596,625,1600,618,1642,599,1639" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_H_25')" />
+      <polygon id="lote-_2_H_26" points="579,1592,603,1596,596,1638,571,1634" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_H_26')" />
+      <polygon id="lote-_2_I_01" points="818,2199,855,2204,850,2229,823,2228" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_I_01')" />
+      <polygon id="lote-_2_I_02" points="816,2175,858,2182,855,2202,818,2196" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_I_02')" />
+      <polygon id="lote-_2_I_03" points="820,2153,865,2161,863,2180,817,2172" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_I_03')" />
+      <polygon id="lote-_2_I_04" points="823,2132,869,2139,866,2156,821,2151" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_I_04')" />
+      <polygon id="lote-_2_I_05" points="827,2110,873,2117,870,2136,824,2129" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_I_05')" />
+      <polygon id="lote-_2_I_06" points="831,2088,876,2096,873,2115,827,2108" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_I_06')" />
+      <polygon id="lote-_2_I_07" points="834,2067,880,2074,877,2093,832,2086" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_I_07')" />
+      <polygon id="lote-_2_I_08" points="838,2045,883,2052,881,2071,835,2064" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_I_08')" />
+      <polygon id="lote-_2_I_09" points="841,2024,887,2031,884,2050,838,2042" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_I_09')" />
+      <polygon id="lote-_2_I_10" points="845,2001,891,2009,888,2028,842,2021" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_I_10')" />
+      <polygon id="lote-_2_I_11" points="848,1980,894,1987,891,2006,845,1999" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_I_11')" />
+      <polygon id="lote-_2_I_12" points="853,1952,899,1956,895,1984,849,1977" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_I_12')" />
+      <polygon id="lote-_2_I_13" points="902,1956,945,1959,940,1992,897,1985" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_I_13')" />
+      <polygon id="lote-_2_I_14" points="897,1988,939,1995,936,2014,894,2007" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_I_14')" />
+      <polygon id="lote-_2_I_15" points="893,2009,935,2016,932,2036,890,2029" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_I_15')" />
+      <polygon id="lote-_2_I_16" points="890,2032,932,2038,925,2079,883,2072" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_I_16')" />
+      <polygon id="lote-_2_I_17" points="886,2053,928,2068,925,2079,883,2072" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_I_17')" />
+      <polygon id="lote-_2_I_18" points="882,1075,925,2082,922,2100,879,2094" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_I_18')" />
+      <polygon id="lote-_2_I_19" points="879,2096,921,2103,918,2122,876,2115" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_I_19')" />
+      <polygon id="lote-_2_I_20" points="876,2118,917,2125,915,2144,872,2137" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_I_20')" />
+      <polygon id="lote-_2_I_21" points="872,2140,914,2146,911,2166,869,2158" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_I_21')" />
+      <polygon id="lote-_2_I_22" points="868,2161,910,2168,907,2187,865,2180" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_I_22')" />
+      <polygon id="lote-_2_I_23" points="882,2186,907,2190,900,2234,876,2233" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_I_23')" />
+      <polygon id="lote-_2_I_24" points="861,2182,879,2186,872,2232,853,2231" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_I_24')" />
+      <polygon id="lote-_2_J_01" points="935,2193,960,2195,957,2239,929,2237" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_J_01')" />
+      <polygon id="lote-_2_J_02" points="962,2196,981,2196,979,2240,960,2239" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_J_02')" />
+      <polygon id="lote-_2_J_03" points="984,2197,1004,2198,1001,2242,982,2241" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_J_03')" />
+      <polygon id="lote-_2_J_04" points="1006,2199,1025,2199,1023,2243,1003,2242" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_J_04')" />
+      <polygon id="lote-_2_J_05" points="1028,2200,1047,2201,1045,2244,1026,2243" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_J_05')" />
+      <polygon id="lote-_2_J_06" points="1050,2202,1069,2203,1067,2246,1047,2245" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_J_06')" />
+      <polygon id="lote-_2_J_07" points="1072,2203,1091,2204,1088,2247,1070,2246" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_J_07')" />
+      <polygon id="lote-_2_J_08" points="1094,2205,1113,2206,1111,2248,1092,2247" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_J_08')" />
+      <polygon id="lote-_2_J_09" points="1116,2206,1135,2208,1133,2250,1113,2249" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_J_09')" />
+      <polygon id="lote-_2_J_10" points="1139,2208,1158,2209,1154,2251,1136,2250" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_J_10')" />
+      <polygon id="lote-_2_J_11" points="1160,2209,1179,2211,1177,2252,1157,2251" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_J_11')" />
+      <polygon id="lote-_2_J_12" points="1182,2211,1201,2212,1198,2254,1179,2253" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_J_12')" />
+      <polygon id="lote-_2_J_13" points="1204,2213,1236,2214,1233,2256,1201,2254" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_J_13')" />
+      <polygon id="lote-_2_K_01" points="955,2077,979,2079,976,2121,948,2120" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_K_01')" />
+      <polygon id="lote-_2_K_02" points="982,2079,1001,2080,999,2123,979,2122" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_K_02')" />
+      <polygon id="lote-_2_K_03" points="1003,2081,1023,2082,1020,2125,1001,2124" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_K_03')" />
+      <polygon id="lote-_2_K_04" points="1026,2082,1044,2083,1042,2126,1023,2125" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_K_04')" />
+      <polygon id="lote-_2_K_05" points="1047,2084,1067,2085,1064,2128,1045,2127" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_K_05')" />
+      <polygon id="lote-_2_K_06" points="1070,2086,1067,2128,1086,2129,1089,2087" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_K_06')" />
+      <polygon id="lote-_2_K_07" points="1092,2087,1110,2088,1108,2131,1089,2130" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_K_07')" />
+      <polygon id="lote-_2_K_08" points="1113,2080,1133,2090,1130,2132,1111,2131" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_K_08')" />
+      <polygon id="lote-_2_K_09" points="1135,2090,1154,2091,1152,2134,1133,2133" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_K_09')" />
+      <polygon id="lote-_2_K_10" points="1157,2092,1176,2093,1174,2136,1155,2135" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_K_10')" />
+      <polygon id="lote-_2_K_11" points="1179,2093,1198,2094,1196,2137,1176,2136" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_K_11')" />
+      <polygon id="lote-_2_K_12" points="1200,2095,1244,2098,1243,2126,1199,2124" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_K_12')" />
+      <polygon id="lote-_2_K_13" points="1199,2126,1242,2129,1240,2155,1197,2153" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_K_13')" />
+      <polygon id="lote-_2_K_14" points="1197,2156,1240,2158,1238,2186,1195,2183" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_K_14')" />
+      <polygon id="lote-_2_K_15" points="1176,2139,1195,2140,1193,2183,1173,2182" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_K_15')" />
+      <polygon id="lote-_2_K_16" points="1154,2138,1173,2138,1171,2180,1152,2180" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_K_16')" />
+      <polygon id="lote-_2_K_17" points="1132,2136,1151,2137,1149,2179,1129,2179" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_K_17')" />
+      <polygon id="lote-_2_K_18" points="1109,2134,1130,2135,1127,2178,1108,2177" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_K_18')" />
+      <polygon id="lote-_2_K_19" points="1088,2133,1108,2133,1106,2176,1086,2176" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_K_19')" />
+      <polygon id="lote-_2_K_20" points="1066,2131,1086,2132,1083,2175,1064,2174" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_K_20')" />
+      <polygon id="lote-_2_K_21" points="1044,2130,1064,2131,1061,2173,1042,2172" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_K_21')" />
+      <polygon id="lote-_2_K_22" points="1023,2128,1042,2129,1039,2172,1019,2171" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_K_22')" />
+      <polygon id="lote-_2_K_23" points="1000,2127,1020,2127,1017,2170,998,2169" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_K_23')" />
+      <polygon id="lote-_2_K_24" points="979,2125,998,2126,996,2169,976,2168" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_K_24')" />
+      <polygon id="lote-_2_K_25" points="947,2123,976,2124,973,2167,940,2165" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_K_25')" />
+      <polygon id="lote-_2_L_01" points="973,1962,998,1963,996,2006,967,2005" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_L_01')" />
+      <polygon id="lote-_2_L_02" points="1001,1964,1020,1964,1017,2008,998,2006" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_L_02')" />
+      <polygon id="lote-_2_L_03" points="1023,1965,1042,1966,1039,2009,1020,2008" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_L_03')" />
+      <polygon id="lote-_2_L_04" points="1044,1967,1064,1967,1062,2011,1042,2010" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_L_04')" />
+      <polygon id="lote-_2_L_05" points="1066,1968,1086,1969,1083,2012,1064,2011" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_L_05')" />
+      <polygon id="lote-_2_L_06" points="1089,1970,1108,1970,1107,2013,1086,2012" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_L_06')" />
+      <polygon id="lote-_2_L_07" points="1110,1971,1130,1972,1127,2015,1108,2014" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_L_07')" />
+      <polygon id="lote-_2_L_08" points="1132,1972,1151,1973,1149,2016,1129,2015" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_L_08')" />
+      <polygon id="lote-_2_L_09" points="1154,1974,1174,1975,1171,2018,1152,2017" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_L_09')" />
+      <polygon id="lote-_2_L_10" points="1176,1975,1195,1976,1193,2019,1173,2019" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_L_10')" />
+      <polygon id="lote-_2_L_11" points="1198,1977,1231,1978,1241,2005,1197,2002" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_L_11')" />
+      <polygon id="lote-_2_L_12" points="1196,2005,1241,2007,1249,2027,1195,2024" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_L_12')" />
+      <polygon id="lote-_2_L_13" points="1219,2028,1249,2030,1247,2069,1217,2067" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_L_13')" />
+      <polygon id="lote-_2_L_14" points="1194,2027,1217,2028,1214,2067,1192,2066" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_L_14')" />
+      <polygon id="lote-_2_L_15" points="1173,2021,1192,2022,1189,2065,1170,2064" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_L_15')" />
+      <polygon id="lote-_2_L_16" points="1151,2020,1170,2021,1168,2063,1148,2063" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_L_16')" />
+      <polygon id="lote-_2_L_17" points="1129,2018,1149,2019,1146,2062,1126,2061" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_L_17')" />
+      <polygon id="lote-_2_L_18" points="1107,2017,1127,2017,1124,2060,1105,2060" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_L_18')" />
+      <polygon id="lote-_2_L_19" points="1085,2015,1104,2016,1102,2060,1082,2058" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_L_19')" />
+      <polygon id="lote-_2_L_20" points="1063,2014,1083,2014,1080,2058,1061,2056" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_L_20')" />
+      <polygon id="lote-_2_L_21" points="1042,2012,1061,2013,1058,2056,1039,2055" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_L_21')" />
+      <polygon id="lote-_2_L_22" points="1019,2011,1039,2011,1036,2055,1017,2053" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_L_22')" />
+      <polygon id="lote-_2_L_23" points="998,2009,1017,2010,1014,2053,995,2052" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_L_23')" />
+      <polygon id="lote-_2_L_24" points="966,2007,995,2008,993,2051,959,2049" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_L_24')" />
+      <polygon id="lote-_2_M_03" points="903,1649,948,1657,945,1676,900,1669" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_M_03')" />
+      <polygon id="lote-_2_M_04" points="900,1671,945,1678,942,1698,897,1690" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_M_04')" />
+      <polygon id="lote-_2_M_05" points="897,1693,941,1700,938,1719,893,1712" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_M_05')" />
+      <polygon id="lote-_2_M_06" points="892,1714,938,1722,935,1741,889,1734" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_M_06')" />
+      <polygon id="lote-_2_M_07" points="889,1736,934,1744,931,1762,886,1755" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_M_07')" />
+      <polygon id="lote-_2_M_08" points="886,1757,930,1765,928,1784,882,1777" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_M_08')" />
+      <polygon id="lote-_2_M_09" points="882,1780,927,1786,924,1806,879,1798" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_M_09')" />
+      <polygon id="lote-_2_M_10" points="878,1801,923,1809,920,1828,875,1820" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_M_10')" />
+      <polygon id="lote-_2_M_11" points="875,1823,920,1830,917,1848,872,1840" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_M_11')" />
+      <polygon id="lote-_2_M_12" points="871,1844,916,1852,913,1871,868,1864" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_M_12')" />
+      <polygon id="lote-_2_M_13" points="867,1867,910,1873,907,1892,864,1885" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_M_13')" />
+      <polygon id="lote-_2_M_14" points="863,1888,906,1895,902,1920,859,1917" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_M_14')" />
+      <polygon id="lote-_2_M_15" points="912,1873,931,1877,924,1922,905,1920" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_M_15')" />
+      <polygon id="lote-_2_M_16" points="934,1877,958,1881,951,1923,927,1922" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_M_16')" />
+      <polygon id="lote-_2_M_17" points="919,1852,962,1859,959,1878,916,1871" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_M_17')" />
+      <polygon id="lote-_2_M_18" points="922,1831,965,1838,962,1856,919,1850" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_M_18')" />
+      <polygon id="lote-_2_M_19" points="926,1809,969,1815,965,1835,923,1828" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_M_19')" />
+      <polygon id="lote-_2_M_20" points="929,1788,972,1795,969,1813,927,1806," fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_M_20')" />
+      <polygon id="lote-_2_M_21" points="933,1765,976,1772,973,1792,930,1785" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_M_21')" />
+      <polygon id="lote-_2_M_22" points="937,1744,980,1751,977,1769,934,1763" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_M_22')" />
+      <polygon id="lote-_2_M_23" points="940,1722,983,1729,980,1748,937,1741" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_M_23')" />
+      <polygon id="lote-_2_M_24" points="944,1701,986,1707,984,1727,941,1720" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_M_24')" />
+      <polygon id="lote-_2_M_25" points="947,1679,990,1686,988,1705,944,1698" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_M_25')" />
+      <polygon id="lote-_2_M_26" points="950,1657,994,1664,991,1683,948,1676" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_M_26')" />
+      <polygon id="lote-_2_M_27" points="953,1635,998,1643,995,1661,951,1655" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_M_27')" />
+      <polygon id="lote-_2_M_28" points="958,1609,1002,1615,998,1640,954,1633" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_M_28')" />
+      <polygon id="lote-_2_N_01" points="1075,1628,1118,1634,1114,1659,1071,1652" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_N_01')" />
+      <polygon id="lote-_2_N_02" points="1071,1655,1113,1661,1110,1681,1068,1674" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_N_02')" />
+      <polygon id="lote-_2_N_03" points="1067,1676,1109,1683,1107,1702,1064,1696" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_N_03')" />
+      <polygon id="lote-_2_N_04" points="1064,1699,1106,1705,1103,1724,1061,1717" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_N_04')" />
+      <polygon id="lote-_2_N_05" points="1060,1720,1102,1727,1100,1745,1057,1739" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_N_05')" />
+      <polygon id="lote-_2_N_06" points="1056,1741,1099,1748,1096,1768,1053,1761" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_N_06')" />
+      <polygon id="lote-_2_N_07" points="1053,1763,1095,1770,1092,1788,1050,1782" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_N_07')" />
+      <polygon id="lote-_2_N_08" points="1049,1785,1091,1791,1089,1811,1047,1804" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_N_08')" />
+      <polygon id="lote-_2_N_09" points="1046,1806,1088,1813,1086,1832,1043,1826" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_N_09')" />
+      <polygon id="lote-_2_N_10" points="1042,1828,1085,1835,1082,1854,1040,1847" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_N_10')" />
+      <polygon id="lote-_2_N_11" points="1039,1850,1081,1857,1078,1876,1035,1869" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_N_11')" />
+      <polygon id="lote-_2_N_12" points="1035,1872,1077,1878,1075,1897,1032,1891" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_N_12')" />
+      <polygon id="lote-_2_N_13" points="1046,1895,1073,1900,1069,1932,1040,1930" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_N_13')" />
+      <polygon id="lote-_2_N_14" points="1013,1890,1043,1894,1038,1930,1007,1928" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_N_14')" />
+      <polygon id="lote-_2_N_15" points="986,1885,1010,1889,1005,1927,980,1926" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_N_15')" />
+      <polygon id="lote-_2_N_16" points="989,1864,1032,1871,1030,1890,987,1883" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_N_16')" />
+      <polygon id="lote-_2_N_17" points="993,1842,1036,1849,1033,1868,990,1861" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_N_17')" />
+      <polygon id="lote-_2_N_18" points="997,1821,1038,1827,1037,1847,994,1840" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_N_18')" />
+      <polygon id="lote-_2_N_19_20" points="1004,1778,1046,1784,1038,1824,998,1818" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_N_19')" />
+      <polygon id="lote-_2_N_21" points="1008,1756,1050,1762,1048,1782,1005,1775" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_N_21')" />
+      <polygon id="lote-_2_N_22" points="1011,1734,1054,1741,1051,1760,1008,1753" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_N_22')" />
+      <polygon id="lote-_2_N_23" points="1015,1712,1057,1719,1054,1738,1012,1732" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_N_23')" />
+      <polygon id="lote-_2_N_24" points="1018,1619,1061,1698,1058,1717,1016,1710" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_N_24')" />
+      <polygon id="lote-_2_N_25" points="1022,1669,1064,1676,1062,1695,1019,1688" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_N_25')" />
+      <polygon id="lote-_2_N_26" points="1026,1647,1068,1654,1065,1673,1023,1666" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_N_26')" />
+      <polygon id="lote-_2_N_27" points="1030,1620,1072,1627,1069,1652,1026,1645" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_N_27')" />
+      <polygon id="lote-_2_O_01" points="1190,1647,1233,1654,1229,1679,1187,1674" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_O_01')" />
+      <polygon id="lote-_2_O_02" points="1186,1674,1229,1681,1225,1700,1183,1693" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_O_02')" />
+      <polygon id="lote-_2_O_03" points="1182,1695,1225,1702,1222,1722,1180,1715" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_O_03')" />
+      <polygon id="lote-_2_O_04" points="1179,1717,1221,1724,1218,1743,1176,1737" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_O_04')" />
+      <polygon id="lote-_2_O_05" points="1176,1736,1218,1746,1215,1765,1172,1758" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_O_05')" />
+      <polygon id="lote-_2_O_06" points="1172,1761,1214,1768,1212,1787,1169,1780" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_O_06')" />
+      <polygon id="lote-_2_O_07" points="1168,1782,1211,1789,1208,1808,1165,1802" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_O_07')" />
+      <polygon id="lote-_2_O_08" points="1165,1804,1208,1811,1204,1830,1162,1823" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_O_08')" />
+      <polygon id="lote-_2_O_09" points="1161,1826,1204,1832,1201,1852,1158,1845" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_O_09')" />
+      <polygon id="lote-_2_O_10" points="1157,1847,1200,1854,1197,1873,1155,1867" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_O_10')" />
+      <polygon id="lote-_2_O_11" points="1154,1869,1196,1876,1194,1895,1150,1888" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_O_11')" />
+      <polygon id="lote-_2_O_12" points="1168,1894,1193,1897,1186,1940,1161,1938" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_O_12')" />
+      <polygon id="lote-_2_O_13" points="1147,1890,1166,1893,1159,1938,1139,1937" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_O_13')" />
+      <polygon id="lote-_2_O_14" points="1101,1907,1140,1914,1137,1937,1097,1934" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_O_14')" />
+      <polygon id="lote-_2_O_15" points="1105,1883,1145,1889,1141,1911,1102,1905" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_O_15')" />
+      <polygon id="lote-_2_O_16" points="1108,1862,1151,1868,1148,1887,1106,1881" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_O_16')" />
+      <polygon id="lote-_2_O_17" points="1112,1839,1155,1846,1152,1866,1110,1859" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_O_17')" />
+      <polygon id="lote-_2_O_18" points="1116,1818,1158,1825,1156,1844,1113,1837" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_O_18')" />
+      <polygon id="lote-_2_O_19" points="1120,1796,1162,1804,1159,1823,1116,1816" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_O_19')" />
+      <polygon id="lote-_2_O_20" points="1123,1775,1166,1782,1163,1801,1120,1794" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_O_20')" />
+      <polygon id="lote-_2_O_21" points="1126,1753,1169,1760,1167,1779,1124,1772" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_O_21')" />
+      <polygon id="lote-_2_O_22" points="1130,1731,1173,1738,1170,1758,1128,1751" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_O_22')" />
+      <polygon id="lote-_2_O_23" points="1134,1710,1177,1716,1174,1736,1131,1729" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_O_23')" />
+      <polygon id="lote-_2_O_24" points="1137,1688,1180,1695,1177,1714,1135,1708" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_O_24')" />
+      <polygon id="lote-_2_O_25" points="1141,1666,1184,1673,1181,1693,1138,1686" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_O_25')" />
+      <polygon id="lote-_2_O_26" points="1145,1639,1188,1646,1185,1671,1142,1664" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_O_26')" />
+      <polygon id="lote-_2_P_01" points="1265,1634,1435,1662,1473,2270,1274,2259,1286,2024,1256,1945,1214,1943,1243,1754,1317,1765,1333,1667,1262,1656" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_P_k01')" />
+      <polygon id="lote-_2_P_02" points="1261,1659,1330,1670,1315,1762,1245,1751" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_P_02')" />
+      <polygon id="lote-_2_P_03" points="1221,1487,1481,1555,1442,1657,1210,1621,1217,1577,1207,1575" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_P_03')" />
+      <polygon id="lote-_2_P_04" points="1187,1575,1214,1579,1208,1620,1181,1616" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_P_04')" />
+      <polygon id="lote-_2_P_05" points="1157,1570,1185,1574,1178,1616,1150,1611" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_P_05')" />
+      <polygon id="lote-_2_P_06" points="1160,1548,1208,1555,1205,1575,1158,1567" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_P_06')" />
+      <polygon id="lote-_2_P_07" points="1164,1526,1211,1534,1208,1553,1162,1546" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_P_07')" />
+      <polygon id="lote-_2_P_08" points="1178,1507,1215,1512,1212,1532,1165,1524,1167,1512" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_P_08')" />
+      <polygon id="lote-_2_P_09" points="1186,1478,1219,1486,1215,1510,1182,1504" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_P_09')" />
+      <polygon id="lote-_2_Q_12" points="966,1555,1011,1563,1007,1587,962,1580" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_Q_12')" />
+      <polygon id="lote-_2_Q_13" points="969,1534,1014,1541,1012,1560,967,1553" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_Q_13')" />
+      <polygon id="lote-_2_Q_14" points="973,1513,1018,1520,1015,1538,970,1531" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_Q_14')" />
+      <polygon id="lote-_2_Q_15" points="977,1491,1021,1498,1018,1517,973,1510" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_Q_15')" />
+      <polygon id="lote-_2_Q_16" points="980,1469,1025,1476,1022,1495,978,1488" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_Q_16')" />
+      <polygon id="lote-_2_Q_17" points="987,1426,1018,1434,1013,1471,981,1467" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_Q_17')" />
+      <polygon id="lote-_2_R_01" points="1103,1456,1145,1467,1142,1487,1100,1480" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_R_01')" />
+      <polygon id="lote-_2_R_02" points="1099,1482,1141,1489,1139,1508,1096,1501" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_R_02')" />
+      <polygon id="lote-_2_R_03" points="1095,1503,1138,1510,1135,1530,1092,1523" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_R_03')" />
+      <polygon id="lote-_2_R_04" points="1092,1526,1134,1532,1131,1551,1089,1545" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_R_04')" />
+      <polygon id="lote-_2_R_05" points="1088,1547,1130,1554,1128,1573,1085,1566" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_R_05')" />
+      <polygon id="lote-_2_R_06" points="1085,1569,1127,1576,1122,1607,1080,1599" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_R_06')" />
+      <polygon id="lote-_2_R_07" points="1040,1561,1082,1568,1077,1599,1035,1593" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_R_07')" />
+      <polygon id="lote-_2_R_08" points="1043,1539,1086,1546,1083,1566,1040,1559" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_R_08')" />
+      <polygon id="lote-_2_R_09" points="1047,1518,1089,1525,1086,1544,1044,1537" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_R_09')" />
+      <polygon id="lote-_2_R_10" points="1050,1496,1093,1503,1090,1522,1048,1516" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_R_10')" />
+      <polygon id="lote-_2_R_11" points="1054,1475,1096,1481,1094,1501,1051,1494" fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_R_11')" />
+      <polygon id="lote-_2_R_12" points="1059,1444,1101,1455,1097,1479,1054,1472                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 " fill="transparent" stroke="transparent" stroke-width="2" onclick="selecionarLote('_2_R_12')" />
+      
+    </svg>
+    </svg>
+  </div>
+
+  <script>
+    let dadosLotes = {};
+    let loteSelecionadoId = null;
+    let loteAtual = null;
+
+async function carregarJSON() {
+  const resposta = await fetch('Lotes.json');
+  const dados = await resposta.json();
+
+  dadosLotes = {};
+
+  dados.forEach((linha) => {
+    const id = linha.ID;
+    dadosLotes[id] = {
+      nome: linha.Nome,
+      area: linha.Area,
+      valor: Number(linha.Valor),
+      vendido: linha.Vendido === true || linha.Vendido === "TRUE",
+    };
+  });
+
+  Object.keys(dadosLotes).forEach(id => {
+    const lote = dadosLotes[id];
+    const elem = document.getElementById("lote-" + id);
+    if (elem && lote.vendido) {
+      elem.setAttribute("fill", "#ff000088");
+    }
+  });
+}
+
+window.onload = () => {
+  carregarJSON();
+}
+
+    function selecionarLote(id) {
+      if (!dadosLotes[id]) return;
+
+      if (loteSelecionadoId) {
+        const anterior = document.getElementById("lote-" + loteSelecionadoId);
+        if (anterior) {
+          const vendidoAntes = dadosLotes[loteSelecionadoId].vendido;
+          anterior.setAttribute("fill", vendidoAntes ? "#ff000088" : "transparent");
+          anterior.setAttribute("stroke", "transparent");
+        }
+      }
+
+      const atual = document.getElementById("lote-" + id);
+      const lote = dadosLotes[id];
+      if (atual && lote) {
+        if (lote.vendido) {
+          atual.setAttribute("fill", "#ff0000aa");
+          atual.setAttribute("stroke", "#ff0000");
+        } else {
+          atual.setAttribute("fill", "#0096ff66");
+          atual.setAttribute("stroke", "#0096ff");
+        }
+      }
+
+      loteSelecionadoId = id;
+      mostrarDetalhes(id);
+    }
+
+    function mostrarDetalhes(id) {
+      const lote = dadosLotes[id];
+      if (!lote) return;
+
+      loteAtual = lote;
+
+      if (lote.vendido) {
+        document.getElementById("nomeLote").textContent = lote.nome;
+        document.getElementById("areaLote").textContent = "---";
+        document.getElementById("valorLote").textContent = "Terreno não disponível";
+        document.getElementById("resumoPagamento").innerHTML = "<strong>Este lote já foi vendido.</strong>";
+      } else {
+        document.getElementById("nomeLote").textContent = lote.nome;
+        let areanumber = Number(lote.area)
+        document.getElementById("areaLote").textContent = areanumber.toFixed(2) + "m²";
+        document.getElementById("valorLote").textContent = `R$ ${lote.valor.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`;
+        atualizarPagamento();
+      }
+    }
+
+    function atualizarPagamento() {
+      const forma = document.getElementById("formaPagamento").value;
+      const resumo = document.getElementById("resumoPagamento");
+
+      if (!loteAtual || loteAtual.vendido) {
+        resumo.textContent = "---";
+        return;
+      }
+
+      let valorBase = loteAtual.valor;
+      let entrada = 0;
+      let parcelas = 0;
+      let parcelaValor = 0;
+      let desconto = 0;
+      let texto = "";
+
+      if (forma === "avista") {
+        desconto = valorBase * 0.25;
+        let valorFinal = valorBase - desconto;
+        texto = `Total com 25% de desconto: <strong>R$ ${valorFinal.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong><br>Pagamento à vista.`;
+      } else if (forma === "100x") {
+        entrada = valorBase * 0.20;
+        let saldo = valorBase - entrada;
+        parcelas = 100;
+        parcelaValor = saldo / parcelas;
+        texto = `Entrada de <strong>R$ ${entrada.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong><br>+ ${parcelas}x de <strong>R$ ${parcelaValor.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong>`;
+      } else if (forma === "36x") {
+        desconto = valorBase * 0.10;
+        let valorComDesconto = valorBase - desconto;
+        entrada = valorComDesconto * 0.40;
+        let saldo = valorComDesconto - entrada;
+        parcelas = 36;
+        parcelaValor = saldo / parcelas;
+        texto = `Total com 10% de desconto: <strong>R$ ${valorComDesconto.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong><br>Entrada de <strong>R$ ${entrada.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong><br>+ ${parcelas}x de <strong>R$ ${parcelaValor.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong>`;
+      }
+
+      resumo.innerHTML = texto;
+    }
+
+    window.onload = carregarJSON();
+  </script>
+
+</body>
+</html>
