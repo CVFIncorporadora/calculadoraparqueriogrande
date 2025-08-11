@@ -49,7 +49,7 @@ html, body {
 #formaPagamento {
   width: 100%;
   padding: 10px;
-  font-size: 14px;
+  font-size: 20px;
   border-radius: 6px;
   border: none;
   background-color: #fbfbfd;
@@ -80,6 +80,11 @@ html, body {
   font-size: 14px;
   color: #cfd8dc;
 }
+#btnImprimir {
+  margin-top: 10px;
+  border-radius: 6px;
+  font-size: 28px;
+}
 
 .conteudo {
   margin-left: 400px;
@@ -93,4 +98,6 @@ px;
   height: auto;
   display: block;
 }
+
+
 
