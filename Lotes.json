@@ -2380,24 +2380,17 @@
   "Vendido": "FALSE"
  },
  {
-  "ID": "_2_D_03",
-  "Nome": "02-Quadra D- Lote 03",
-  "Area": 308.4,
-  "Valor": 172990,
+  "ID": "_2_D_03_04",
+  "Nome": "02-Quadra D- Lote 03_04",
+  "Area": 315.56,
+  "Valor": 257937.97,
   "Vendido": "FALSE"
  },
  {
-  "ID": "_2_D_04_05",
-  "Nome": "02-Quadra D- Lote 04_05",
-  "Area": 616.1400000000001,
-  "Valor": 169862.67199999996,
-  "Vendido": "FALSE"
- },
- {
-  "ID": "_2_D_06",
-  "Nome": "02-Quadra D- Lote 06",
-  "Area": 307.8,
-  "Valor": 172990,
+  "ID": "_2_D_05_06",
+  "Nome": "02-Quadra D- Lote 05_06",
+  "Area": 615.78,
+  "Valor": 257904.70,
   "Vendido": "FALSE"
  },
  {
@@ -3990,24 +3983,17 @@
   "Vendido": "TRUE"
  },
  {
-  "ID": "_2_N_18",
+  "ID": "_2_N_18_19",
   "Nome": "02-Quadra N- Lote 18",
-  "Area": 300,
-  "Valor": 149990,
+  "Area": 600,
+  "Valor": 233430,
   "Vendido": "FALSE"
  },
  {
-  "ID": "_2_N_19_20",
+  "ID": "_2_N_20_21",
   "Nome": "02-Quadra N- Lote 19_20",
   "Area": 600,
-  "Valor": 166880,
-  "Vendido": "FALSE"
- },
- {
-  "ID": "_2_N_21",
-  "Nome": "02-Quadra N- Lote 21",
-  "Area": 300,
-  "Valor": 149990,
+  "Valor": 233430,
   "Vendido": "FALSE"
  },
  {
