@@ -149,7 +149,7 @@ const observacoes = `
       <html>
         <head>
           <meta charset="utf-8" />
-          <title>Impressão</title>
+          <title>Proposta</title>
           ${css}
         </head>
         <body>
@@ -177,4 +177,5 @@ const observacoes = `
     novaJanela.focus();
   }
   
+
 
