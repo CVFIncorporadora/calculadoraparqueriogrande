@@ -1444,21 +1444,21 @@
  {
   "ID": "_1_L_01",
   "Nome": "01-Quadra L- Lote 01",
-  "Area": 546.06,
+  "Area": 394.74,
   "Valor": 197989.00000000003,
   "Vendido": "FALSE"
  },
  {
   "ID": "_1_L_02",
   "Nome": "01-Quadra L- Lote 02",
-  "Area": 307,
+  "Area": 307.02,
   "Valor": 167189,
   "Vendido": "FALSE"
  },
  {
   "ID": "_1_L_03",
   "Nome": "01-Quadra L- Lote 03",
-  "Area": 394.74,
+  "Area": 375.94,
   "Valor": 194689.00000000003,
   "Vendido": "FALSE"
  },
@@ -1563,98 +1563,98 @@
  {
   "ID": "_1_L_18",
   "Nome": "01-Quadra L- Lote 18",
-  "Area": 478.5,
+  "Area": 375,
   "Valor": 194689.00000000003,
   "Vendido": "FALSE"
  },
  {
   "ID": "_1_L_19",
   "Nome": "01-Quadra L- Lote 19",
-  "Area": 382.8,
+  "Area": 300,
   "Valor": 167189,
   "Vendido": "FALSE"
  },
  {
   "ID": "_1_L_20",
   "Nome": "01-Quadra L- Lote 20",
-  "Area": 382.8,
+  "Area": 300,
   "Valor": 167189,
   "Vendido": "FALSE"
  },
  {
   "ID": "_1_L_21",
   "Nome": "01-Quadra L- Lote 21",
-  "Area": 382.8,
+  "Area": 300,
   "Valor": 167189,
   "Vendido": "FALSE"
  },
  {
   "ID": "_1_L_22",
   "Nome": "01-Quadra L- Lote 22",
-  "Area": 382.8,
+  "Area": 300,
   "Valor": 167189,
   "Vendido": "FALSE"
  },
  {
   "ID": "_1_L_23",
   "Nome": "01-Quadra L- Lote 23",
-  "Area": 382.8,
+  "Area": 300,
   "Valor": 167189,
   "Vendido": "TRUE"
  },
  {
   "ID": "_1_L_24",
   "Nome": "01-Quadra L- Lote 24",
-  "Area": 382.8,
+  "Area": 300,
   "Valor": 167189,
   "Vendido": "TRUE"
  },
  {
   "ID": "_1_L_25",
   "Nome": "01-Quadra L- Lote 25",
-  "Area": 382.8,
+  "Area": 300,
   "Valor": 167189,
   "Vendido": "TRUE"
  },
  {
   "ID": "_1_L_26",
   "Nome": "01-Quadra L- Lote 26",
-  "Area": 382.8,
+  "Area": 300,
   "Valor": 167189,
   "Vendido": "FALSE"
  },
  {
   "ID": "_1_L_27",
   "Nome": "01-Quadra L- Lote 27",
-  "Area": 382.8,
+  "Area": 300,
   "Valor": 167189,
   "Vendido": "FALSE"
  },
  {
   "ID": "_1_L_28",
   "Nome": "01-Quadra L- Lote 28",
-  "Area": 382.8,
+  "Area": 300,
   "Valor": 167189,
   "Vendido": "FALSE"
  },
  {
   "ID": "_1_L_29",
   "Nome": "01-Quadra L- Lote 29",
-  "Area": 382.8,
+  "Area": 300,
   "Valor": 167189,
   "Vendido": "FALSE"
  },
  {
   "ID": "_1_L_30",
   "Nome": "01-Quadra L- Lote 30",
-  "Area": 382.8,
+  "Area": 300,
   "Valor": 167189,
   "Vendido": "FALSE"
  },
  {
   "ID": "_1_L_31",
   "Nome": "01-Quadra L- Lote 31",
-  "Area": 382.8,
+  "Area": 300,
   "Valor": 167189,
   "Vendido": "FALSE"
  },
@@ -4328,84 +4328,84 @@
  {
   "ID": "_2_R_01",
   "Nome": "02-Quadra R- Lote 01",
-  "Area": 154990,
+  "Area": 329.82,
   "Valor": 154990,
   "Vendido": "FALSE"
  },
  {
   "ID": "_2_R_02",
   "Nome": "02-Quadra R- Lote 02",
-  "Area": 149990,
+  "Area": 300,
   "Valor": 149990,
   "Vendido": "FALSE"
  },
  {
   "ID": "_2_R_03",
   "Nome": "02-Quadra R- Lote 03",
-  "Area": 149990,
+  "Area": 300,
   "Valor": 149990,
   "Vendido": "FALSE"
  },
  {
   "ID": "_2_R_04",
   "Nome": "02-Quadra R- Lote 04",
-  "Area": 149990,
+  "Area": 300,
   "Valor": 149990,
   "Vendido": "FALSE"
  },
  {
   "ID": "_2_R_05",
   "Nome": "02-Quadra R- Lote 05",
-  "Area": 149990,
+  "Area": 300,
   "Valor": 149990,
   "Vendido": "FALSE"
  },
  {
   "ID": "_2_R_06",
   "Nome": "02-Quadra R- Lote 06",
-  "Area": 189990,
+  "Area": 464.50,
   "Valor": 189990,
   "Vendido": "FALSE"
  },
  {
   "ID": "_2_R_07",
   "Nome": "02-Quadra R- Lote 07",
-  "Area": 189990,
+  "Area": 464.50,
   "Valor": 189990,
   "Vendido": "FALSE"
  },
  {
   "ID": "_2_R_08",
   "Nome": "02-Quadra R- Lote 08",
-  "Area": 149990,
+  "Area": 300,
   "Valor": 149990,
   "Vendido": "FALSE"
  },
  {
   "ID": "_2_R_09",
   "Nome": "02-Quadra R- Lote 09",
-  "Area": 149990,
+  "Area": 300,
   "Valor": 149990,
   "Vendido": "FALSE"
  },
  {
   "ID": "_2_R_10",
   "Nome": "02-Quadra R- Lote 10",
-  "Area": 149990,
+  "Area": 300,
   "Valor": 149990,
   "Vendido": "FALSE"
  },
  {
   "ID": "_2_R_11",
   "Nome": "02-Quadra R- Lote 11",
-  "Area": 149990,
+  "Area": 300,
   "Valor": 149990,
   "Vendido": "FALSE"
  },
  {
   "ID": "_2_R_12",
   "Nome": "02-Quadra R- Lote 12",
-  "Area": 187990,
+  "Area": 389.46,
   "Valor": 187990,
   "Vendido": "FALSE"
  }
