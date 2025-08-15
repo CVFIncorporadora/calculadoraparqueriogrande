@@ -8,14 +8,77 @@ export function imprimirMapa() {
     const dataAtual = new Date().toLocaleDateString('pt-BR');
   
     // Rodapé com data e linha para assinatura
-    const rodape = `
-      <div style="margin-top: 40px; font-family: Arial, sans-serif; font-size: 14px;">
-        <p>Data: ${dataAtual}</p>
-        <p>Assinatura:</p>
-        <div style="border-bottom: 1px solid #000; width: 300px; height: 1px; margin-top: 40px;"></div>
+    const corretor = `
+    <div style="margin-top: 60px; font-family: Arial, sans-serif; font-size: 14px; text-align: left;">
+      <div style="display: flex; align-items: flex-end; gap: 10px;">
+        <span style="font-size: 22px;">X</span>
+        <div style="width: 300px; border-bottom: 2px solid #000; height: 1px;"></div>
       </div>
+      <div style="margin-left: 35px; margin-top: 5px;">
+        <p style="margin: 0;">Corretor</p>
+        <p style="margin: 0;">CPF:</p>
+      </div>
+    </div>
     `;
-  
+    const assinaturas = `
+    <div style="margin-top: 60px; font-family: Arial, sans-serif; font-size: 14px; display: flex; justify-content: space-between; gap: 60px;">
+    
+      <!-- Assinatura 1 -->
+      <div style="flex: 1;">
+        <div style="display: flex; align-items: flex-end; gap: 10px;">
+          <span style="font-size: 22px;">X</span>
+          <div style="flex: 1; border-bottom: 2px solid #000; height: 1px;"></div>
+        </div>
+        <div style="margin-left: 35px; margin-top: 5px;">
+          <p style="margin: 0;">Nome: </p>
+          <p style="margin: 0;">CPF: </p>
+        </div>
+      </div>
+    
+      <!-- Assinatura 2 -->
+      <div style="flex: 1;">
+        <div style="display: flex; align-items: flex-end; gap: 10px;">
+          <span style="font-size: 22px;">X</span>
+          <div style="flex: 1; border-bottom: 2px solid #000; height: 1px;"></div>
+        </div>
+        <div style="margin-left: 35px; margin-top: 5px;">
+          <p style="margin: 0;">Nome: </p>
+          <p style="margin: 0;">CPF: </p>
+        </div>
+      </div>
+    
+    </div>
+    `;
+  const data_entrada = `
+  <div style="margin-top: 40px; font-family: Arial, sans-serif; font-size: 14px;">
+    <div style="display: flex; align-items: flex-end; gap: 10px;">
+      <span>Data entrada:</span>
+      <div style="width: 300px; border-bottom: 1px solid #000; height: 1px;"></div>
+      
+    </div>
+  </div>
+`;
+const data_vencimento = `
+<div style="margin-top: 40px; font-family: Arial, sans-serif; font-size: 14px;">
+  <div style="display: flex; align-items: flex-end; gap: 10px;">
+    <span>Dia para Primeiro vencimento:</span>
+    <div style="width: 200px; border-bottom: 1px solid #000; height: 1px;"></div>
+    <span>*demais vencimentos devem ser no mesmo dia nos meses subsequentes. </span>
+  </div>
+</div>
+`;
+const observacoes = `
+<div style="margin-top: 40px; font-family: Arial, sans-serif; font-size: 14px;">
+  <span>Observações:</span>
+  <div style="margin-top: 10px;">
+    <div style="flex: 1; border-bottom: 1px solid #000; height: 20px; margin-bottom: 10px;"></div>
+    <div style="flex: 1; border-bottom: 1px solid #000; height: 20px; margin-bottom: 10px;"></div>
+    <div style="flex: 1; border-bottom: 1px solid #000; height: 20px; margin-bottom: 10px;"></div>
+    <div style="flex: 1; border-bottom: 1px solid #000; height: 20px; margin-bottom: 10px;"></div>
+    <div style="flex: 1; border-bottom: 1px solid #000; height: 20px;"></div>
+  </div>
+</div>
+`;
     // CSS para a impressão
     const css = `
       <style>
@@ -28,6 +91,7 @@ export function imprimirMapa() {
           padding: 20px;
           box-sizing: border-box;
           font-size: 28px;
+          position: center;
 
         }
           #formaPagamento {
@@ -62,7 +126,8 @@ export function imprimirMapa() {
         button {
           display: none;
         }
-          @media print {
+          @media print 
+             {
   label[for="formaPagamento"],
   #formaPagamento {
     display: none !important;
@@ -89,8 +154,13 @@ export function imprimirMapa() {
         </head>
         <body>
           ${painelHTML}
+          ${data_entrada}
+          ${data_vencimento}
+          ${observacoes}
+          ${assinaturas}
+          ${corretor}
           ${conteudoHTML}
-          ${rodape}
+         
           <script>
             window.onload = function() {
               setTimeout(() => {
