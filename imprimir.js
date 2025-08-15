@@ -52,7 +52,7 @@ export function imprimirMapa() {
   const data_entrada = `
   <div style="margin-top: 40px; font-family: Arial, sans-serif; font-size: 14px;">
     <div style="display: flex; align-items: flex-end; gap: 10px;">
-      <span>Data entrada:</span>
+      <span>Data da entrada:</span>
       <div style="width: 300px; border-bottom: 1px solid #000; height: 1px;"></div>
       
     </div>
@@ -177,3 +177,4 @@ const observacoes = `
     novaJanela.focus();
   }
   
+
