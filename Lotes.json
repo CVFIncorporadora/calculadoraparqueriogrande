@@ -1047,21 +1047,21 @@
   "Nome": "01-Quadra J- Lote 01",
   "Area": 411.5,
   "Valor": 230989.00000000003,
-  "Vendido": "FALSE"
+  "Vendido": "TRUE"
  },
  {
   "ID": "_1_J_02",
   "Nome": "01-Quadra J- Lote 02",
   "Area": 300,
   "Valor": 170489,
-  "Vendido": "FALSE"
+  "Vendido": "TRUE"
  },
  {
   "ID": "_1_J_03",
   "Nome": "01-Quadra J- Lote 03",
   "Area": 300,
   "Valor": 170489,
-  "Vendido": "FALSE"
+  "Vendido": "TRUE"
  },
  {
   "ID": "_1_J_04",
