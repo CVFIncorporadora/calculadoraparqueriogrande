@@ -2783,7 +2783,7 @@
   "Nome": "02-Quadra F- Lote 23",
   "Area": 300,
   "Valor": 154990,
-  "Vendido": "TRUE"
+  "Vendido": "FALSE"
  },
  {
   "ID": "_2_F_24",
@@ -3238,7 +3238,7 @@
   "Nome": "02-Quadra I- Lote 23",
   "Area": 397.73,
   "Valor": 179990,
-  "Vendido": "FALSE"
+  "Vendido": "TRUE"
  },
  {
   "ID": "_2_I_24",
