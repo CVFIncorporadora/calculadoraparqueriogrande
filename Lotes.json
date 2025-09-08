@@ -1250,14 +1250,14 @@
   "Nome": "01-Quadra K- Lote 04",
   "Area": 300,
   "Valor": 170489,
-  "Vendido": "FALSE"
+  "Vendido": "TRUE"
  },
  {
   "ID": "_1_K_05",
   "Nome": "01-Quadra K- Lote 05",
   "Area": 300,
   "Valor": 170489,
-  "Vendido": "FALSE"
+  "Vendido": "TRUE"
  },
  {
   "ID": "_1_K_06",
@@ -1271,21 +1271,21 @@
   "Nome": "01-Quadra K- Lote 07",
   "Area": 300,
   "Valor": 170489,
-  "Vendido": "FALSE"
+  "Vendido": "TRUE"
  },
  {
   "ID": "_1_K_08",
   "Nome": "01-Quadra K- Lote 08",
   "Area": 300,
   "Valor": 170489,
-  "Vendido": "FALSE"
+  "Vendido": "TRUE"
  },
  {
   "ID": "_1_K_09",
   "Nome": "01-Quadra K- Lote 09",
   "Area": 300,
   "Valor": 170489,
-  "Vendido": "FALSE"
+  "Vendido": "TRUE"
  },
  {
   "ID": "_1_K_10",
@@ -1404,42 +1404,42 @@
   "Nome": "01-Quadra K- Lote 26",
   "Area": 382.8,
   "Valor": 219989.00000000003,
-  "Vendido": "FALSE"
+  "Vendido": "TRUE"
  },
  {
   "ID": "_1_K_27",
   "Nome": "01-Quadra K- Lote 27",
   "Area": 382.8,
   "Valor": 219989.00000000003,
-  "Vendido": "FALSE"
+  "Vendido": "TRUE"
  },
  {
   "ID": "_1_K_28",
   "Nome": "01-Quadra K- Lote 28",
   "Area": 382.8,
   "Valor": 219989.00000000003,
-  "Vendido": "FALSE"
+  "Vendido": "TRUE"
  },
  {
   "ID": "_1_K_29",
   "Nome": "01-Quadra K- Lote 29",
   "Area": 382.8,
   "Valor": 219989.00000000003,
-  "Vendido": "FALSE"
+  "Vendido": "TRUE"
  },
  {
   "ID": "_1_K_30",
   "Nome": "01-Quadra K- Lote 30",
   "Area": 382.8,
   "Valor": 219989.00000000003,
-  "Vendido": "FALSE"
+  "Vendido": "TRUE"
  },
  {
   "ID": "_1_K_31",
   "Nome": "01-Quadra K- Lote 31",
   "Area": 382.8,
   "Valor": 219989.00000000003,
-  "Vendido": "FALSE"
+  "Vendido": "TRUE"
  },
  {
   "ID": "_1_L_01",
@@ -2643,7 +2643,7 @@
   "Nome": "02-Quadra F- Lote 03",
   "Area": 300,
   "Valor": 154990,
-  "Vendido": "FALSE"
+  "Vendido": "TRUE"
  },
  {
   "ID": "_2_F_04",
