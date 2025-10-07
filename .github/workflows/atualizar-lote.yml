@@ -25,7 +25,7 @@ jobs:
     # O tipo de máquina virtual para executar o job
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+        contents: write
 
     steps:
       # 1. Clona o seu repositório para a máquina virtual
