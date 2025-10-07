@@ -20,9 +20,8 @@ if (statusNormalizado !== 'TRUE' && statusNormalizado !== 'FALSE') {
 
 const arquivoJsonPath = path.join(__dirname, 'lotes.json');
 
-// --- LINHA CORRIGIDA ABAIXO ---
-// O texto foi envolvido por crases (`) para criar uma template string.
-console.log(Iniciando atualização para o ID: ${idParaAtualizar}...);
+// --- ESTA É A LINHA CORRIGIDA ---
+console.log(`Iniciando atualização para o ID: ${idParaAtualizar}...`);
 
 try {
   const arquivoBruto = fs.readFileSync(arquivoJsonPath, 'utf8');
