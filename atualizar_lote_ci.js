@@ -41,7 +41,7 @@ try {
   const jsonAtualizado = JSON.stringify(listaDeLotes, null, 2);
   fs.writeFileSync(arquivoJsonPath, jsonAtualizado, 'utf8');
 
-  console.log(Sucesso! Lote ${idParaAtualizar} atualizado para Vendido=${statusNormalizado}.);
+  console.log(`Sucesso! Lote ${idParaAtualizar} atualizado para Vendido=${statusNormalizado}.`);
 
 } catch (error) {
   console.error('Ocorreu um erro durante o processo:', error);
