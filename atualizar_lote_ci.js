@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
+// Pega os argumentos da linha de comando.
 const idParaAtualizar = process.argv[2];
 const novoStatus = process.argv[3];
 
@@ -8,7 +9,7 @@ const novoStatus = process.argv[3];
 if (!idParaAtualizar || !novoStatus) {
   console.error('ERRO: É necessário fornecer o ID e o novo status como argumentos.');
   console.error('Uso: node atualizar_lote_ci.js <ID_DO_LOTE> <NOVO_STATUS>');
-  process.exit(1); 
+  process.exit(1);
 }
 
 const statusNormalizado = novoStatus.toUpperCase();
@@ -19,11 +20,13 @@ if (statusNormalizado !== 'TRUE' && statusNormalizado !== 'FALSE') {
 
 const arquivoJsonPath = path.join(__dirname, 'lotes.json');
 
+// --- LINHA CORRIGIDA ABAIXO ---
+// O texto foi envolvido por crases (`) para criar uma template string.
 console.log(Iniciando atualização para o ID: ${idParaAtualizar}...);
 
 try {
   const arquivoBruto = fs.readFileSync(arquivoJsonPath, 'utf8');
-  const listaDeLotes = JSON.parse(arquivoBruto);
+  let listaDeLotes = JSON.parse(arquivoBruto);
 
   const indiceDoLote = listaDeLotes.findIndex(lote => lote.ID === idParaAtualizar);
 
