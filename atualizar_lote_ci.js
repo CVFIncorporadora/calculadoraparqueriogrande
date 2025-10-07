@@ -30,7 +30,7 @@ try {
   const indiceDoLote = listaDeLotes.findIndex(lote => lote.ID === idParaAtualizar);
 
   if (indiceDoLote === -1) {
-    console.error(ERRO: Lote com ID "${idParaAtualizar}" não foi encontrado.);
+    console.error(`ERRO: Lote com ID "${idParaAtualizar}" não foi encontrado.`);
     process.exit(1);
   }
 
