@@ -1,53 +1,43 @@
-# Nome do Workflow que aparecerá na aba "Actions" do GitHub
+---
 name: Atualizar Status do Lote
-
-# Gatilho (trigger) do workflow: acionamento manual
 on:
   workflow_dispatch:
-    # Define os campos de entrada que aparecerão no formulário do GitHub
     inputs:
       lote_id:
-        description: 'ID do lote a ser atualizado (ex: _1_A_01)'
+        description: "ID do lote a ser atualizado (ex: _1_A_01)"
         required: true
         type: string
       novo_status:
-        description: 'Novo status de vendido'
+        description: Novo status de vendido
         required: true
         type: choice
         options:
-          - 'TRUE'
-          - 'FALSE'
-        default: 'TRUE'
-
+          - "TRUE"
+          - "FALSE"
+        default: "TRUE"
 jobs:
-  # Nome do job
   atualizar-arquivo-json:
-    # O tipo de máquina virtual para executar o job
     runs-on: ubuntu-latest
     permissions:
-        contents: write
-
+      contents: write
     steps:
-      # 1. Clona o seu repositório para a máquina virtual
       - name: Checkout do repositório
         uses: actions/checkout@v4
-
-      # 2. Configura o ambiente Node.js
       - name: Configurar Node.js
         uses: actions/setup-node@v4
-        with:
-          node-version: '20' # Use uma versão LTS do Node
-
-      # 3. Executa o script não-interativo passando as entradas do formulário
+        with: node-version: '20'
       - name: Executar script de atualização
-        run: |
-          node atualizar_lote_ci.js "${{ github.event.inputs.lote_id }}" "${{ github.event.inputs.novo_status }}"
-
-      # 4. Configura o Git e faz o commit e push das alterações
+        run: >
+          node atualizar_lote_ci.js "${{ github.event.inputs.lote_id }}" "${{
+          github.event.inputs.novo_status }}"
       - name: Fazer commit das alterações
-        run: |
+        run: >
           git config --global user.name 'GitHub Actions Bot'
+
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
           git add Lotes.json
+
           git diff --staged --quiet || git commit -m "CI: Atualiza status do lote ${{ github.event.inputs.lote_id }} para ${{ github.event.inputs.novo_status }}"
+
           git push
