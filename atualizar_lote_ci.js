@@ -18,7 +18,7 @@ if (statusNormalizado !== 'TRUE' && statusNormalizado !== 'FALSE') {
     process.exit(1);
 }
 
-const arquivoJsonPath = path.join(__dirname, 'lotes.json');
+const arquivoJsonPath = path.join(__dirname, 'Lotes.json');
 
 // --- ESTA É A LINHA CORRIGIDA ---
 console.log(`Iniciando atualização para o ID: ${idParaAtualizar}...`);
