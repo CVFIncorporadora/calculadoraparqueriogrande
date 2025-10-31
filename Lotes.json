@@ -2244,14 +2244,14 @@
     "Nome": "02-Quadra A- Lote 14",
     "Area": 300,
     "Valor": 150490,
-    "Vendido": "TRUE"
+    "Vendido": "FALSE"
   },
   {
     "ID": "_2_A_15",
     "Nome": "02-Quadra A- Lote 15",
     "Area": 300,
     "Valor": 150490,
-    "Vendido": "TRUE"
+    "Vendido": "FALSE"
   },
   {
     "ID": "_2_A_16",
