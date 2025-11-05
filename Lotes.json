@@ -1,4412 +1,4412 @@
 [
-  {
-    "ID": "_1_A_01",
-    "Nome": "01-Quadra A- Lote 01",
-    "Area": 458.88,
-    "Valor": 329989,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_A_02",
-    "Nome": "01-Quadra A- Lote 02",
-    "Area": 300,
-    "Valor": 246389,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_A_03",
-    "Nome": "01-Quadra A- Lote 03",
-    "Area": 331.52,
-    "Valor": 271689,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_A_04",
-    "Nome": "01-Quadra A- Lote 04",
-    "Area": 518.7,
-    "Valor": 361289.00000000006,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_A_05",
-    "Nome": "01-Quadra A- Lote 05",
-    "Area": 469.26,
-    "Valor": 330489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_A_06",
-    "Nome": "01-Quadra A- Lote 06",
-    "Area": 419.94,
-    "Valor": 317289,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_A_07",
-    "Nome": "01-Quadra A- Lote 07",
-    "Area": 370.62,
-    "Valor": 302989,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_A_08",
-    "Nome": "01-Quadra A- Lote 08",
-    "Area": 465.27,
-    "Valor": 330489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_A_09",
-    "Nome": "01-Quadra A- Lote 09",
-    "Area": 415.93,
-    "Valor": 317289,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_A_10",
-    "Nome": "01-Quadra A- Lote 10",
-    "Area": 366.59,
-    "Valor": 302989,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_A_11",
-    "Nome": "01-Quadra A- Lote 11",
-    "Area": 342.25,
-    "Valor": 280989,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_A_12",
-    "Nome": "01-Quadra A- Lote 12",
-    "Area": 328.32,
-    "Valor": 181989.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_A_13",
-    "Nome": "01-Quadra A- Lote 13",
-    "Area": 324,
-    "Valor": 179789,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_A_14",
-    "Nome": "01-Quadra A- Lote 14",
-    "Area": 324,
-    "Valor": 179789,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_A_15",
-    "Nome": "01-Quadra A- Lote 15",
-    "Area": 324,
-    "Valor": 179789,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_A_16",
-    "Nome": "01-Quadra A- Lote 16",
-    "Area": 468,
-    "Valor": 220489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_A_17",
-    "Nome": "01-Quadra A- Lote 17",
-    "Area": 468,
-    "Valor": 220489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_A_18",
-    "Nome": "01-Quadra A- Lote 18",
-    "Area": 468,
-    "Valor": 220489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_A_19",
-    "Nome": "01-Quadra A- Lote 19",
-    "Area": 468,
-    "Valor": 220489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_A_20",
-    "Nome": "01-Quadra A- Lote 20",
-    "Area": 324,
-    "Valor": 179789,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_A_21",
-    "Nome": "01-Quadra A- Lote 21",
-    "Area": 405,
-    "Valor": 220489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_A_22",
-    "Nome": "01-Quadra A- Lote 22",
-    "Area": 324,
-    "Valor": 200689.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_A_23",
-    "Nome": "01-Quadra A- Lote 23",
-    "Area": 468,
-    "Valor": 286489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_A_24",
-    "Nome": "01-Quadra A- Lote 24",
-    "Area": 468,
-    "Valor": 286489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_A_25",
-    "Nome": "01-Quadra A- Lote 25",
-    "Area": 468,
-    "Valor": 286489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_B_01",
-    "Nome": "01-Quadra B- Lote 01",
-    "Area": 582.5,
-    "Valor": 264489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_B_02",
-    "Nome": "01-Quadra B- Lote 02",
-    "Area": 302.13,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_B_03",
-    "Nome": "01-Quadra B- Lote 03",
-    "Area": 301.74,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_B_04",
-    "Nome": "01-Quadra B- Lote 04",
-    "Area": 301.35,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_B_05",
-    "Nome": "01-Quadra B- Lote 05",
-    "Area": 300.72,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_B_06",
-    "Nome": "01-Quadra B- Lote 06",
-    "Area": 0,
-    "Valor": 0,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_B_07",
-    "Nome": "01-Quadra B- Lote 07",
-    "Area": 300.18,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_B_08",
-    "Nome": "01-Quadra B- Lote 08",
-    "Area": 300.11,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_B_09",
-    "Nome": "01-Quadra B- Lote 09",
-    "Area": 300.33,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_B_10",
-    "Nome": "01-Quadra B- Lote 10",
-    "Area": 300.54,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_B_11",
-    "Nome": "01-Quadra B- Lote 11",
-    "Area": 300.84,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_B_12",
-    "Nome": "01-Quadra B- Lote 12",
-    "Area": 300.96,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_B_13",
-    "Nome": "01-Quadra B- Lote 13",
-    "Area": 301.17,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_B_14",
-    "Nome": "01-Quadra B- Lote 14",
-    "Area": 301.39,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_B_15",
-    "Nome": "01-Quadra B- Lote 15",
-    "Area": 301.6,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_B_16",
-    "Nome": "01-Quadra B- Lote 16",
-    "Area": 301.81,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_B_17",
-    "Nome": "01-Quadra B- Lote 17",
-    "Area": 377.56,
-    "Valor": 220489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_C_01",
-    "Nome": "01-Quadra C- Lote 01",
-    "Area": 472.78,
-    "Valor": 286489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_C_02",
-    "Nome": "01-Quadra C- Lote 02",
-    "Area": 302.87,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_C_03",
-    "Nome": "01-Quadra C- Lote 03",
-    "Area": 303.08,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_C_04",
-    "Nome": "01-Quadra C- Lote 04",
-    "Area": 303.29,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_C_05",
-    "Nome": "01-Quadra C- Lote 05",
-    "Area": 303.51,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_C_06",
-    "Nome": "01-Quadra C- Lote 06",
-    "Area": 303.72,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_C_07",
-    "Nome": "01-Quadra C- Lote 07",
-    "Area": 303.93,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_C_08",
-    "Nome": "01-Quadra C- Lote 08",
-    "Area": 304.14,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_C_09",
-    "Nome": "01-Quadra C- Lote 09",
-    "Area": 304.36,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_C_10",
-    "Nome": "01-Quadra C- Lote 10",
-    "Area": 304.57,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_C_11",
-    "Nome": "01-Quadra C- Lote 11",
-    "Area": 304.78,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_C_12",
-    "Nome": "01-Quadra C- Lote 12",
-    "Area": 304.99,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_C_13",
-    "Nome": "01-Quadra C- Lote 13",
-    "Area": 305.26,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_C_14",
-    "Nome": "01-Quadra C- Lote 14",
-    "Area": 381.75,
-    "Valor": 219989.00000000003,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_D_14",
-    "Nome": "01-Quadra D- Lote 14",
-    "Area": 490.91,
-    "Valor": 302489,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_E_01",
-    "Nome": "01-Quadra E- Lote 01",
-    "Area": 380.75,
-    "Valor": 230989.00000000003,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_E_02",
-    "Nome": "01-Quadra E- Lote 02",
-    "Area": 300,
-    "Valor": 170489,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_E_03",
-    "Nome": "01-Quadra E- Lote 03",
-    "Area": 300,
-    "Valor": 170989,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_E_04",
-    "Nome": "01-Quadra E- Lote 04",
-    "Area": 300,
-    "Valor": 170989,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_E_05",
-    "Nome": "01-Quadra E- Lote 05",
-    "Area": 300,
-    "Valor": 170989,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_E_06",
-    "Nome": "01-Quadra E- Lote 06",
-    "Area": 300,
-    "Valor": 170989,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_E_07",
-    "Nome": "01-Quadra E- Lote 07",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_E_08",
-    "Nome": "01-Quadra E- Lote 08",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_E_09",
-    "Nome": "01-Quadra E- Lote 09",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_E_10",
-    "Nome": "01-Quadra E- Lote 10",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_E_11",
-    "Nome": "01-Quadra E- Lote 11",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_E_12",
-    "Nome": "01-Quadra E- Lote 12",
-    "Area": 300,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_E_13",
-    "Nome": "01-Quadra E- Lote 13",
-    "Area": 300,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_E_14",
-    "Nome": "01-Quadra E- Lote 14",
-    "Area": 437.12,
-    "Valor": 209489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_E_15",
-    "Nome": "01-Quadra E- Lote 15",
-    "Area": 506.75,
-    "Valor": 230989.00000000003,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_E_16",
-    "Nome": "01-Quadra E- Lote 16",
-    "Area": 300,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_E_17",
-    "Nome": "01-Quadra E- Lote 17",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_E_18",
-    "Nome": "01-Quadra E- Lote 18",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_E_19",
-    "Nome": "01-Quadra E- Lote 19",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_E_20",
-    "Nome": "01-Quadra E- Lote 20",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_E_21",
-    "Nome": "01-Quadra E- Lote 21",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_E_22",
-    "Nome": "01-Quadra E- Lote 22",
-    "Area": 300,
-    "Valor": 170989,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_E_23",
-    "Nome": "01-Quadra E- Lote 23",
-    "Area": 300,
-    "Valor": 170989,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_E_24",
-    "Nome": "01-Quadra E- Lote 24",
-    "Area": 300,
-    "Valor": 170989,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_E_25",
-    "Nome": "01-Quadra E- Lote 25",
-    "Area": 300,
-    "Valor": 170989,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_E_26",
-    "Nome": "01-Quadra E- Lote 26",
-    "Area": 300,
-    "Valor": 170489,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_E_27",
-    "Nome": "01-Quadra E- Lote 27",
-    "Area": 380.75,
-    "Valor": 230989.00000000003,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_F_01",
-    "Nome": "01-Quadra F- Lote 01",
-    "Area": 380.75,
-    "Valor": 230989.00000000003,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_F_02",
-    "Nome": "01-Quadra F- Lote 02",
-    "Area": 300,
-    "Valor": 170489,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_F_03",
-    "Nome": "01-Quadra F- Lote 03",
-    "Area": 300,
-    "Valor": 170489,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_F_04",
-    "Nome": "01-Quadra F- Lote 04",
-    "Area": 300,
-    "Valor": 170489,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_F_05",
-    "Nome": "01-Quadra F- Lote 05",
-    "Area": 300,
-    "Valor": 170489,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_F_06",
-    "Nome": "01-Quadra F- Lote 06",
-    "Area": 300,
-    "Valor": 170489,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_F_07",
-    "Nome": "01-Quadra F- Lote 07",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_F_08",
-    "Nome": "01-Quadra F- Lote 08",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_F_09",
-    "Nome": "01-Quadra F- Lote 09",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_F_10",
-    "Nome": "01-Quadra F- Lote 10",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_F_11",
-    "Nome": "01-Quadra F- Lote 11",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_F_12",
-    "Nome": "01-Quadra F- Lote 12",
-    "Area": 300,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_F_13",
-    "Nome": "01-Quadra F- Lote 13",
-    "Area": 375,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_F_14",
-    "Nome": "01-Quadra F- Lote 14",
-    "Area": 375,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_F_15",
-    "Nome": "01-Quadra F- Lote 15",
-    "Area": 300,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_F_16",
-    "Nome": "01-Quadra F- Lote 16",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_F_17",
-    "Nome": "01-Quadra F- Lote 17",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_F_18",
-    "Nome": "01-Quadra F- Lote 18",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_F_19",
-    "Nome": "01-Quadra F- Lote 19",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_F_20",
-    "Nome": "01-Quadra F- Lote 20",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_F_21",
-    "Nome": "01-Quadra F- Lote 21",
-    "Area": 300,
-    "Valor": 170489,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_F_22",
-    "Nome": "01-Quadra F- Lote 22",
-    "Area": 300,
-    "Valor": 170489,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_F_23",
-    "Nome": "01-Quadra F- Lote 23",
-    "Area": 300,
-    "Valor": 170489,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_F_24",
-    "Nome": "01-Quadra F- Lote 24",
-    "Area": 300,
-    "Valor": 170489,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_F_25",
-    "Nome": "01-Quadra F- Lote 25",
-    "Area": 300,
-    "Valor": 170489,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_F_26",
-    "Nome": "01-Quadra F- Lote 26",
-    "Area": 380.75,
-    "Valor": 230989.00000000003,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_G_01",
-    "Nome": "01-Quadra G- Lote 01",
-    "Area": 380.75,
-    "Valor": 230989.00000000003,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_G_02",
-    "Nome": "01-Quadra G- Lote 02",
-    "Area": 300,
-    "Valor": 170489,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_G_03",
-    "Nome": "01-Quadra G- Lote 03",
-    "Area": 300,
-    "Valor": 170489,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_G_04",
-    "Nome": "01-Quadra G- Lote 04",
-    "Area": 300,
-    "Valor": 170989,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_G_05",
-    "Nome": "01-Quadra G- Lote 05",
-    "Area": 300,
-    "Valor": 170989,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_G_06",
-    "Nome": "01-Quadra G- Lote 06",
-    "Area": 300,
-    "Valor": 170989,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_G_07",
-    "Nome": "01-Quadra G- Lote 07",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_G_08",
-    "Nome": "01-Quadra G- Lote 08",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_G_09",
-    "Nome": "01-Quadra G- Lote 09",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_G_10",
-    "Nome": "01-Quadra G- Lote 10",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_G_11",
-    "Nome": "01-Quadra G- Lote 11",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_G_12",
-    "Nome": "01-Quadra G- Lote 12",
-    "Area": 300,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_G_13",
-    "Nome": "01-Quadra G- Lote 13",
-    "Area": 375,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_G_14",
-    "Nome": "01-Quadra G- Lote 14",
-    "Area": 375,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_G_15",
-    "Nome": "01-Quadra G- Lote 15",
-    "Area": 300,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_G_16",
-    "Nome": "01-Quadra G- Lote 16",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_G_17",
-    "Nome": "01-Quadra G- Lote 17",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_G_18",
-    "Nome": "01-Quadra G- Lote 18",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_G_19",
-    "Nome": "01-Quadra G- Lote 19",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_G_20",
-    "Nome": "01-Quadra G- Lote 20",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_G_21",
-    "Nome": "01-Quadra G- Lote 21",
-    "Area": 300,
-    "Valor": 170989,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_G_22",
-    "Nome": "01-Quadra G- Lote 22",
-    "Area": 300,
-    "Valor": 170989,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_G_23",
-    "Nome": "01-Quadra G- Lote 23",
-    "Area": 300,
-    "Valor": 170989,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_G_24",
-    "Nome": "01-Quadra G- Lote 24",
-    "Area": 300,
-    "Valor": 170489,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_G_25",
-    "Nome": "01-Quadra G- Lote 25",
-    "Area": 300,
-    "Valor": 170489,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_G_26",
-    "Nome": "01-Quadra G- Lote 26",
-    "Area": 380.75,
-    "Valor": 230989.00000000003,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_H_01",
-    "Nome": "01-Quadra H- Lote 01",
-    "Area": 380.75,
-    "Valor": 230989.00000000003,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_H_02",
-    "Nome": "01-Quadra H- Lote 02",
-    "Area": 300,
-    "Valor": 170489,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_H_03",
-    "Nome": "01-Quadra H- Lote 03",
-    "Area": 300,
-    "Valor": 170489,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_H_04",
-    "Nome": "01-Quadra H- Lote 04",
-    "Area": 300,
-    "Valor": 155490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_H_05",
-    "Nome": "01-Quadra H- Lote 05",
-    "Area": 300,
-    "Valor": 155490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_H_06",
-    "Nome": "01-Quadra H- Lote 06",
-    "Area": 300,
-    "Valor": 155490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_H_07",
-    "Nome": "01-Quadra H- Lote 07",
-    "Area": 300,
-    "Valor": 151990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_H_08",
-    "Nome": "01-Quadra H- Lote 08",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_H_09",
-    "Nome": "01-Quadra H- Lote 09",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_H_10",
-    "Nome": "01-Quadra H- Lote 10",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_H_11",
-    "Nome": "01-Quadra H- Lote 11",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_H_12",
-    "Nome": "01-Quadra H- Lote 12",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_H_13",
-    "Nome": "01-Quadra H- Lote 13",
-    "Area": 375,
-    "Valor": 170490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_J_01",
-    "Nome": "01-Quadra J- Lote 01",
-    "Area": 411.5,
-    "Valor": 231489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_J_02",
-    "Nome": "01-Quadra J- Lote 02",
-    "Area": 300,
-    "Valor": 170989,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_J_03",
-    "Nome": "01-Quadra J- Lote 03",
-    "Area": 300,
-    "Valor": 170989,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_J_04",
-    "Nome": "01-Quadra J- Lote 04",
-    "Area": 300,
-    "Valor": 170989,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_J_05",
-    "Nome": "01-Quadra J- Lote 05",
-    "Area": 300,
-    "Valor": 170989,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_J_06",
-    "Nome": "01-Quadra J- Lote 06",
-    "Area": 300,
-    "Valor": 170989,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_J_07",
-    "Nome": "01-Quadra J- Lote 07",
-    "Area": 300,
-    "Valor": 170989,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_J_08",
-    "Nome": "01-Quadra J- Lote 08",
-    "Area": 300,
-    "Valor": 170989,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_J_09",
-    "Nome": "01-Quadra J- Lote 09",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_J_10",
-    "Nome": "01-Quadra J- Lote 10",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_J_11",
-    "Nome": "01-Quadra J- Lote 11",
-    "Area": 465.06,
-    "Valor": 252989.00000000003,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_J_12",
-    "Nome": "01-Quadra J- Lote 12",
-    "Area": 431.32,
-    "Valor": 244189.00000000003,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_J_13",
-    "Nome": "01-Quadra J- Lote 13",
-    "Area": 324,
-    "Valor": 179789,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_J_14",
-    "Nome": "01-Quadra J- Lote 14",
-    "Area": 324,
-    "Valor": 179789,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_J_15",
-    "Nome": "01-Quadra J- Lote 15",
-    "Area": 324,
-    "Valor": 179789,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_J_16",
-    "Nome": "01-Quadra J- Lote 16",
-    "Area": 324,
-    "Valor": 179789,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_J_17",
-    "Nome": "01-Quadra J- Lote 17",
-    "Area": 324,
-    "Valor": 176489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_J_18",
-    "Nome": "01-Quadra J- Lote 18",
-    "Area": 324,
-    "Valor": 176489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_J_19",
-    "Nome": "01-Quadra J- Lote 19",
-    "Area": 366.3,
-    "Valor": 191889.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_J_20",
-    "Nome": "01-Quadra J- Lote 20",
-    "Area": 425.66,
-    "Valor": 209489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_J_21",
-    "Nome": "01-Quadra J- Lote 21",
-    "Area": 300.48,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_J_22",
-    "Nome": "01-Quadra J- Lote 22",
-    "Area": 300.42,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_J_23",
-    "Nome": "01-Quadra J- Lote 23",
-    "Area": 300.36,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_J_24",
-    "Nome": "01-Quadra J- Lote 24",
-    "Area": 300.36,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_J_25",
-    "Nome": "01-Quadra J- Lote 25",
-    "Area": 300.36,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_J_26",
-    "Nome": "01-Quadra J- Lote 26",
-    "Area": 433.14,
-    "Valor": 209489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_K_01",
-    "Nome": "01-Quadra K- Lote 01",
-    "Area": 546.06,
-    "Valor": 197989.00000000003,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_K_02",
-    "Nome": "01-Quadra K- Lote 02",
-    "Area": 307,
-    "Valor": 173189,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_K_03",
-    "Nome": "01-Quadra K- Lote 03",
-    "Area": 394.74,
-    "Valor": 198489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_K_04",
-    "Nome": "01-Quadra K- Lote 04",
-    "Area": 300,
-    "Valor": 170489,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_K_05",
-    "Nome": "01-Quadra K- Lote 05",
-    "Area": 300,
-    "Valor": 170489,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_K_06",
-    "Nome": "01-Quadra K- Lote 06",
-    "Area": 300,
-    "Valor": 170489,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_K_07",
-    "Nome": "01-Quadra K- Lote 07",
-    "Area": 300,
-    "Valor": 170489,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_K_08",
-    "Nome": "01-Quadra K- Lote 08",
-    "Area": 300,
-    "Valor": 170489,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_K_09",
-    "Nome": "01-Quadra K- Lote 09",
-    "Area": 300,
-    "Valor": 170489,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_K_10",
-    "Nome": "01-Quadra K- Lote 10",
-    "Area": 300,
-    "Valor": 170489,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_K_11",
-    "Nome": "01-Quadra K- Lote 11",
-    "Area": 300,
-    "Valor": 170489,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_K_12",
-    "Nome": "01-Quadra K- Lote 12",
-    "Area": 300,
-    "Valor": 170489,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_K_13",
-    "Nome": "01-Quadra K- Lote 13",
-    "Area": 300,
-    "Valor": 170989,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_K_14",
-    "Nome": "01-Quadra K- Lote 14",
-    "Area": 300,
-    "Valor": 170989,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_K_15",
-    "Nome": "01-Quadra K- Lote 15",
-    "Area": 300,
-    "Valor": 170989,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_K_16",
-    "Nome": "01-Quadra K- Lote 16",
-    "Area": 300,
-    "Valor": 170989,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_K_17",
-    "Nome": "01-Quadra K- Lote 17",
-    "Area": 375,
-    "Valor": 196289.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_K_18",
-    "Nome": "01-Quadra K- Lote 18",
-    "Area": 478.5,
-    "Valor": 285989,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_K_19",
-    "Nome": "01-Quadra K- Lote 19",
-    "Area": 382.8,
-    "Valor": 230989.00000000003,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_K_20",
-    "Nome": "01-Quadra K- Lote 20",
-    "Area": 382.8,
-    "Valor": 230989.00000000003,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_K_21",
-    "Nome": "01-Quadra K- Lote 21",
-    "Area": 382.8,
-    "Valor": 230989.00000000003,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_K_22",
-    "Nome": "01-Quadra K- Lote 22",
-    "Area": 382.8,
-    "Valor": 220489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_K_23",
-    "Nome": "01-Quadra K- Lote 23",
-    "Area": 382.8,
-    "Valor": 220489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_K_24",
-    "Nome": "01-Quadra K- Lote 24",
-    "Area": 382.8,
-    "Valor": 220489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_K_25",
-    "Nome": "01-Quadra K- Lote 25",
-    "Area": 382.8,
-    "Valor": 220489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_K_26",
-    "Nome": "01-Quadra K- Lote 26",
-    "Area": 382.8,
-    "Valor": 219989.00000000003,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_K_27",
-    "Nome": "01-Quadra K- Lote 27",
-    "Area": 382.8,
-    "Valor": 219989.00000000003,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_K_28",
-    "Nome": "01-Quadra K- Lote 28",
-    "Area": 382.8,
-    "Valor": 219989.00000000003,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_K_29",
-    "Nome": "01-Quadra K- Lote 29",
-    "Area": 382.8,
-    "Valor": 219989.00000000003,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_K_30",
-    "Nome": "01-Quadra K- Lote 30",
-    "Area": 382.8,
-    "Valor": 219989.00000000003,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_K_31",
-    "Nome": "01-Quadra K- Lote 31",
-    "Area": 382.8,
-    "Valor": 219989.00000000003,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_L_01",
-    "Nome": "01-Quadra L- Lote 01",
-    "Area": 394.74,
-    "Valor": 198489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_L_02",
-    "Nome": "01-Quadra L- Lote 02",
-    "Area": 307.02,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_L_03",
-    "Nome": "01-Quadra L- Lote 03",
-    "Area": 375.59,
-    "Valor": 195189.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_L_04",
-    "Nome": "01-Quadra L- Lote 04",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_L_05",
-    "Nome": "01-Quadra L- Lote 05",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_L_06",
-    "Nome": "01-Quadra L- Lote 06",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_L_07",
-    "Nome": "01-Quadra L- Lote 07",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_L_08",
-    "Nome": "01-Quadra L- Lote 08",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_L_09",
-    "Nome": "01-Quadra L- Lote 09",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_L_10",
-    "Nome": "01-Quadra L- Lote 10",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_L_11",
-    "Nome": "01-Quadra L- Lote 11",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_L_12",
-    "Nome": "01-Quadra L- Lote 12",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_L_13",
-    "Nome": "01-Quadra L- Lote 13",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_L_14",
-    "Nome": "01-Quadra L- Lote 14",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_L_15",
-    "Nome": "01-Quadra L- Lote 15",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_L_16",
-    "Nome": "01-Quadra L- Lote 16",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_L_17",
-    "Nome": "01-Quadra L- Lote 17",
-    "Area": 375,
-    "Valor": 195189.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_L_18",
-    "Nome": "01-Quadra L- Lote 18",
-    "Area": 375,
-    "Valor": 195189.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_L_19",
-    "Nome": "01-Quadra L- Lote 19",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_L_20",
-    "Nome": "01-Quadra L- Lote 20",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_L_21",
-    "Nome": "01-Quadra L- Lote 21",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_L_22",
-    "Nome": "01-Quadra L- Lote 22",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_L_23",
-    "Nome": "01-Quadra L- Lote 23",
-    "Area": 300,
-    "Valor": 167189,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_L_24",
-    "Nome": "01-Quadra L- Lote 24",
-    "Area": 300,
-    "Valor": 167189,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_L_25",
-    "Nome": "01-Quadra L- Lote 25",
-    "Area": 300,
-    "Valor": 167189,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_L_26",
-    "Nome": "01-Quadra L- Lote 26",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_L_27",
-    "Nome": "01-Quadra L- Lote 27",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_L_28",
-    "Nome": "01-Quadra L- Lote 28",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_L_29",
-    "Nome": "01-Quadra L- Lote 29",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_L_30",
-    "Nome": "01-Quadra L- Lote 30",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_L_31",
-    "Nome": "01-Quadra L- Lote 31",
-    "Area": 300,
-    "Valor": 167689,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_M_01",
-    "Nome": "01-Quadra M- Lote 01",
-    "Area": 396.75,
-    "Valor": 198489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_M_02",
-    "Nome": "01-Quadra M- Lote 02",
-    "Area": 319.02,
-    "Valor": 173189,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_N_01",
-    "Nome": "01-Quadra N- Lote 01",
-    "Area": 533.55,
-    "Valor": 242489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_N_02",
-    "Nome": "01-Quadra N- Lote 02",
-    "Area": 621.55,
-    "Valor": 253489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_N_03",
-    "Nome": "01-Quadra N- Lote 03",
-    "Area": 300,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_N_04",
-    "Nome": "01-Quadra N- Lote 04",
-    "Area": 300,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_N_05",
-    "Nome": "01-Quadra N- Lote 05",
-    "Area": 300,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_N_06",
-    "Nome": "01-Quadra N- Lote 06",
-    "Area": 300,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_N_07",
-    "Nome": "01-Quadra N- Lote 07",
-    "Area": 300,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_N_08",
-    "Nome": "01-Quadra N- Lote 08",
-    "Area": 300,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_N_09",
-    "Nome": "01-Quadra N- Lote 09",
-    "Area": 300,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_N_10",
-    "Nome": "01-Quadra N- Lote 10",
-    "Area": 300,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_N_11",
-    "Nome": "01-Quadra N- Lote 11",
-    "Area": 300,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_N_12",
-    "Nome": "01-Quadra N- Lote 12",
-    "Area": 300,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_N_13",
-    "Nome": "01-Quadra N- Lote 13",
-    "Area": 300,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_N_14",
-    "Nome": "01-Quadra N- Lote 14",
-    "Area": 375,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_N_15",
-    "Nome": "01-Quadra N- Lote 15",
-    "Area": 375,
-    "Valor": 187489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_N_16",
-    "Nome": "01-Quadra N- Lote 16",
-    "Area": 300,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_N_17",
-    "Nome": "01-Quadra N- Lote 17",
-    "Area": 300,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_N_18",
-    "Nome": "01-Quadra N- Lote 18",
-    "Area": 300,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_N_19",
-    "Nome": "01-Quadra N- Lote 19",
-    "Area": 300,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_N_20",
-    "Nome": "01-Quadra N- Lote 20",
-    "Area": 300,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_N_21",
-    "Nome": "01-Quadra N- Lote 21",
-    "Area": 300,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_N_22",
-    "Nome": "01-Quadra N- Lote 22",
-    "Area": 300,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_N_23",
-    "Nome": "01-Quadra N- Lote 23",
-    "Area": 300,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_N_24",
-    "Nome": "01-Quadra N- Lote 24",
-    "Area": 300,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_N_25",
-    "Nome": "01-Quadra N- Lote 25",
-    "Area": 300,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_N_26",
-    "Nome": "01-Quadra N- Lote 26",
-    "Area": 300,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_N_27",
-    "Nome": "01-Quadra N- Lote 27",
-    "Area": 300,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_O_01",
-    "Nome": "01-Quadra O- Lote 01",
-    "Area": 503.25,
-    "Valor": 209489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_O_02",
-    "Nome": "01-Quadra O- Lote 02",
-    "Area": 300,
-    "Valor": 154489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_O_03",
-    "Nome": "01-Quadra O- Lote 03",
-    "Area": 300,
-    "Valor": 154489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_O_04",
-    "Nome": "01-Quadra O- Lote 04",
-    "Area": 300,
-    "Valor": 154489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_O_05",
-    "Nome": "01-Quadra O- Lote 05",
-    "Area": 300,
-    "Valor": 130490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_O_06",
-    "Nome": "01-Quadra O- Lote 06",
-    "Area": 300,
-    "Valor": 129990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_O_07",
-    "Nome": "01-Quadra O- Lote 07",
-    "Area": 300,
-    "Valor": 130490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_O_08",
-    "Nome": "01-Quadra O- Lote 08",
-    "Area": 300,
-    "Valor": 129990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_O_09",
-    "Nome": "01-Quadra O- Lote 09",
-    "Area": 300,
-    "Valor": 130490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_O_10",
-    "Nome": "01-Quadra O- Lote 10",
-    "Area": 300,
-    "Valor": 130490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_O_11",
-    "Nome": "01-Quadra O- Lote 11",
-    "Area": 300,
-    "Valor": 130490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_O_12",
-    "Nome": "01-Quadra O- Lote 12",
-    "Area": 536.25,
-    "Valor": 209489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_P_01",
-    "Nome": "01-Quadra P- Lote 01",
-    "Area": 439.53,
-    "Valor": 198489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_P_02",
-    "Nome": "01-Quadra P- Lote 02",
-    "Area": 357.54,
-    "Valor": 176489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_P_03",
-    "Nome": "01-Quadra P- Lote 03",
-    "Area": 419,
-    "Valor": 198489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_P_04",
-    "Nome": "01-Quadra P- Lote 04",
-    "Area": 300,
-    "Valor": 154489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_P_05",
-    "Nome": "01-Quadra P- Lote 05",
-    "Area": 300,
-    "Valor": 154489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_P_06",
-    "Nome": "01-Quadra P- Lote 06",
-    "Area": 300,
-    "Valor": 154489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_P_07",
-    "Nome": "01-Quadra P- Lote 07",
-    "Area": 300,
-    "Valor": 154489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_P_08",
-    "Nome": "01-Quadra P- Lote 08",
-    "Area": 300,
-    "Valor": 154489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_P_09",
-    "Nome": "01-Quadra P- Lote 09",
-    "Area": 429.3,
-    "Valor": 198489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_P_10",
-    "Nome": "01-Quadra P- Lote 10",
-    "Area": 343.09,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_P_11",
-    "Nome": "01-Quadra P- Lote 11",
-    "Area": 300,
-    "Valor": 154489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_P_12",
-    "Nome": "01-Quadra P- Lote 12",
-    "Area": 300,
-    "Valor": 154489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_P_13",
-    "Nome": "01-Quadra P- Lote 13",
-    "Area": 300,
-    "Valor": 154489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_P_14",
-    "Nome": "01-Quadra P- Lote 14",
-    "Area": 300,
-    "Valor": 154489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_P_15",
-    "Nome": "01-Quadra P- Lote 15",
-    "Area": 300,
-    "Valor": 154489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_P_16",
-    "Nome": "01-Quadra P- Lote 16",
-    "Area": 301.3,
-    "Valor": 154489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_Q_01",
-    "Nome": "01-Quadra Q- Lote 01",
-    "Area": 0,
-    "Valor": 0,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_1_Q_02",
-    "Nome": "01-Quadra Q- Lote 02",
-    "Area": 300.72,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_Q_03",
-    "Nome": "01-Quadra Q- Lote 03",
-    "Area": 302.16,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_Q_04",
-    "Nome": "01-Quadra Q- Lote 04",
-    "Area": 303.6,
-    "Valor": 165489,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_Q_05",
-    "Nome": "01-Quadra Q- Lote 05",
-    "Area": 305.04,
-    "Valor": 168239,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_Q_06",
-    "Nome": "01-Quadra Q- Lote 06",
-    "Area": 306.48,
-    "Valor": 168239,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_Q_07",
-    "Nome": "01-Quadra Q- Lote 07",
-    "Area": 307.92,
-    "Valor": 168239,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_Q_08",
-    "Nome": "01-Quadra Q- Lote 08",
-    "Area": 309.36,
-    "Valor": 168239,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_Q_09",
-    "Nome": "01-Quadra Q- Lote 09",
-    "Area": 310.8,
-    "Valor": 168239,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_Q_10",
-    "Nome": "01-Quadra Q- Lote 10",
-    "Area": 312.24,
-    "Valor": 168239,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_Q_11",
-    "Nome": "01-Quadra Q- Lote 11",
-    "Area": 392.32,
-    "Valor": 198489.00000000003,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_R_01",
-    "Nome": "01-Quadra R- Lote 01",
-    "Area": 2157.65,
-    "Valor": 440489.00000000006,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_1_R_02",
-    "Nome": "01-Quadra R- Lote 02",
-    "Area": 2066.18,
-    "Valor": 439389.00000000006,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_A_01",
-    "Nome": "02-Quadra A- Lote 01",
-    "Area": 575.62,
-    "Valor": 179990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_A_02",
-    "Nome": "02-Quadra A- Lote 02",
-    "Area": 300,
-    "Valor": 154990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_A_03",
-    "Nome": "02-Quadra A- Lote 03",
-    "Area": 300,
-    "Valor": 154990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_A_04",
-    "Nome": "02-Quadra A- Lote 04",
-    "Area": 300,
-    "Valor": 154990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_A_05",
-    "Nome": "02-Quadra A- Lote 05",
-    "Area": 300,
-    "Valor": 154990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_A_06",
-    "Nome": "02-Quadra A- Lote 06",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_A_07",
-    "Nome": "02-Quadra A- Lote 07",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_A_08",
-    "Nome": "02-Quadra A- Lote 08",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_A_09",
-    "Nome": "02-Quadra A- Lote 09",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_A_10",
-    "Nome": "02-Quadra A- Lote 10",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_A_11",
-    "Nome": "02-Quadra A- Lote 11",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_A_12",
-    "Nome": "02-Quadra A- Lote 12",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_A_13",
-    "Nome": "02-Quadra A- Lote 13",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_A_14",
-    "Nome": "02-Quadra A- Lote 14",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_A_15",
-    "Nome": "02-Quadra A- Lote 15",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_A_16",
-    "Nome": "02-Quadra A- Lote 16",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_A_17",
-    "Nome": "02-Quadra A- Lote 17",
-    "Area": 509.5,
-    "Valor": 212990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_B_01",
-    "Nome": "02-Quadra B- Lote 01",
-    "Area": 0,
-    "Valor": 0,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_B_02",
-    "Nome": "02-Quadra B- Lote 02",
-    "Area": 324,
-    "Valor": 160490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_B_03",
-    "Nome": "02-Quadra B- Lote 03",
-    "Area": 324,
-    "Valor": 160490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_B_04",
-    "Nome": "02-Quadra B- Lote 04",
-    "Area": 324,
-    "Valor": 160490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_B_05",
-    "Nome": "02-Quadra B- Lote 05",
-    "Area": 324,
-    "Valor": 160490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_B_06",
-    "Nome": "02-Quadra B- Lote 06",
-    "Area": 467.79,
-    "Valor": 259990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_B_07",
-    "Nome": "02-Quadra B- Lote 07",
-    "Area": 591.96,
-    "Valor": 179990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_B_08",
-    "Nome": "02-Quadra B- Lote 08",
-    "Area": 472.68,
-    "Valor": 259990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_B_09",
-    "Nome": "02-Quadra B- Lote 09",
-    "Area": 412.88,
-    "Valor": 229990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_B_10",
-    "Nome": "02-Quadra B- Lote 10",
-    "Area": 0,
-    "Valor": 0,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_C_01",
-    "Nome": "02-Quadra C- Lote 01",
-    "Area": 491.18,
-    "Valor": 274990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_C_02",
-    "Nome": "02-Quadra C- Lote 02",
-    "Area": 309.86,
-    "Valor": 173990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_C_03",
-    "Nome": "02-Quadra C- Lote 03",
-    "Area": 309.65,
-    "Valor": 173990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_C_04",
-    "Nome": "02-Quadra C- Lote 04",
-    "Area": 386.76,
-    "Valor": 212990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_D_01",
-    "Nome": "02-Quadra D- Lote 01",
-    "Area": 386.1,
-    "Valor": 212990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_D_02",
-    "Nome": "02-Quadra D- Lote 02",
-    "Area": 308.64,
-    "Valor": 173490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_D_03_04",
-    "Nome": "02-Quadra D- Lote 03_04",
-    "Area": 616.56,
-    "Valor": 258437.97,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_D_05_06",
-    "Nome": "02-Quadra D- Lote 05_06",
-    "Area": 615.78,
-    "Valor": 258404.7,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_D_07",
-    "Nome": "02-Quadra D- Lote 07",
-    "Area": 307.56,
-    "Valor": 172990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_D_08",
-    "Nome": "02-Quadra D- Lote 08",
-    "Area": 307.32,
-    "Valor": 171990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_D_09",
-    "Nome": "02-Quadra D- Lote 09",
-    "Area": 307.08,
-    "Valor": 171990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_D_10",
-    "Nome": "02-Quadra D- Lote 10",
-    "Area": 306.9,
-    "Valor": 171990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_D_11",
-    "Nome": "02-Quadra D- Lote 11",
-    "Area": 306.72,
-    "Valor": 171990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_D_12",
-    "Nome": "02-Quadra D- Lote 12",
-    "Area": 306.48,
-    "Valor": 171990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_D_13",
-    "Nome": "02-Quadra D- Lote 13",
-    "Area": 306.24,
-    "Valor": 171990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_E_01",
-    "Nome": "02-Quadra E- Lote 01",
-    "Area": 380.75,
-    "Valor": 209990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_E_02",
-    "Nome": "02-Quadra E- Lote 02",
-    "Area": 300,
-    "Valor": 154990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_E_03",
-    "Nome": "02-Quadra E- Lote 03",
-    "Area": 300,
-    "Valor": 155490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_E_04",
-    "Nome": "02-Quadra E- Lote 04",
-    "Area": 300,
-    "Valor": 154990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_E_05",
-    "Nome": "02-Quadra E- Lote 05",
-    "Area": 300,
-    "Valor": 154990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_E_06",
-    "Nome": "02-Quadra E- Lote 06",
-    "Area": 300,
-    "Valor": 154990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_E_07",
-    "Nome": "02-Quadra E- Lote 07",
-    "Area": 300,
-    "Valor": 151990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_E_08",
-    "Nome": "02-Quadra E- Lote 08",
-    "Area": 300,
-    "Valor": 151990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_E_09",
-    "Nome": "02-Quadra E- Lote 09",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_E_10",
-    "Nome": "02-Quadra E- Lote 10",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_E_11",
-    "Nome": "02-Quadra E- Lote 11",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_E_12",
-    "Nome": "02-Quadra E- Lote 12",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_E_13",
-    "Nome": "02-Quadra E- Lote 13",
-    "Area": 375,
-    "Valor": 170490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_E_14",
-    "Nome": "02-Quadra E- Lote 14",
-    "Area": 375,
-    "Valor": 173990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_E_15",
-    "Nome": "02-Quadra E- Lote 15",
-    "Area": 300,
-    "Valor": 149990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_E_16",
-    "Nome": "02-Quadra E- Lote 16",
-    "Area": 300,
-    "Valor": 151990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_E_17",
-    "Nome": "02-Quadra E- Lote 17",
-    "Area": 300,
-    "Valor": 151990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_E_18",
-    "Nome": "02-Quadra E- Lote 18",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_E_19",
-    "Nome": "02-Quadra E- Lote 19",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_E_20",
-    "Nome": "02-Quadra E- Lote 20",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_E_21",
-    "Nome": "02-Quadra E- Lote 21",
-    "Area": 300,
-    "Valor": 155490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_E_22",
-    "Nome": "02-Quadra E- Lote 22",
-    "Area": 300,
-    "Valor": 155490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_E_23",
-    "Nome": "02-Quadra E- Lote 23",
-    "Area": 300,
-    "Valor": 155490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_E_24",
-    "Nome": "02-Quadra E- Lote 24",
-    "Area": 300,
-    "Valor": 154990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_E_25",
-    "Nome": "02-Quadra E- Lote 25",
-    "Area": 300,
-    "Valor": 154990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_E_26",
-    "Nome": "02-Quadra E- Lote 26",
-    "Area": 380.75,
-    "Valor": 209990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_F_01",
-    "Nome": "02-Quadra F- Lote 01",
-    "Area": 380.75,
-    "Valor": 209990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_F_02",
-    "Nome": "02-Quadra F- Lote 02",
-    "Area": 300,
-    "Valor": 155490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_F_03",
-    "Nome": "02-Quadra F- Lote 03",
-    "Area": 300,
-    "Valor": 154990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_F_04",
-    "Nome": "02-Quadra F- Lote 04",
-    "Area": 300,
-    "Valor": 155490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_F_05",
-    "Nome": "02-Quadra F- Lote 05",
-    "Area": 300,
-    "Valor": 155490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_F_06",
-    "Nome": "02-Quadra F- Lote 06",
-    "Area": 300,
-    "Valor": 155490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_F_07",
-    "Nome": "02-Quadra F- Lote 07",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_F_08",
-    "Nome": "02-Quadra F- Lote 08",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_F_09",
-    "Nome": "02-Quadra F- Lote 09",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_F_10",
-    "Nome": "02-Quadra F- Lote 10",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_F_11",
-    "Nome": "02-Quadra F- Lote 11",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_F_12",
-    "Nome": "02-Quadra F- Lote 12",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_F_13",
-    "Nome": "02-Quadra F- Lote 13",
-    "Area": 375,
-    "Valor": 170490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_F_14",
-    "Nome": "02-Quadra F- Lote 14",
-    "Area": 375,
-    "Valor": 173990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_F_15",
-    "Nome": "02-Quadra F- Lote 15",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_F_16",
-    "Nome": "02-Quadra F- Lote 16",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_F_17",
-    "Nome": "02-Quadra F- Lote 17",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_F_18",
-    "Nome": "02-Quadra F- Lote 18",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_F_19",
-    "Nome": "02-Quadra F- Lote 19",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_F_20",
-    "Nome": "02-Quadra F- Lote 20",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_F_21",
-    "Nome": "02-Quadra F- Lote 21",
-    "Area": 300,
-    "Valor": 155490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_F_22",
-    "Nome": "02-Quadra F- Lote 22",
-    "Area": 300,
-    "Valor": 155490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_F_23",
-    "Nome": "02-Quadra F- Lote 23",
-    "Area": 300,
-    "Valor": 154990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_F_24",
-    "Nome": "02-Quadra F- Lote 24",
-    "Area": 300,
-    "Valor": 154990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_F_25",
-    "Nome": "02-Quadra F- Lote 25",
-    "Area": 300,
-    "Valor": 154990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_F_26",
-    "Nome": "02-Quadra F- Lote 26",
-    "Area": 380.75,
-    "Valor": 209990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_G_01",
-    "Nome": "02-Quadra G- Lote 01",
-    "Area": 380.75,
-    "Valor": 209990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_G_02",
-    "Nome": "02-Quadra G- Lote 02",
-    "Area": 300,
-    "Valor": 154990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_G_03",
-    "Nome": "02-Quadra G- Lote 03",
-    "Area": 300,
-    "Valor": 154990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_G_04",
-    "Nome": "02-Quadra G- Lote 04",
-    "Area": 300,
-    "Valor": 154990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_G_05",
-    "Nome": "02-Quadra G- Lote 05",
-    "Area": 300,
-    "Valor": 155490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_G_06",
-    "Nome": "02-Quadra G- Lote 06",
-    "Area": 300,
-    "Valor": 155490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_G_07",
-    "Nome": "02-Quadra G- Lote 07",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_G_08",
-    "Nome": "02-Quadra G- Lote 08",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_G_09",
-    "Nome": "02-Quadra G- Lote 09",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_G_10",
-    "Nome": "02-Quadra G- Lote 10",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_G_11",
-    "Nome": "02-Quadra G- Lote 11",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_G_12",
-    "Nome": "02-Quadra G- Lote 12",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_G_13",
-    "Nome": "02-Quadra G- Lote 13",
-    "Area": 375,
-    "Valor": 170490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_G_14",
-    "Nome": "02-Quadra G- Lote 14",
-    "Area": 375,
-    "Valor": 170490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_G_15",
-    "Nome": "02-Quadra G- Lote 15",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_G_16",
-    "Nome": "02-Quadra G- Lote 16",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_G_17",
-    "Nome": "02-Quadra G- Lote 17",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_G_18",
-    "Nome": "02-Quadra G- Lote 18",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_G_19",
-    "Nome": "02-Quadra G- Lote 19",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_G_20",
-    "Nome": "02-Quadra G- Lote 20",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_G_21",
-    "Nome": "02-Quadra G- Lote 21",
-    "Area": 300,
-    "Valor": 155490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_G_22",
-    "Nome": "02-Quadra G- Lote 22",
-    "Area": 300,
-    "Valor": 155490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_G_23",
-    "Nome": "02-Quadra G- Lote 23",
-    "Area": 300,
-    "Valor": 155490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_G_24",
-    "Nome": "02-Quadra G- Lote 24",
-    "Area": 300,
-    "Valor": 154990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_G_25",
-    "Nome": "02-Quadra G- Lote 25",
-    "Area": 300,
-    "Valor": 154990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_G_26",
-    "Nome": "02-Quadra G- Lote 26",
-    "Area": 380.75,
-    "Valor": 209990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_H_14",
-    "Nome": "02-Quadra H- Lote 14",
-    "Area": 375,
-    "Valor": 170490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_H_15",
-    "Nome": "02-Quadra H- Lote 15",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_H_16",
-    "Nome": "02-Quadra H- Lote 16",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_H_17",
-    "Nome": "02-Quadra H- Lote 17",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_H_18",
-    "Nome": "02-Quadra H- Lote 18",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_H_19",
-    "Nome": "02-Quadra H- Lote 19",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_H_20",
-    "Nome": "02-Quadra H- Lote 20",
-    "Area": 300,
-    "Valor": 152490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_H_21",
-    "Nome": "02-Quadra H- Lote 21",
-    "Area": 300,
-    "Valor": 155490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_H_22",
-    "Nome": "02-Quadra H- Lote 22",
-    "Area": 300,
-    "Valor": 155490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_H_23",
-    "Nome": "02-Quadra H- Lote 23",
-    "Area": 300,
-    "Valor": 155490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_H_24",
-    "Nome": "02-Quadra H- Lote 24",
-    "Area": 300,
-    "Valor": 154990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_H_25",
-    "Nome": "02-Quadra H- Lote 25",
-    "Area": 300,
-    "Valor": 154990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_H_26",
-    "Nome": "02-Quadra H- Lote 26",
-    "Area": 380.75,
-    "Valor": 209990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_I_01",
-    "Nome": "02-Quadra I- Lote 01",
-    "Area": 316,
-    "Valor": 157500,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_I_02",
-    "Nome": "02-Quadra I- Lote 02",
-    "Area": 301.47,
-    "Valor": 149990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_I_03",
-    "Nome": "02-Quadra I- Lote 03",
-    "Area": 322.68,
-    "Valor": 156990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_I_04",
-    "Nome": "02-Quadra I- Lote 04",
-    "Area": 322.68,
-    "Valor": 156990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_I_05",
-    "Nome": "02-Quadra I- Lote 05",
-    "Area": 322.68,
-    "Valor": 156990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_I_06",
-    "Nome": "02-Quadra I- Lote 06",
-    "Area": 322.68,
-    "Valor": 156990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_I_07",
-    "Nome": "02-Quadra I- Lote 07",
-    "Area": 322.68,
-    "Valor": 157490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_I_08",
-    "Nome": "02-Quadra I- Lote 08",
-    "Area": 322.68,
-    "Valor": 157490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_I_09",
-    "Nome": "02-Quadra I- Lote 09",
-    "Area": 322.68,
-    "Valor": 157490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_I_10",
-    "Nome": "02-Quadra I- Lote 10",
-    "Area": 322.68,
-    "Valor": 157490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_I_11",
-    "Nome": "02-Quadra I- Lote 11",
-    "Area": 322.68,
-    "Valor": 156990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_I_12",
-    "Nome": "02-Quadra I- Lote 12",
-    "Area": 437.09,
-    "Valor": 193990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_I_13",
-    "Nome": "02-Quadra I- Lote 13",
-    "Area": 467,
-    "Valor": 195990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_I_14",
-    "Nome": "02-Quadra I- Lote 14",
-    "Area": 300,
-    "Valor": 149990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_I_15",
-    "Nome": "02-Quadra I- Lote 15",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_I_16",
-    "Nome": "02-Quadra I- Lote 16",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_I_17",
-    "Nome": "02-Quadra I- Lote 17",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_I_18",
-    "Nome": "02-Quadra I- Lote 18",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_I_19",
-    "Nome": "02-Quadra I- Lote 19",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_I_20",
-    "Nome": "02-Quadra I- Lote 20",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_I_21",
-    "Nome": "02-Quadra I- Lote 21",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_I_22",
-    "Nome": "02-Quadra I- Lote 22",
-    "Area": 300,
-    "Valor": 149990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_I_23",
-    "Nome": "02-Quadra I- Lote 23",
-    "Area": 397.73,
-    "Valor": 179990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_I_24",
-    "Nome": "02-Quadra I- Lote 24",
-    "Area": 333.33,
-    "Valor": 159990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_J_01",
-    "Nome": "02-Quadra J- Lote 01",
-    "Area": 404.25,
-    "Valor": 169990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_J_02",
-    "Nome": "02-Quadra J- Lote 02",
-    "Area": 300,
-    "Valor": 139000,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_J_03",
-    "Nome": "02-Quadra J- Lote 03",
-    "Area": 300,
-    "Valor": 139000,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_J_04",
-    "Nome": "02-Quadra J- Lote 04",
-    "Area": 300,
-    "Valor": 139000,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_J_05",
-    "Nome": "02-Quadra J- Lote 05",
-    "Area": 300,
-    "Valor": 139000,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_J_06",
-    "Nome": "02-Quadra J- Lote 06",
-    "Area": 300,
-    "Valor": 139000,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_J_07",
-    "Nome": "02-Quadra J- Lote 07",
-    "Area": 300,
-    "Valor": 139000,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_J_08",
-    "Nome": "02-Quadra J- Lote 08",
-    "Area": 300,
-    "Valor": 139000,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_J_09",
-    "Nome": "02-Quadra J- Lote 09",
-    "Area": 300,
-    "Valor": 139000,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_J_10",
-    "Nome": "02-Quadra J- Lote 10",
-    "Area": 300,
-    "Valor": 139990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_J_11",
-    "Nome": "02-Quadra J- Lote 11",
-    "Area": 300,
-    "Valor": 139990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_J_12",
-    "Nome": "02-Quadra J- Lote 12",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_J_13",
-    "Nome": "02-Quadra J- Lote 13",
-    "Area": 485.5,
-    "Valor": 186990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_K_01",
-    "Nome": "02-Quadra K- Lote 01",
-    "Area": 404.25,
-    "Valor": 162990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_K_02",
-    "Nome": "02-Quadra K- Lote 02",
-    "Area": 300,
-    "Valor": 139000,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_K_03",
-    "Nome": "02-Quadra K- Lote 03",
-    "Area": 300,
-    "Valor": 139000,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_K_04",
-    "Nome": "02-Quadra K- Lote 04",
-    "Area": 300,
-    "Valor": 139000,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_K_05",
-    "Nome": "02-Quadra K- Lote 05",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_K_06",
-    "Nome": "02-Quadra K- Lote 06",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_K_07",
-    "Nome": "02-Quadra K- Lote 07",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_K_08",
-    "Nome": "02-Quadra K- Lote 08",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_K_09",
-    "Nome": "02-Quadra K- Lote 09",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_K_10",
-    "Nome": "02-Quadra K- Lote 10",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_K_11",
-    "Nome": "02-Quadra K- Lote 11",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_K_12",
-    "Nome": "02-Quadra K- Lote 12",
-    "Area": 432.31,
-    "Valor": 169990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_K_13",
-    "Nome": "02-Quadra K- Lote 13",
-    "Area": 406.88,
-    "Valor": 164990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_K_14",
-    "Nome": "02-Quadra K- Lote 14",
-    "Area": 432.31,
-    "Valor": 169990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_K_15",
-    "Nome": "02-Quadra K- Lote 15",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_K_16",
-    "Nome": "02-Quadra K- Lote 16",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_K_17",
-    "Nome": "02-Quadra K- Lote 17",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_K_18",
-    "Nome": "02-Quadra K- Lote 18",
-    "Area": 300,
-    "Valor": 139990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_K_19",
-    "Nome": "02-Quadra K- Lote 19",
-    "Area": 300,
-    "Valor": 139990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_K_20",
-    "Nome": "02-Quadra K- Lote 20",
-    "Area": 300,
-    "Valor": 139990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_K_21",
-    "Nome": "02-Quadra K- Lote 21",
-    "Area": 300,
-    "Valor": 139990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_K_22",
-    "Nome": "02-Quadra K- Lote 22",
-    "Area": 300,
-    "Valor": 139000,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_K_23",
-    "Nome": "02-Quadra K- Lote 23",
-    "Area": 300,
-    "Valor": 139000,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_K_24",
-    "Nome": "02-Quadra K- Lote 24",
-    "Area": 300,
-    "Valor": 139000,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_K_25",
-    "Nome": "02-Quadra K- Lote 25",
-    "Area": 462.64,
-    "Valor": 179990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_L_01",
-    "Nome": "02-Quadra L- Lote 01",
-    "Area": 404.25,
-    "Valor": 162990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_L_02",
-    "Nome": "02-Quadra L- Lote 02",
-    "Area": 300,
-    "Valor": 139000,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_L_03",
-    "Nome": "02-Quadra L- Lote 03",
-    "Area": 300,
-    "Valor": 139000,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_L_04",
-    "Nome": "02-Quadra L- Lote 04",
-    "Area": 300,
-    "Valor": 139000,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_L_05",
-    "Nome": "02-Quadra L- Lote 05",
-    "Area": 300,
-    "Valor": 139000,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_L_06",
-    "Nome": "02-Quadra L- Lote 06",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_L_07",
-    "Nome": "02-Quadra L- Lote 07",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_L_08",
-    "Nome": "02-Quadra L- Lote 08",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_L_09",
-    "Nome": "02-Quadra L- Lote 09",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_L_10",
-    "Nome": "02-Quadra L- Lote 10",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_L_11",
-    "Nome": "02-Quadra L- Lote 11",
-    "Area": 340.37,
-    "Valor": 150400,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_L_12",
-    "Nome": "02-Quadra L- Lote 12",
-    "Area": 346.75,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_L_13",
-    "Nome": "02-Quadra L- Lote 13",
-    "Area": 412.2,
-    "Valor": 164990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_L_14",
-    "Nome": "02-Quadra L- Lote 14",
-    "Area": 308,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_L_15",
-    "Nome": "02-Quadra L- Lote 15",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_L_16",
-    "Nome": "02-Quadra L- Lote 16",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_L_17",
-    "Nome": "02-Quadra L- Lote 17",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_L_18",
-    "Nome": "02-Quadra L- Lote 18",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_L_19",
-    "Nome": "02-Quadra L- Lote 19",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_L_20",
-    "Nome": "02-Quadra L- Lote 20",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_L_21",
-    "Nome": "02-Quadra L- Lote 21",
-    "Area": 300,
-    "Valor": 139000,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_L_22",
-    "Nome": "02-Quadra L- Lote 22",
-    "Area": 300,
-    "Valor": 139000,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_L_23",
-    "Nome": "02-Quadra L- Lote 23",
-    "Area": 300,
-    "Valor": 139000,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_L_24",
-    "Nome": "02-Quadra L- Lote 24",
-    "Area": 462.64,
-    "Valor": 180490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_M_03",
-    "Nome": "02-Quadra M- Lote 03",
-    "Area": 319.68,
-    "Valor": 157490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_M_04",
-    "Nome": "02-Quadra M- Lote 04",
-    "Area": 319.68,
-    "Valor": 157490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_M_05",
-    "Nome": "02-Quadra M- Lote 05",
-    "Area": 319.68,
-    "Valor": 157490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_M_06",
-    "Nome": "02-Quadra M- Lote 06",
-    "Area": 319.68,
-    "Valor": 157490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_M_07",
-    "Nome": "02-Quadra M- Lote 07",
-    "Area": 319.68,
-    "Valor": 157490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_M_08",
-    "Nome": "02-Quadra M- Lote 08",
-    "Area": 319.68,
-    "Valor": 157490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_M_09",
-    "Nome": "02-Quadra M- Lote 09",
-    "Area": 319.68,
-    "Valor": 157490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_M_10",
-    "Nome": "02-Quadra M- Lote 10",
-    "Area": 319.68,
-    "Valor": 157490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_M_11",
-    "Nome": "02-Quadra M- Lote 11",
-    "Area": 319.68,
-    "Valor": 157490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_M_12",
-    "Nome": "02-Quadra M- Lote 12",
-    "Area": 319.68,
-    "Valor": 157490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_M_13",
-    "Nome": "02-Quadra M- Lote 13",
-    "Area": 301.17,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_M_14",
-    "Nome": "02-Quadra M- Lote 14",
-    "Area": 414.91,
-    "Valor": 186990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_M_15",
-    "Nome": "02-Quadra M- Lote 15",
-    "Area": 324.6,
-    "Valor": 157490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_M_16",
-    "Nome": "02-Quadra M- Lote 16",
-    "Area": 386.81,
-    "Valor": 180490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_M_17",
-    "Nome": "02-Quadra M- Lote 17",
-    "Area": 302.88,
-    "Valor": 149990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_M_18",
-    "Nome": "02-Quadra M- Lote 18",
-    "Area": 302.88,
-    "Valor": 149990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_M_19",
-    "Nome": "02-Quadra M- Lote 19",
-    "Area": 302.88,
-    "Valor": 149990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_M_20",
-    "Nome": "02-Quadra M- Lote 20",
-    "Area": 302.88,
-    "Valor": 149990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_M_21",
-    "Nome": "02-Quadra M- Lote 21",
-    "Area": 302.88,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_M_22",
-    "Nome": "02-Quadra M- Lote 22",
-    "Area": 302.88,
-    "Valor": 149990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_M_23",
-    "Nome": "02-Quadra M- Lote 23",
-    "Area": 302.88,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_M_24",
-    "Nome": "02-Quadra M- Lote 24",
-    "Area": 302.88,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_M_25",
-    "Nome": "02-Quadra M- Lote 25",
-    "Area": 302.88,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_M_26",
-    "Nome": "02-Quadra M- Lote 26",
-    "Area": 302.88,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_M_27",
-    "Nome": "02-Quadra M- Lote 27",
-    "Area": 303.6,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_M_28",
-    "Nome": "02-Quadra M- Lote 28",
-    "Area": 381.52,
-    "Valor": 177490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_N_01",
-    "Nome": "02-Quadra N- Lote 01",
-    "Area": 375,
-    "Valor": 174490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_N_02",
-    "Nome": "02-Quadra N- Lote 02",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_N_03",
-    "Nome": "02-Quadra N- Lote 03",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_N_04",
-    "Nome": "02-Quadra N- Lote 04",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_N_05",
-    "Nome": "02-Quadra N- Lote 05",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_N_06",
-    "Nome": "02-Quadra N- Lote 06",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_N_07",
-    "Nome": "02-Quadra N- Lote 07",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_N_08",
-    "Nome": "02-Quadra N- Lote 08",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_N_09",
-    "Nome": "02-Quadra N- Lote 09",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_N_10",
-    "Nome": "02-Quadra N- Lote 10",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_N_11",
-    "Nome": "02-Quadra N- Lote 11",
-    "Area": 300,
-    "Valor": 149990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_N_12",
-    "Nome": "02-Quadra N- Lote 12",
-    "Area": 300,
-    "Valor": 149990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_N_13",
-    "Nome": "02-Quadra N- Lote 13",
-    "Area": 336.92,
-    "Valor": 160490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_N_14",
-    "Nome": "02-Quadra N- Lote 14",
-    "Area": 388.96,
-    "Valor": 180490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_N_15",
-    "Nome": "02-Quadra N- Lote 15",
-    "Area": 346.14,
-    "Valor": 165490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_N_16",
-    "Nome": "02-Quadra N- Lote 16",
-    "Area": 300,
-    "Valor": 149990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_N_17",
-    "Nome": "02-Quadra N- Lote 17",
-    "Area": 300,
-    "Valor": 149990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_N_18_19",
-    "Nome": "02-Quadra N- Lote 18_19",
-    "Area": 600,
-    "Valor": 233930,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_N_20_21",
-    "Nome": "02-Quadra N- Lote 20_21",
-    "Area": 600,
-    "Valor": 233930,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_N_22",
-    "Nome": "02-Quadra N- Lote 22",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_N_23",
-    "Nome": "02-Quadra N- Lote 23",
-    "Area": 300,
-    "Valor": 149990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_N_24",
-    "Nome": "02-Quadra N- Lote 24",
-    "Area": 300,
-    "Valor": 149990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_N_25",
-    "Nome": "02-Quadra N- Lote 25",
-    "Area": 300,
-    "Valor": 149990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_N_26",
-    "Nome": "02-Quadra N- Lote 26",
-    "Area": 300,
-    "Valor": 149990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_N_27",
-    "Nome": "02-Quadra N- Lote 27",
-    "Area": 375,
-    "Valor": 173990,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_O_01",
-    "Nome": "02-Quadra O- Lote 01",
-    "Area": 375,
-    "Valor": 155490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_O_02",
-    "Nome": "02-Quadra O- Lote 02",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_O_03",
-    "Nome": "02-Quadra O- Lote 03",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_O_04",
-    "Nome": "02-Quadra O- Lote 04",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_O_05",
-    "Nome": "02-Quadra O- Lote 05",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_O_06",
-    "Nome": "02-Quadra O- Lote 06",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_O_07",
-    "Nome": "02-Quadra O- Lote 07",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_O_08",
-    "Nome": "02-Quadra O- Lote 08",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_O_09",
-    "Nome": "02-Quadra O- Lote 09",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_O_10",
-    "Nome": "02-Quadra O- Lote 10",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_O_11",
-    "Nome": "02-Quadra O- Lote 11",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_O_12",
-    "Nome": "02-Quadra O- Lote 12",
-    "Area": 387.33,
-    "Valor": 160490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_O_13",
-    "Nome": "02-Quadra O- Lote 13",
-    "Area": 325.01,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_O_14",
-    "Nome": "02-Quadra O- Lote 14",
-    "Area": 350.06,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_O_15",
-    "Nome": "02-Quadra O- Lote 15",
-    "Area": 310.5,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_O_16",
-    "Nome": "02-Quadra O- Lote 16",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_O_17",
-    "Nome": "02-Quadra O- Lote 17",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_O_18",
-    "Nome": "02-Quadra O- Lote 18",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_O_19",
-    "Nome": "02-Quadra O- Lote 19",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_O_20",
-    "Nome": "02-Quadra O- Lote 20",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_O_21",
-    "Nome": "02-Quadra O- Lote 21",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_O_22",
-    "Nome": "02-Quadra O- Lote 22",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_O_23",
-    "Nome": "02-Quadra O- Lote 23",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_O_24",
-    "Nome": "02-Quadra O- Lote 24",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_O_25",
-    "Nome": "02-Quadra O- Lote 25",
-    "Area": 300,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_O_26",
-    "Nome": "02-Quadra O- Lote 26",
-    "Area": 375,
-    "Valor": 155490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_P_01",
-    "Nome": "02-Quadra P- Lote 01",
-    "Area": 0,
-    "Valor": 0,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_P_02",
-    "Nome": "02-Quadra P- Lote 02",
-    "Area": 0,
-    "Valor": 0,
-    "Vendido": "TRUE"
-  },
-  {
-    "ID": "_2_P_03",
-    "Nome": "02-Quadra P- Lote 03",
-    "Area": 9329.62,
-    "Valor": 934490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_P_04",
-    "Nome": "02-Quadra P- Lote 04",
-    "Area": 391.68,
-    "Valor": 165490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_P_05",
-    "Nome": "02-Quadra P- Lote 05",
-    "Area": 416.16,
-    "Valor": 167490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_P_06",
-    "Nome": "02-Quadra P- Lote 06",
-    "Area": 330,
-    "Valor": 147490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_P_07",
-    "Nome": "02-Quadra P- Lote 07",
-    "Area": 330,
-    "Valor": 147490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_P_08",
-    "Nome": "02-Quadra P- Lote 08",
-    "Area": 308.18,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_P_09",
-    "Nome": "02-Quadra P- Lote 09",
-    "Area": 302.1,
-    "Valor": 140490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_Q_12",
-    "Nome": "02-Quadra Q- Lote 12",
-    "Area": 385.87,
-    "Valor": 180490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_Q_13",
-    "Nome": "02-Quadra Q- Lote 13",
-    "Area": 310.32,
-    "Valor": 152990,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_Q_14",
-    "Nome": "02-Quadra Q- Lote 14",
-    "Area": 311.76,
-    "Valor": 152990,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_Q_15",
-    "Nome": "02-Quadra Q- Lote 15",
-    "Area": 313.2,
-    "Valor": 152990,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_Q_16",
-    "Nome": "02-Quadra Q- Lote 16",
-    "Area": 314.64,
-    "Valor": 152990,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_Q_17",
-    "Nome": "02-Quadra Q- Lote 17",
-    "Area": 440.47,
-    "Valor": 195490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_R_01",
-    "Nome": "02-Quadra R- Lote 01",
-    "Area": 329.82,
-    "Valor": 155490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_R_02",
-    "Nome": "02-Quadra R- Lote 02",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_R_03",
-    "Nome": "02-Quadra R- Lote 03",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_R_04",
-    "Nome": "02-Quadra R- Lote 04",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_R_05",
-    "Nome": "02-Quadra R- Lote 05",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_R_06",
-    "Nome": "02-Quadra R- Lote 06",
-    "Area": 464.5,
-    "Valor": 190490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_R_07",
-    "Nome": "02-Quadra R- Lote 07",
-    "Area": 464.5,
-    "Valor": 190490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_R_08",
-    "Nome": "02-Quadra R- Lote 08",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_R_09",
-    "Nome": "02-Quadra R- Lote 09",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_R_10",
-    "Nome": "02-Quadra R- Lote 10",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_R_11",
-    "Nome": "02-Quadra R- Lote 11",
-    "Area": 300,
-    "Valor": 150490,
-    "Vendido": "FALSE"
-  },
-  {
-    "ID": "_2_R_12",
-    "Nome": "02-Quadra R- Lote 12",
-    "Area": 389.46,
-    "Valor": 188490,
-    "Vendido": "FALSE"
-  }
+ {
+  "ID": "_1_A_01",
+  "Nome": "01-Quadra A- Lote 01",
+  "Area": 458.88,
+  "Valor": 333989,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_A_02",
+  "Nome": "01-Quadra A- Lote 02",
+  "Area": 300,
+  "Valor": 250389,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_A_03",
+  "Nome": "01-Quadra A- Lote 03",
+  "Area": 331.52,
+  "Valor": 275689,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_A_04",
+  "Nome": "01-Quadra A- Lote 04",
+  "Area": 518.7,
+  "Valor": 365289,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_A_05",
+  "Nome": "01-Quadra A- Lote 05",
+  "Area": 469.26,
+  "Valor": 334489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_A_06",
+  "Nome": "01-Quadra A- Lote 06",
+  "Area": 419.94,
+  "Valor": 321289,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_A_07",
+  "Nome": "01-Quadra A- Lote 07",
+  "Area": 370.62,
+  "Valor": 306989,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_A_08",
+  "Nome": "01-Quadra A- Lote 08",
+  "Area": 465.27,
+  "Valor": 334489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_A_09",
+  "Nome": "01-Quadra A- Lote 09",
+  "Area": 415.93,
+  "Valor": 321289,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_A_10",
+  "Nome": "01-Quadra A- Lote 10",
+  "Area": 366.59,
+  "Valor": 306989,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_A_11",
+  "Nome": "01-Quadra A- Lote 11",
+  "Area": 342.25,
+  "Valor": 284989,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_A_12",
+  "Nome": "01-Quadra A- Lote 12",
+  "Area": 328.32,
+  "Valor": 185989,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_A_13",
+  "Nome": "01-Quadra A- Lote 13",
+  "Area": 324,
+  "Valor": 183789,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_A_14",
+  "Nome": "01-Quadra A- Lote 14",
+  "Area": 324,
+  "Valor": 183789,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_A_15",
+  "Nome": "01-Quadra A- Lote 15",
+  "Area": 324,
+  "Valor": 183789,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_A_16",
+  "Nome": "01-Quadra A- Lote 16",
+  "Area": 468,
+  "Valor": 224489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_A_17",
+  "Nome": "01-Quadra A- Lote 17",
+  "Area": 468,
+  "Valor": 224489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_A_18",
+  "Nome": "01-Quadra A- Lote 18",
+  "Area": 468,
+  "Valor": 224489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_A_19",
+  "Nome": "01-Quadra A- Lote 19",
+  "Area": 468,
+  "Valor": 224489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_A_20",
+  "Nome": "01-Quadra A- Lote 20",
+  "Area": 324,
+  "Valor": 183789,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_A_21",
+  "Nome": "01-Quadra A- Lote 21",
+  "Area": 405,
+  "Valor": 224489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_A_22",
+  "Nome": "01-Quadra A- Lote 22",
+  "Area": 324,
+  "Valor": 204689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_A_23",
+  "Nome": "01-Quadra A- Lote 23",
+  "Area": 468,
+  "Valor": 290489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_A_24",
+  "Nome": "01-Quadra A- Lote 24",
+  "Area": 468,
+  "Valor": 290489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_A_25",
+  "Nome": "01-Quadra A- Lote 25",
+  "Area": 468,
+  "Valor": 290489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_B_01",
+  "Nome": "01-Quadra B- Lote 01",
+  "Area": 582.5,
+  "Valor": 268489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_B_02",
+  "Nome": "01-Quadra B- Lote 02",
+  "Area": 302.13,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_B_03",
+  "Nome": "01-Quadra B- Lote 03",
+  "Area": 301.74,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_B_04",
+  "Nome": "01-Quadra B- Lote 04",
+  "Area": 301.35,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_B_05",
+  "Nome": "01-Quadra B- Lote 05",
+  "Area": 300.72,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_B_06",
+  "Nome": "01-Quadra B- Lote 06",
+  "Area": 0,
+  "Valor": 0,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_B_07",
+  "Nome": "01-Quadra B- Lote 07",
+  "Area": 300.18,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_B_08",
+  "Nome": "01-Quadra B- Lote 08",
+  "Area": 300.11,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_B_09",
+  "Nome": "01-Quadra B- Lote 09",
+  "Area": 300.33,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_B_10",
+  "Nome": "01-Quadra B- Lote 10",
+  "Area": 300.54,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_B_11",
+  "Nome": "01-Quadra B- Lote 11",
+  "Area": 300.84,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_B_12",
+  "Nome": "01-Quadra B- Lote 12",
+  "Area": 300.96,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_B_13",
+  "Nome": "01-Quadra B- Lote 13",
+  "Area": 301.17,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_B_14",
+  "Nome": "01-Quadra B- Lote 14",
+  "Area": 301.39,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_B_15",
+  "Nome": "01-Quadra B- Lote 15",
+  "Area": 301.6,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_B_16",
+  "Nome": "01-Quadra B- Lote 16",
+  "Area": 301.81,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_B_17",
+  "Nome": "01-Quadra B- Lote 17",
+  "Area": 377.56,
+  "Valor": 224489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_C_01",
+  "Nome": "01-Quadra C- Lote 01",
+  "Area": 472.78,
+  "Valor": 290489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_C_02",
+  "Nome": "01-Quadra C- Lote 02",
+  "Area": 302.87,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_C_03",
+  "Nome": "01-Quadra C- Lote 03",
+  "Area": 303.08,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_C_04",
+  "Nome": "01-Quadra C- Lote 04",
+  "Area": 303.29,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_C_05",
+  "Nome": "01-Quadra C- Lote 05",
+  "Area": 303.51,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_C_06",
+  "Nome": "01-Quadra C- Lote 06",
+  "Area": 303.72,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_C_07",
+  "Nome": "01-Quadra C- Lote 07",
+  "Area": 303.93,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_C_08",
+  "Nome": "01-Quadra C- Lote 08",
+  "Area": 304.14,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_C_09",
+  "Nome": "01-Quadra C- Lote 09",
+  "Area": 304.36,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_C_10",
+  "Nome": "01-Quadra C- Lote 10",
+  "Area": 304.57,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_C_11",
+  "Nome": "01-Quadra C- Lote 11",
+  "Area": 304.78,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_C_12",
+  "Nome": "01-Quadra C- Lote 12",
+  "Area": 304.99,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_C_13",
+  "Nome": "01-Quadra C- Lote 13",
+  "Area": 305.26,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_C_14",
+  "Nome": "01-Quadra C- Lote 14",
+  "Area": 381.75,
+  "Valor": 223989,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_D_14",
+  "Nome": "01-Quadra D- Lote 14",
+  "Area": 490.91,
+  "Valor": 306489,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_E_01",
+  "Nome": "01-Quadra E- Lote 01",
+  "Area": 380.75,
+  "Valor": 234989,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_E_02",
+  "Nome": "01-Quadra E- Lote 02",
+  "Area": 300,
+  "Valor": 174489,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_E_03",
+  "Nome": "01-Quadra E- Lote 03",
+  "Area": 300,
+  "Valor": 174989,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_E_04",
+  "Nome": "01-Quadra E- Lote 04",
+  "Area": 300,
+  "Valor": 174989,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_E_05",
+  "Nome": "01-Quadra E- Lote 05",
+  "Area": 300,
+  "Valor": 174989,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_E_06",
+  "Nome": "01-Quadra E- Lote 06",
+  "Area": 300,
+  "Valor": 174989,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_E_07",
+  "Nome": "01-Quadra E- Lote 07",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_E_08",
+  "Nome": "01-Quadra E- Lote 08",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_E_09",
+  "Nome": "01-Quadra E- Lote 09",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_E_10",
+  "Nome": "01-Quadra E- Lote 10",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_E_11",
+  "Nome": "01-Quadra E- Lote 11",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_E_12",
+  "Nome": "01-Quadra E- Lote 12",
+  "Area": 300,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_E_13",
+  "Nome": "01-Quadra E- Lote 13",
+  "Area": 300,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_E_14",
+  "Nome": "01-Quadra E- Lote 14",
+  "Area": 437.12,
+  "Valor": 213489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_E_15",
+  "Nome": "01-Quadra E- Lote 15",
+  "Area": 506.75,
+  "Valor": 234989,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_E_16",
+  "Nome": "01-Quadra E- Lote 16",
+  "Area": 300,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_E_17",
+  "Nome": "01-Quadra E- Lote 17",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_E_18",
+  "Nome": "01-Quadra E- Lote 18",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_E_19",
+  "Nome": "01-Quadra E- Lote 19",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_E_20",
+  "Nome": "01-Quadra E- Lote 20",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_E_21",
+  "Nome": "01-Quadra E- Lote 21",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_E_22",
+  "Nome": "01-Quadra E- Lote 22",
+  "Area": 300,
+  "Valor": 174989,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_E_23",
+  "Nome": "01-Quadra E- Lote 23",
+  "Area": 300,
+  "Valor": 174989,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_E_24",
+  "Nome": "01-Quadra E- Lote 24",
+  "Area": 300,
+  "Valor": 174989,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_E_25",
+  "Nome": "01-Quadra E- Lote 25",
+  "Area": 300,
+  "Valor": 174989,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_E_26",
+  "Nome": "01-Quadra E- Lote 26",
+  "Area": 300,
+  "Valor": 174489,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_E_27",
+  "Nome": "01-Quadra E- Lote 27",
+  "Area": 380.75,
+  "Valor": 234989,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_F_01",
+  "Nome": "01-Quadra F- Lote 01",
+  "Area": 380.75,
+  "Valor": 234989,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_F_02",
+  "Nome": "01-Quadra F- Lote 02",
+  "Area": 300,
+  "Valor": 174489,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_F_03",
+  "Nome": "01-Quadra F- Lote 03",
+  "Area": 300,
+  "Valor": 174489,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_F_04",
+  "Nome": "01-Quadra F- Lote 04",
+  "Area": 300,
+  "Valor": 174489,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_F_05",
+  "Nome": "01-Quadra F- Lote 05",
+  "Area": 300,
+  "Valor": 174489,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_F_06",
+  "Nome": "01-Quadra F- Lote 06",
+  "Area": 300,
+  "Valor": 174489,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_F_07",
+  "Nome": "01-Quadra F- Lote 07",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_F_08",
+  "Nome": "01-Quadra F- Lote 08",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_F_09",
+  "Nome": "01-Quadra F- Lote 09",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_F_10",
+  "Nome": "01-Quadra F- Lote 10",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_F_11",
+  "Nome": "01-Quadra F- Lote 11",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_F_12",
+  "Nome": "01-Quadra F- Lote 12",
+  "Area": 300,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_F_13",
+  "Nome": "01-Quadra F- Lote 13",
+  "Area": 375,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_F_14",
+  "Nome": "01-Quadra F- Lote 14",
+  "Area": 375,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_F_15",
+  "Nome": "01-Quadra F- Lote 15",
+  "Area": 300,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_F_16",
+  "Nome": "01-Quadra F- Lote 16",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_F_17",
+  "Nome": "01-Quadra F- Lote 17",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_F_18",
+  "Nome": "01-Quadra F- Lote 18",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_F_19",
+  "Nome": "01-Quadra F- Lote 19",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_F_20",
+  "Nome": "01-Quadra F- Lote 20",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_F_21",
+  "Nome": "01-Quadra F- Lote 21",
+  "Area": 300,
+  "Valor": 174489,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_F_22",
+  "Nome": "01-Quadra F- Lote 22",
+  "Area": 300,
+  "Valor": 174489,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_F_23",
+  "Nome": "01-Quadra F- Lote 23",
+  "Area": 300,
+  "Valor": 174489,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_F_24",
+  "Nome": "01-Quadra F- Lote 24",
+  "Area": 300,
+  "Valor": 174489,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_F_25",
+  "Nome": "01-Quadra F- Lote 25",
+  "Area": 300,
+  "Valor": 174489,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_F_26",
+  "Nome": "01-Quadra F- Lote 26",
+  "Area": 380.75,
+  "Valor": 234989,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_G_01",
+  "Nome": "01-Quadra G- Lote 01",
+  "Area": 380.75,
+  "Valor": 234989,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_G_02",
+  "Nome": "01-Quadra G- Lote 02",
+  "Area": 300,
+  "Valor": 174489,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_G_03",
+  "Nome": "01-Quadra G- Lote 03",
+  "Area": 300,
+  "Valor": 174489,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_G_04",
+  "Nome": "01-Quadra G- Lote 04",
+  "Area": 300,
+  "Valor": 174989,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_G_05",
+  "Nome": "01-Quadra G- Lote 05",
+  "Area": 300,
+  "Valor": 174989,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_G_06",
+  "Nome": "01-Quadra G- Lote 06",
+  "Area": 300,
+  "Valor": 174989,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_G_07",
+  "Nome": "01-Quadra G- Lote 07",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_G_08",
+  "Nome": "01-Quadra G- Lote 08",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_G_09",
+  "Nome": "01-Quadra G- Lote 09",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_G_10",
+  "Nome": "01-Quadra G- Lote 10",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_G_11",
+  "Nome": "01-Quadra G- Lote 11",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_G_12",
+  "Nome": "01-Quadra G- Lote 12",
+  "Area": 300,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_G_13",
+  "Nome": "01-Quadra G- Lote 13",
+  "Area": 375,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_G_14",
+  "Nome": "01-Quadra G- Lote 14",
+  "Area": 375,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_G_15",
+  "Nome": "01-Quadra G- Lote 15",
+  "Area": 300,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_G_16",
+  "Nome": "01-Quadra G- Lote 16",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_G_17",
+  "Nome": "01-Quadra G- Lote 17",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_G_18",
+  "Nome": "01-Quadra G- Lote 18",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_G_19",
+  "Nome": "01-Quadra G- Lote 19",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_G_20",
+  "Nome": "01-Quadra G- Lote 20",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_G_21",
+  "Nome": "01-Quadra G- Lote 21",
+  "Area": 300,
+  "Valor": 174989,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_G_22",
+  "Nome": "01-Quadra G- Lote 22",
+  "Area": 300,
+  "Valor": 174989,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_G_23",
+  "Nome": "01-Quadra G- Lote 23",
+  "Area": 300,
+  "Valor": 174989,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_G_24",
+  "Nome": "01-Quadra G- Lote 24",
+  "Area": 300,
+  "Valor": 174489,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_G_25",
+  "Nome": "01-Quadra G- Lote 25",
+  "Area": 300,
+  "Valor": 174489,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_G_26",
+  "Nome": "01-Quadra G- Lote 26",
+  "Area": 380.75,
+  "Valor": 234989,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_H_01",
+  "Nome": "01-Quadra H- Lote 01",
+  "Area": 380.75,
+  "Valor": 234989,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_H_02",
+  "Nome": "01-Quadra H- Lote 02",
+  "Area": 300,
+  "Valor": 174489,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_H_03",
+  "Nome": "01-Quadra H- Lote 03",
+  "Area": 300,
+  "Valor": 174489,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_H_04",
+  "Nome": "01-Quadra H- Lote 04",
+  "Area": 300,
+  "Valor": 159490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_H_05",
+  "Nome": "01-Quadra H- Lote 05",
+  "Area": 300,
+  "Valor": 159490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_H_06",
+  "Nome": "01-Quadra H- Lote 06",
+  "Area": 300,
+  "Valor": 159490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_H_07",
+  "Nome": "01-Quadra H- Lote 07",
+  "Area": 300,
+  "Valor": 155990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_H_08",
+  "Nome": "01-Quadra H- Lote 08",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_H_09",
+  "Nome": "01-Quadra H- Lote 09",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_H_10",
+  "Nome": "01-Quadra H- Lote 10",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_H_11",
+  "Nome": "01-Quadra H- Lote 11",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_H_12",
+  "Nome": "01-Quadra H- Lote 12",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_H_13",
+  "Nome": "01-Quadra H- Lote 13",
+  "Area": 375,
+  "Valor": 174490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_J_01",
+  "Nome": "01-Quadra J- Lote 01",
+  "Area": 411.5,
+  "Valor": 235489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_J_02",
+  "Nome": "01-Quadra J- Lote 02",
+  "Area": 300,
+  "Valor": 174989,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_J_03",
+  "Nome": "01-Quadra J- Lote 03",
+  "Area": 300,
+  "Valor": 174989,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_J_04",
+  "Nome": "01-Quadra J- Lote 04",
+  "Area": 300,
+  "Valor": 174989,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_J_05",
+  "Nome": "01-Quadra J- Lote 05",
+  "Area": 300,
+  "Valor": 174989,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_J_06",
+  "Nome": "01-Quadra J- Lote 06",
+  "Area": 300,
+  "Valor": 174989,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_J_07",
+  "Nome": "01-Quadra J- Lote 07",
+  "Area": 300,
+  "Valor": 174989,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_J_08",
+  "Nome": "01-Quadra J- Lote 08",
+  "Area": 300,
+  "Valor": 174989,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_J_09",
+  "Nome": "01-Quadra J- Lote 09",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_J_10",
+  "Nome": "01-Quadra J- Lote 10",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_J_11",
+  "Nome": "01-Quadra J- Lote 11",
+  "Area": 465.06,
+  "Valor": 256989,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_J_12",
+  "Nome": "01-Quadra J- Lote 12",
+  "Area": 431.32,
+  "Valor": 248189,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_J_13",
+  "Nome": "01-Quadra J- Lote 13",
+  "Area": 324,
+  "Valor": 183789,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_J_14",
+  "Nome": "01-Quadra J- Lote 14",
+  "Area": 324,
+  "Valor": 183789,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_J_15",
+  "Nome": "01-Quadra J- Lote 15",
+  "Area": 324,
+  "Valor": 183789,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_J_16",
+  "Nome": "01-Quadra J- Lote 16",
+  "Area": 324,
+  "Valor": 183789,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_J_17",
+  "Nome": "01-Quadra J- Lote 17",
+  "Area": 324,
+  "Valor": 180489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_J_18",
+  "Nome": "01-Quadra J- Lote 18",
+  "Area": 324,
+  "Valor": 180489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_J_19",
+  "Nome": "01-Quadra J- Lote 19",
+  "Area": 366.3,
+  "Valor": 195889,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_J_20",
+  "Nome": "01-Quadra J- Lote 20",
+  "Area": 425.66,
+  "Valor": 213489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_J_21",
+  "Nome": "01-Quadra J- Lote 21",
+  "Area": 300.48,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_J_22",
+  "Nome": "01-Quadra J- Lote 22",
+  "Area": 300.42,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_J_23",
+  "Nome": "01-Quadra J- Lote 23",
+  "Area": 300.36,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_J_24",
+  "Nome": "01-Quadra J- Lote 24",
+  "Area": 300.36,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_J_25",
+  "Nome": "01-Quadra J- Lote 25",
+  "Area": 300.36,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_J_26",
+  "Nome": "01-Quadra J- Lote 26",
+  "Area": 433.14,
+  "Valor": 213489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_K_01",
+  "Nome": "01-Quadra K- Lote 01",
+  "Area": 546.06,
+  "Valor": 201989,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_K_02",
+  "Nome": "01-Quadra K- Lote 02",
+  "Area": 307,
+  "Valor": 177189,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_K_03",
+  "Nome": "01-Quadra K- Lote 03",
+  "Area": 394.74,
+  "Valor": 202489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_K_04",
+  "Nome": "01-Quadra K- Lote 04",
+  "Area": 300,
+  "Valor": 174489,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_K_05",
+  "Nome": "01-Quadra K- Lote 05",
+  "Area": 300,
+  "Valor": 174489,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_K_06",
+  "Nome": "01-Quadra K- Lote 06",
+  "Area": 300,
+  "Valor": 174489,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_K_07",
+  "Nome": "01-Quadra K- Lote 07",
+  "Area": 300,
+  "Valor": 174489,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_K_08",
+  "Nome": "01-Quadra K- Lote 08",
+  "Area": 300,
+  "Valor": 174489,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_K_09",
+  "Nome": "01-Quadra K- Lote 09",
+  "Area": 300,
+  "Valor": 174489,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_K_10",
+  "Nome": "01-Quadra K- Lote 10",
+  "Area": 300,
+  "Valor": 174489,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_K_11",
+  "Nome": "01-Quadra K- Lote 11",
+  "Area": 300,
+  "Valor": 174489,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_K_12",
+  "Nome": "01-Quadra K- Lote 12",
+  "Area": 300,
+  "Valor": 174489,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_K_13",
+  "Nome": "01-Quadra K- Lote 13",
+  "Area": 300,
+  "Valor": 174989,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_K_14",
+  "Nome": "01-Quadra K- Lote 14",
+  "Area": 300,
+  "Valor": 174989,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_K_15",
+  "Nome": "01-Quadra K- Lote 15",
+  "Area": 300,
+  "Valor": 174989,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_K_16",
+  "Nome": "01-Quadra K- Lote 16",
+  "Area": 300,
+  "Valor": 174989,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_K_17",
+  "Nome": "01-Quadra K- Lote 17",
+  "Area": 375,
+  "Valor": 200289,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_K_18",
+  "Nome": "01-Quadra K- Lote 18",
+  "Area": 478.5,
+  "Valor": 289989,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_K_19",
+  "Nome": "01-Quadra K- Lote 19",
+  "Area": 382.8,
+  "Valor": 234989,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_K_20",
+  "Nome": "01-Quadra K- Lote 20",
+  "Area": 382.8,
+  "Valor": 234989,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_K_21",
+  "Nome": "01-Quadra K- Lote 21",
+  "Area": 382.8,
+  "Valor": 234989,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_K_22",
+  "Nome": "01-Quadra K- Lote 22",
+  "Area": 382.8,
+  "Valor": 224489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_K_23",
+  "Nome": "01-Quadra K- Lote 23",
+  "Area": 382.8,
+  "Valor": 224489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_K_24",
+  "Nome": "01-Quadra K- Lote 24",
+  "Area": 382.8,
+  "Valor": 224489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_K_25",
+  "Nome": "01-Quadra K- Lote 25",
+  "Area": 382.8,
+  "Valor": 224489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_K_26",
+  "Nome": "01-Quadra K- Lote 26",
+  "Area": 382.8,
+  "Valor": 223989,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_K_27",
+  "Nome": "01-Quadra K- Lote 27",
+  "Area": 382.8,
+  "Valor": 223989,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_K_28",
+  "Nome": "01-Quadra K- Lote 28",
+  "Area": 382.8,
+  "Valor": 223989,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_K_29",
+  "Nome": "01-Quadra K- Lote 29",
+  "Area": 382.8,
+  "Valor": 223989,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_K_30",
+  "Nome": "01-Quadra K- Lote 30",
+  "Area": 382.8,
+  "Valor": 223989,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_K_31",
+  "Nome": "01-Quadra K- Lote 31",
+  "Area": 382.8,
+  "Valor": 223989,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_L_01",
+  "Nome": "01-Quadra L- Lote 01",
+  "Area": 394.74,
+  "Valor": 202489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_L_02",
+  "Nome": "01-Quadra L- Lote 02",
+  "Area": 307.02,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_L_03",
+  "Nome": "01-Quadra L- Lote 03",
+  "Area": 375.59,
+  "Valor": 199189,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_L_04",
+  "Nome": "01-Quadra L- Lote 04",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_L_05",
+  "Nome": "01-Quadra L- Lote 05",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_L_06",
+  "Nome": "01-Quadra L- Lote 06",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_L_07",
+  "Nome": "01-Quadra L- Lote 07",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_L_08",
+  "Nome": "01-Quadra L- Lote 08",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_L_09",
+  "Nome": "01-Quadra L- Lote 09",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_L_10",
+  "Nome": "01-Quadra L- Lote 10",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_L_11",
+  "Nome": "01-Quadra L- Lote 11",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_L_12",
+  "Nome": "01-Quadra L- Lote 12",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_L_13",
+  "Nome": "01-Quadra L- Lote 13",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_L_14",
+  "Nome": "01-Quadra L- Lote 14",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_L_15",
+  "Nome": "01-Quadra L- Lote 15",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_L_16",
+  "Nome": "01-Quadra L- Lote 16",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_L_17",
+  "Nome": "01-Quadra L- Lote 17",
+  "Area": 375,
+  "Valor": 199189,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_L_18",
+  "Nome": "01-Quadra L- Lote 18",
+  "Area": 375,
+  "Valor": 199189,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_L_19",
+  "Nome": "01-Quadra L- Lote 19",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_L_20",
+  "Nome": "01-Quadra L- Lote 20",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_L_21",
+  "Nome": "01-Quadra L- Lote 21",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_L_22",
+  "Nome": "01-Quadra L- Lote 22",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_L_23",
+  "Nome": "01-Quadra L- Lote 23",
+  "Area": 300,
+  "Valor": 171189,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_L_24",
+  "Nome": "01-Quadra L- Lote 24",
+  "Area": 300,
+  "Valor": 171189,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_L_25",
+  "Nome": "01-Quadra L- Lote 25",
+  "Area": 300,
+  "Valor": 171189,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_L_26",
+  "Nome": "01-Quadra L- Lote 26",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_L_27",
+  "Nome": "01-Quadra L- Lote 27",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_L_28",
+  "Nome": "01-Quadra L- Lote 28",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_L_29",
+  "Nome": "01-Quadra L- Lote 29",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_L_30",
+  "Nome": "01-Quadra L- Lote 30",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_L_31",
+  "Nome": "01-Quadra L- Lote 31",
+  "Area": 300,
+  "Valor": 171689,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_M_01",
+  "Nome": "01-Quadra M- Lote 01",
+  "Area": 396.75,
+  "Valor": 202489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_M_02",
+  "Nome": "01-Quadra M- Lote 02",
+  "Area": 319.02,
+  "Valor": 177189,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_N_01",
+  "Nome": "01-Quadra N- Lote 01",
+  "Area": 533.55,
+  "Valor": 246489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_N_02",
+  "Nome": "01-Quadra N- Lote 02",
+  "Area": 621.55,
+  "Valor": 257489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_N_03",
+  "Nome": "01-Quadra N- Lote 03",
+  "Area": 300,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_N_04",
+  "Nome": "01-Quadra N- Lote 04",
+  "Area": 300,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_N_05",
+  "Nome": "01-Quadra N- Lote 05",
+  "Area": 300,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_N_06",
+  "Nome": "01-Quadra N- Lote 06",
+  "Area": 300,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_N_07",
+  "Nome": "01-Quadra N- Lote 07",
+  "Area": 300,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_N_08",
+  "Nome": "01-Quadra N- Lote 08",
+  "Area": 300,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_N_09",
+  "Nome": "01-Quadra N- Lote 09",
+  "Area": 300,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_N_10",
+  "Nome": "01-Quadra N- Lote 10",
+  "Area": 300,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_N_11",
+  "Nome": "01-Quadra N- Lote 11",
+  "Area": 300,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_N_12",
+  "Nome": "01-Quadra N- Lote 12",
+  "Area": 300,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_N_13",
+  "Nome": "01-Quadra N- Lote 13",
+  "Area": 300,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_N_14",
+  "Nome": "01-Quadra N- Lote 14",
+  "Area": 375,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_N_15",
+  "Nome": "01-Quadra N- Lote 15",
+  "Area": 375,
+  "Valor": 191489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_N_16",
+  "Nome": "01-Quadra N- Lote 16",
+  "Area": 300,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_N_17",
+  "Nome": "01-Quadra N- Lote 17",
+  "Area": 300,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_N_18",
+  "Nome": "01-Quadra N- Lote 18",
+  "Area": 300,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_N_19",
+  "Nome": "01-Quadra N- Lote 19",
+  "Area": 300,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_N_20",
+  "Nome": "01-Quadra N- Lote 20",
+  "Area": 300,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_N_21",
+  "Nome": "01-Quadra N- Lote 21",
+  "Area": 300,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_N_22",
+  "Nome": "01-Quadra N- Lote 22",
+  "Area": 300,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_N_23",
+  "Nome": "01-Quadra N- Lote 23",
+  "Area": 300,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_N_24",
+  "Nome": "01-Quadra N- Lote 24",
+  "Area": 300,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_N_25",
+  "Nome": "01-Quadra N- Lote 25",
+  "Area": 300,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_N_26",
+  "Nome": "01-Quadra N- Lote 26",
+  "Area": 300,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_N_27",
+  "Nome": "01-Quadra N- Lote 27",
+  "Area": 300,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_O_01",
+  "Nome": "01-Quadra O- Lote 01",
+  "Area": 503.25,
+  "Valor": 213489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_O_02",
+  "Nome": "01-Quadra O- Lote 02",
+  "Area": 300,
+  "Valor": 158489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_O_03",
+  "Nome": "01-Quadra O- Lote 03",
+  "Area": 300,
+  "Valor": 158489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_O_04",
+  "Nome": "01-Quadra O- Lote 04",
+  "Area": 300,
+  "Valor": 158489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_O_05",
+  "Nome": "01-Quadra O- Lote 05",
+  "Area": 300,
+  "Valor": 134490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_O_06",
+  "Nome": "01-Quadra O- Lote 06",
+  "Area": 300,
+  "Valor": 133990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_O_07",
+  "Nome": "01-Quadra O- Lote 07",
+  "Area": 300,
+  "Valor": 134490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_O_08",
+  "Nome": "01-Quadra O- Lote 08",
+  "Area": 300,
+  "Valor": 133990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_O_09",
+  "Nome": "01-Quadra O- Lote 09",
+  "Area": 300,
+  "Valor": 134490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_O_10",
+  "Nome": "01-Quadra O- Lote 10",
+  "Area": 300,
+  "Valor": 134490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_O_11",
+  "Nome": "01-Quadra O- Lote 11",
+  "Area": 300,
+  "Valor": 134490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_O_12",
+  "Nome": "01-Quadra O- Lote 12",
+  "Area": 536.25,
+  "Valor": 213489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_P_01",
+  "Nome": "01-Quadra P- Lote 01",
+  "Area": 439.53,
+  "Valor": 202489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_P_02",
+  "Nome": "01-Quadra P- Lote 02",
+  "Area": 357.54,
+  "Valor": 180489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_P_03",
+  "Nome": "01-Quadra P- Lote 03",
+  "Area": 419,
+  "Valor": 202489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_P_04",
+  "Nome": "01-Quadra P- Lote 04",
+  "Area": 300,
+  "Valor": 158489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_P_05",
+  "Nome": "01-Quadra P- Lote 05",
+  "Area": 300,
+  "Valor": 158489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_P_06",
+  "Nome": "01-Quadra P- Lote 06",
+  "Area": 300,
+  "Valor": 158489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_P_07",
+  "Nome": "01-Quadra P- Lote 07",
+  "Area": 300,
+  "Valor": 158489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_P_08",
+  "Nome": "01-Quadra P- Lote 08",
+  "Area": 300,
+  "Valor": 158489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_P_09",
+  "Nome": "01-Quadra P- Lote 09",
+  "Area": 429.3,
+  "Valor": 202489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_P_10",
+  "Nome": "01-Quadra P- Lote 10",
+  "Area": 343.09,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_P_11",
+  "Nome": "01-Quadra P- Lote 11",
+  "Area": 300,
+  "Valor": 158489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_P_12",
+  "Nome": "01-Quadra P- Lote 12",
+  "Area": 300,
+  "Valor": 158489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_P_13",
+  "Nome": "01-Quadra P- Lote 13",
+  "Area": 300,
+  "Valor": 158489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_P_14",
+  "Nome": "01-Quadra P- Lote 14",
+  "Area": 300,
+  "Valor": 158489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_P_15",
+  "Nome": "01-Quadra P- Lote 15",
+  "Area": 300,
+  "Valor": 158489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_P_16",
+  "Nome": "01-Quadra P- Lote 16",
+  "Area": 301.3,
+  "Valor": 158489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_Q_01",
+  "Nome": "01-Quadra Q- Lote 01",
+  "Area": 0,
+  "Valor": 0,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_1_Q_02",
+  "Nome": "01-Quadra Q- Lote 02",
+  "Area": 300.72,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_Q_03",
+  "Nome": "01-Quadra Q- Lote 03",
+  "Area": 302.16,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_Q_04",
+  "Nome": "01-Quadra Q- Lote 04",
+  "Area": 303.6,
+  "Valor": 169489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_Q_05",
+  "Nome": "01-Quadra Q- Lote 05",
+  "Area": 305.04,
+  "Valor": 172239,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_Q_06",
+  "Nome": "01-Quadra Q- Lote 06",
+  "Area": 306.48,
+  "Valor": 172239,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_Q_07",
+  "Nome": "01-Quadra Q- Lote 07",
+  "Area": 307.92,
+  "Valor": 172239,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_Q_08",
+  "Nome": "01-Quadra Q- Lote 08",
+  "Area": 309.36,
+  "Valor": 172239,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_Q_09",
+  "Nome": "01-Quadra Q- Lote 09",
+  "Area": 310.8,
+  "Valor": 172239,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_Q_10",
+  "Nome": "01-Quadra Q- Lote 10",
+  "Area": 312.24,
+  "Valor": 172239,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_Q_11",
+  "Nome": "01-Quadra Q- Lote 11",
+  "Area": 392.32,
+  "Valor": 202489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_R_01",
+  "Nome": "01-Quadra R- Lote 01",
+  "Area": 2157.65,
+  "Valor": 444489,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_1_R_02",
+  "Nome": "01-Quadra R- Lote 02",
+  "Area": 2066.18,
+  "Valor": 443389,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_A_01",
+  "Nome": "02-Quadra A- Lote 01",
+  "Area": 575.62,
+  "Valor": 183990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_A_02",
+  "Nome": "02-Quadra A- Lote 02",
+  "Area": 300,
+  "Valor": 158990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_A_03",
+  "Nome": "02-Quadra A- Lote 03",
+  "Area": 300,
+  "Valor": 158990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_A_04",
+  "Nome": "02-Quadra A- Lote 04",
+  "Area": 300,
+  "Valor": 158990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_A_05",
+  "Nome": "02-Quadra A- Lote 05",
+  "Area": 300,
+  "Valor": 158990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_A_06",
+  "Nome": "02-Quadra A- Lote 06",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_A_07",
+  "Nome": "02-Quadra A- Lote 07",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_A_08",
+  "Nome": "02-Quadra A- Lote 08",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_A_09",
+  "Nome": "02-Quadra A- Lote 09",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_A_10",
+  "Nome": "02-Quadra A- Lote 10",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_A_11",
+  "Nome": "02-Quadra A- Lote 11",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_A_12",
+  "Nome": "02-Quadra A- Lote 12",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_A_13",
+  "Nome": "02-Quadra A- Lote 13",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_A_14",
+  "Nome": "02-Quadra A- Lote 14",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_A_15",
+  "Nome": "02-Quadra A- Lote 15",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_A_16",
+  "Nome": "02-Quadra A- Lote 16",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_A_17",
+  "Nome": "02-Quadra A- Lote 17",
+  "Area": 509.5,
+  "Valor": 216990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_B_01",
+  "Nome": "02-Quadra B- Lote 01",
+  "Area": 0,
+  "Valor": 4000,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_B_02",
+  "Nome": "02-Quadra B- Lote 02",
+  "Area": 324,
+  "Valor": 164490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_B_03",
+  "Nome": "02-Quadra B- Lote 03",
+  "Area": 324,
+  "Valor": 164490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_B_04",
+  "Nome": "02-Quadra B- Lote 04",
+  "Area": 324,
+  "Valor": 164490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_B_05",
+  "Nome": "02-Quadra B- Lote 05",
+  "Area": 324,
+  "Valor": 164490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_B_06",
+  "Nome": "02-Quadra B- Lote 06",
+  "Area": 467.79,
+  "Valor": 263990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_B_07",
+  "Nome": "02-Quadra B- Lote 07",
+  "Area": 591.96,
+  "Valor": 183990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_B_08",
+  "Nome": "02-Quadra B- Lote 08",
+  "Area": 472.68,
+  "Valor": 263990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_B_09",
+  "Nome": "02-Quadra B- Lote 09",
+  "Area": 412.88,
+  "Valor": 233990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_B_10",
+  "Nome": "02-Quadra B- Lote 10",
+  "Area": 0,
+  "Valor": 4000,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_C_01",
+  "Nome": "02-Quadra C- Lote 01",
+  "Area": 491.18,
+  "Valor": 278990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_C_02",
+  "Nome": "02-Quadra C- Lote 02",
+  "Area": 309.86,
+  "Valor": 177990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_C_03",
+  "Nome": "02-Quadra C- Lote 03",
+  "Area": 309.65,
+  "Valor": 177990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_C_04",
+  "Nome": "02-Quadra C- Lote 04",
+  "Area": 386.76,
+  "Valor": 216990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_D_01",
+  "Nome": "02-Quadra D- Lote 01",
+  "Area": 386.1,
+  "Valor": 216990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_D_02",
+  "Nome": "02-Quadra D- Lote 02",
+  "Area": 308.64,
+  "Valor": 177490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_D_03_04",
+  "Nome": "02-Quadra D- Lote 03_04",
+  "Area": 616.56,
+  "Valor": 262437.97,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_D_05_06",
+  "Nome": "02-Quadra D- Lote 05_06",
+  "Area": 615.78,
+  "Valor": 262404.7,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_D_07",
+  "Nome": "02-Quadra D- Lote 07",
+  "Area": 307.56,
+  "Valor": 176990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_D_08",
+  "Nome": "02-Quadra D- Lote 08",
+  "Area": 307.32,
+  "Valor": 175990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_D_09",
+  "Nome": "02-Quadra D- Lote 09",
+  "Area": 307.08,
+  "Valor": 175990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_D_10",
+  "Nome": "02-Quadra D- Lote 10",
+  "Area": 306.9,
+  "Valor": 175990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_D_11",
+  "Nome": "02-Quadra D- Lote 11",
+  "Area": 306.72,
+  "Valor": 175990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_D_12",
+  "Nome": "02-Quadra D- Lote 12",
+  "Area": 306.48,
+  "Valor": 175990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_D_13",
+  "Nome": "02-Quadra D- Lote 13",
+  "Area": 306.24,
+  "Valor": 175990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_E_01",
+  "Nome": "02-Quadra E- Lote 01",
+  "Area": 380.75,
+  "Valor": 213990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_E_02",
+  "Nome": "02-Quadra E- Lote 02",
+  "Area": 300,
+  "Valor": 158990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_E_03",
+  "Nome": "02-Quadra E- Lote 03",
+  "Area": 300,
+  "Valor": 159490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_E_04",
+  "Nome": "02-Quadra E- Lote 04",
+  "Area": 300,
+  "Valor": 158990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_E_05",
+  "Nome": "02-Quadra E- Lote 05",
+  "Area": 300,
+  "Valor": 158990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_E_06",
+  "Nome": "02-Quadra E- Lote 06",
+  "Area": 300,
+  "Valor": 158990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_E_07",
+  "Nome": "02-Quadra E- Lote 07",
+  "Area": 300,
+  "Valor": 155990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_E_08",
+  "Nome": "02-Quadra E- Lote 08",
+  "Area": 300,
+  "Valor": 155990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_E_09",
+  "Nome": "02-Quadra E- Lote 09",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_E_10",
+  "Nome": "02-Quadra E- Lote 10",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_E_11",
+  "Nome": "02-Quadra E- Lote 11",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_E_12",
+  "Nome": "02-Quadra E- Lote 12",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_E_13",
+  "Nome": "02-Quadra E- Lote 13",
+  "Area": 375,
+  "Valor": 174490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_E_14",
+  "Nome": "02-Quadra E- Lote 14",
+  "Area": 375,
+  "Valor": 177990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_E_15",
+  "Nome": "02-Quadra E- Lote 15",
+  "Area": 300,
+  "Valor": 153990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_E_16",
+  "Nome": "02-Quadra E- Lote 16",
+  "Area": 300,
+  "Valor": 155990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_E_17",
+  "Nome": "02-Quadra E- Lote 17",
+  "Area": 300,
+  "Valor": 155990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_E_18",
+  "Nome": "02-Quadra E- Lote 18",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_E_19",
+  "Nome": "02-Quadra E- Lote 19",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_E_20",
+  "Nome": "02-Quadra E- Lote 20",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_E_21",
+  "Nome": "02-Quadra E- Lote 21",
+  "Area": 300,
+  "Valor": 159490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_E_22",
+  "Nome": "02-Quadra E- Lote 22",
+  "Area": 300,
+  "Valor": 159490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_E_23",
+  "Nome": "02-Quadra E- Lote 23",
+  "Area": 300,
+  "Valor": 159490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_E_24",
+  "Nome": "02-Quadra E- Lote 24",
+  "Area": 300,
+  "Valor": 158990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_E_25",
+  "Nome": "02-Quadra E- Lote 25",
+  "Area": 300,
+  "Valor": 158990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_E_26",
+  "Nome": "02-Quadra E- Lote 26",
+  "Area": 380.75,
+  "Valor": 213990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_F_01",
+  "Nome": "02-Quadra F- Lote 01",
+  "Area": 380.75,
+  "Valor": 213990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_F_02",
+  "Nome": "02-Quadra F- Lote 02",
+  "Area": 300,
+  "Valor": 159490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_F_03",
+  "Nome": "02-Quadra F- Lote 03",
+  "Area": 300,
+  "Valor": 158990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_F_04",
+  "Nome": "02-Quadra F- Lote 04",
+  "Area": 300,
+  "Valor": 159490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_F_05",
+  "Nome": "02-Quadra F- Lote 05",
+  "Area": 300,
+  "Valor": 159490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_F_06",
+  "Nome": "02-Quadra F- Lote 06",
+  "Area": 300,
+  "Valor": 159490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_F_07",
+  "Nome": "02-Quadra F- Lote 07",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_F_08",
+  "Nome": "02-Quadra F- Lote 08",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_F_09",
+  "Nome": "02-Quadra F- Lote 09",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_F_10",
+  "Nome": "02-Quadra F- Lote 10",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_F_11",
+  "Nome": "02-Quadra F- Lote 11",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_F_12",
+  "Nome": "02-Quadra F- Lote 12",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_F_13",
+  "Nome": "02-Quadra F- Lote 13",
+  "Area": 375,
+  "Valor": 174490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_F_14",
+  "Nome": "02-Quadra F- Lote 14",
+  "Area": 375,
+  "Valor": 177990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_F_15",
+  "Nome": "02-Quadra F- Lote 15",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_F_16",
+  "Nome": "02-Quadra F- Lote 16",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_F_17",
+  "Nome": "02-Quadra F- Lote 17",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_F_18",
+  "Nome": "02-Quadra F- Lote 18",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_F_19",
+  "Nome": "02-Quadra F- Lote 19",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_F_20",
+  "Nome": "02-Quadra F- Lote 20",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_F_21",
+  "Nome": "02-Quadra F- Lote 21",
+  "Area": 300,
+  "Valor": 159490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_F_22",
+  "Nome": "02-Quadra F- Lote 22",
+  "Area": 300,
+  "Valor": 159490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_F_23",
+  "Nome": "02-Quadra F- Lote 23",
+  "Area": 300,
+  "Valor": 158990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_F_24",
+  "Nome": "02-Quadra F- Lote 24",
+  "Area": 300,
+  "Valor": 158990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_F_25",
+  "Nome": "02-Quadra F- Lote 25",
+  "Area": 300,
+  "Valor": 158990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_F_26",
+  "Nome": "02-Quadra F- Lote 26",
+  "Area": 380.75,
+  "Valor": 213990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_G_01",
+  "Nome": "02-Quadra G- Lote 01",
+  "Area": 380.75,
+  "Valor": 213990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_G_02",
+  "Nome": "02-Quadra G- Lote 02",
+  "Area": 300,
+  "Valor": 158990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_G_03",
+  "Nome": "02-Quadra G- Lote 03",
+  "Area": 300,
+  "Valor": 158990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_G_04",
+  "Nome": "02-Quadra G- Lote 04",
+  "Area": 300,
+  "Valor": 158990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_G_05",
+  "Nome": "02-Quadra G- Lote 05",
+  "Area": 300,
+  "Valor": 159490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_G_06",
+  "Nome": "02-Quadra G- Lote 06",
+  "Area": 300,
+  "Valor": 159490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_G_07",
+  "Nome": "02-Quadra G- Lote 07",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_G_08",
+  "Nome": "02-Quadra G- Lote 08",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_G_09",
+  "Nome": "02-Quadra G- Lote 09",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_G_10",
+  "Nome": "02-Quadra G- Lote 10",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_G_11",
+  "Nome": "02-Quadra G- Lote 11",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_G_12",
+  "Nome": "02-Quadra G- Lote 12",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_G_13",
+  "Nome": "02-Quadra G- Lote 13",
+  "Area": 375,
+  "Valor": 174490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_G_14",
+  "Nome": "02-Quadra G- Lote 14",
+  "Area": 375,
+  "Valor": 174490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_G_15",
+  "Nome": "02-Quadra G- Lote 15",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_G_16",
+  "Nome": "02-Quadra G- Lote 16",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_G_17",
+  "Nome": "02-Quadra G- Lote 17",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_G_18",
+  "Nome": "02-Quadra G- Lote 18",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_G_19",
+  "Nome": "02-Quadra G- Lote 19",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_G_20",
+  "Nome": "02-Quadra G- Lote 20",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_G_21",
+  "Nome": "02-Quadra G- Lote 21",
+  "Area": 300,
+  "Valor": 159490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_G_22",
+  "Nome": "02-Quadra G- Lote 22",
+  "Area": 300,
+  "Valor": 159490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_G_23",
+  "Nome": "02-Quadra G- Lote 23",
+  "Area": 300,
+  "Valor": 159490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_G_24",
+  "Nome": "02-Quadra G- Lote 24",
+  "Area": 300,
+  "Valor": 158990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_G_25",
+  "Nome": "02-Quadra G- Lote 25",
+  "Area": 300,
+  "Valor": 158990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_G_26",
+  "Nome": "02-Quadra G- Lote 26",
+  "Area": 380.75,
+  "Valor": 213990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_H_14",
+  "Nome": "02-Quadra H- Lote 14",
+  "Area": 375,
+  "Valor": 174490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_H_15",
+  "Nome": "02-Quadra H- Lote 15",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_H_16",
+  "Nome": "02-Quadra H- Lote 16",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_H_17",
+  "Nome": "02-Quadra H- Lote 17",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_H_18",
+  "Nome": "02-Quadra H- Lote 18",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_H_19",
+  "Nome": "02-Quadra H- Lote 19",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_H_20",
+  "Nome": "02-Quadra H- Lote 20",
+  "Area": 300,
+  "Valor": 156490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_H_21",
+  "Nome": "02-Quadra H- Lote 21",
+  "Area": 300,
+  "Valor": 159490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_H_22",
+  "Nome": "02-Quadra H- Lote 22",
+  "Area": 300,
+  "Valor": 159490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_H_23",
+  "Nome": "02-Quadra H- Lote 23",
+  "Area": 300,
+  "Valor": 159490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_H_24",
+  "Nome": "02-Quadra H- Lote 24",
+  "Area": 300,
+  "Valor": 158990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_H_25",
+  "Nome": "02-Quadra H- Lote 25",
+  "Area": 300,
+  "Valor": 158990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_H_26",
+  "Nome": "02-Quadra H- Lote 26",
+  "Area": 380.75,
+  "Valor": 213990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_I_01",
+  "Nome": "02-Quadra I- Lote 01",
+  "Area": 316,
+  "Valor": 161500,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_I_02",
+  "Nome": "02-Quadra I- Lote 02",
+  "Area": 301.47,
+  "Valor": 153990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_I_03",
+  "Nome": "02-Quadra I- Lote 03",
+  "Area": 322.68,
+  "Valor": 160990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_I_04",
+  "Nome": "02-Quadra I- Lote 04",
+  "Area": 322.68,
+  "Valor": 160990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_I_05",
+  "Nome": "02-Quadra I- Lote 05",
+  "Area": 322.68,
+  "Valor": 160990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_I_06",
+  "Nome": "02-Quadra I- Lote 06",
+  "Area": 322.68,
+  "Valor": 160990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_I_07",
+  "Nome": "02-Quadra I- Lote 07",
+  "Area": 322.68,
+  "Valor": 161490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_I_08",
+  "Nome": "02-Quadra I- Lote 08",
+  "Area": 322.68,
+  "Valor": 161490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_I_09",
+  "Nome": "02-Quadra I- Lote 09",
+  "Area": 322.68,
+  "Valor": 161490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_I_10",
+  "Nome": "02-Quadra I- Lote 10",
+  "Area": 322.68,
+  "Valor": 161490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_I_11",
+  "Nome": "02-Quadra I- Lote 11",
+  "Area": 322.68,
+  "Valor": 160990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_I_12",
+  "Nome": "02-Quadra I- Lote 12",
+  "Area": 437.09,
+  "Valor": 197990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_I_13",
+  "Nome": "02-Quadra I- Lote 13",
+  "Area": 467,
+  "Valor": 199990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_I_14",
+  "Nome": "02-Quadra I- Lote 14",
+  "Area": 300,
+  "Valor": 153990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_I_15",
+  "Nome": "02-Quadra I- Lote 15",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_I_16",
+  "Nome": "02-Quadra I- Lote 16",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_I_17",
+  "Nome": "02-Quadra I- Lote 17",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_I_18",
+  "Nome": "02-Quadra I- Lote 18",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_I_19",
+  "Nome": "02-Quadra I- Lote 19",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_I_20",
+  "Nome": "02-Quadra I- Lote 20",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_I_21",
+  "Nome": "02-Quadra I- Lote 21",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_I_22",
+  "Nome": "02-Quadra I- Lote 22",
+  "Area": 300,
+  "Valor": 153990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_I_23",
+  "Nome": "02-Quadra I- Lote 23",
+  "Area": 397.73,
+  "Valor": 183990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_I_24",
+  "Nome": "02-Quadra I- Lote 24",
+  "Area": 333.33,
+  "Valor": 163990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_J_01",
+  "Nome": "02-Quadra J- Lote 01",
+  "Area": 404.25,
+  "Valor": 173990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_J_02",
+  "Nome": "02-Quadra J- Lote 02",
+  "Area": 300,
+  "Valor": 143000,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_J_03",
+  "Nome": "02-Quadra J- Lote 03",
+  "Area": 300,
+  "Valor": 143000,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_J_04",
+  "Nome": "02-Quadra J- Lote 04",
+  "Area": 300,
+  "Valor": 143000,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_J_05",
+  "Nome": "02-Quadra J- Lote 05",
+  "Area": 300,
+  "Valor": 143000,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_J_06",
+  "Nome": "02-Quadra J- Lote 06",
+  "Area": 300,
+  "Valor": 143000,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_J_07",
+  "Nome": "02-Quadra J- Lote 07",
+  "Area": 300,
+  "Valor": 143000,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_J_08",
+  "Nome": "02-Quadra J- Lote 08",
+  "Area": 300,
+  "Valor": 143000,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_J_09",
+  "Nome": "02-Quadra J- Lote 09",
+  "Area": 300,
+  "Valor": 143000,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_J_10",
+  "Nome": "02-Quadra J- Lote 10",
+  "Area": 300,
+  "Valor": 143990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_J_11",
+  "Nome": "02-Quadra J- Lote 11",
+  "Area": 300,
+  "Valor": 143990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_J_12",
+  "Nome": "02-Quadra J- Lote 12",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_J_13",
+  "Nome": "02-Quadra J- Lote 13",
+  "Area": 485.5,
+  "Valor": 190990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_K_01",
+  "Nome": "02-Quadra K- Lote 01",
+  "Area": 404.25,
+  "Valor": 166990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_K_02",
+  "Nome": "02-Quadra K- Lote 02",
+  "Area": 300,
+  "Valor": 143000,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_K_03",
+  "Nome": "02-Quadra K- Lote 03",
+  "Area": 300,
+  "Valor": 143000,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_K_04",
+  "Nome": "02-Quadra K- Lote 04",
+  "Area": 300,
+  "Valor": 143000,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_K_05",
+  "Nome": "02-Quadra K- Lote 05",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_K_06",
+  "Nome": "02-Quadra K- Lote 06",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_K_07",
+  "Nome": "02-Quadra K- Lote 07",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_K_08",
+  "Nome": "02-Quadra K- Lote 08",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_K_09",
+  "Nome": "02-Quadra K- Lote 09",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_K_10",
+  "Nome": "02-Quadra K- Lote 10",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_K_11",
+  "Nome": "02-Quadra K- Lote 11",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_K_12",
+  "Nome": "02-Quadra K- Lote 12",
+  "Area": 432.31,
+  "Valor": 173990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_K_13",
+  "Nome": "02-Quadra K- Lote 13",
+  "Area": 406.88,
+  "Valor": 168990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_K_14",
+  "Nome": "02-Quadra K- Lote 14",
+  "Area": 432.31,
+  "Valor": 173990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_K_15",
+  "Nome": "02-Quadra K- Lote 15",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_K_16",
+  "Nome": "02-Quadra K- Lote 16",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_K_17",
+  "Nome": "02-Quadra K- Lote 17",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_K_18",
+  "Nome": "02-Quadra K- Lote 18",
+  "Area": 300,
+  "Valor": 143990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_K_19",
+  "Nome": "02-Quadra K- Lote 19",
+  "Area": 300,
+  "Valor": 143990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_K_20",
+  "Nome": "02-Quadra K- Lote 20",
+  "Area": 300,
+  "Valor": 143990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_K_21",
+  "Nome": "02-Quadra K- Lote 21",
+  "Area": 300,
+  "Valor": 143990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_K_22",
+  "Nome": "02-Quadra K- Lote 22",
+  "Area": 300,
+  "Valor": 143000,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_K_23",
+  "Nome": "02-Quadra K- Lote 23",
+  "Area": 300,
+  "Valor": 143000,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_K_24",
+  "Nome": "02-Quadra K- Lote 24",
+  "Area": 300,
+  "Valor": 143000,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_K_25",
+  "Nome": "02-Quadra K- Lote 25",
+  "Area": 462.64,
+  "Valor": 183990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_L_01",
+  "Nome": "02-Quadra L- Lote 01",
+  "Area": 404.25,
+  "Valor": 166990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_L_02",
+  "Nome": "02-Quadra L- Lote 02",
+  "Area": 300,
+  "Valor": 143000,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_L_03",
+  "Nome": "02-Quadra L- Lote 03",
+  "Area": 300,
+  "Valor": 143000,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_L_04",
+  "Nome": "02-Quadra L- Lote 04",
+  "Area": 300,
+  "Valor": 143000,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_L_05",
+  "Nome": "02-Quadra L- Lote 05",
+  "Area": 300,
+  "Valor": 143000,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_L_06",
+  "Nome": "02-Quadra L- Lote 06",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_L_07",
+  "Nome": "02-Quadra L- Lote 07",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_L_08",
+  "Nome": "02-Quadra L- Lote 08",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_L_09",
+  "Nome": "02-Quadra L- Lote 09",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_L_10",
+  "Nome": "02-Quadra L- Lote 10",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_L_11",
+  "Nome": "02-Quadra L- Lote 11",
+  "Area": 340.37,
+  "Valor": 154400,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_L_12",
+  "Nome": "02-Quadra L- Lote 12",
+  "Area": 346.75,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_L_13",
+  "Nome": "02-Quadra L- Lote 13",
+  "Area": 412.2,
+  "Valor": 168990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_L_14",
+  "Nome": "02-Quadra L- Lote 14",
+  "Area": 308,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_L_15",
+  "Nome": "02-Quadra L- Lote 15",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_L_16",
+  "Nome": "02-Quadra L- Lote 16",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_L_17",
+  "Nome": "02-Quadra L- Lote 17",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_L_18",
+  "Nome": "02-Quadra L- Lote 18",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_L_19",
+  "Nome": "02-Quadra L- Lote 19",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_L_20",
+  "Nome": "02-Quadra L- Lote 20",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_L_21",
+  "Nome": "02-Quadra L- Lote 21",
+  "Area": 300,
+  "Valor": 143000,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_L_22",
+  "Nome": "02-Quadra L- Lote 22",
+  "Area": 300,
+  "Valor": 143000,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_L_23",
+  "Nome": "02-Quadra L- Lote 23",
+  "Area": 300,
+  "Valor": 143000,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_L_24",
+  "Nome": "02-Quadra L- Lote 24",
+  "Area": 462.64,
+  "Valor": 184490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_M_03",
+  "Nome": "02-Quadra M- Lote 03",
+  "Area": 319.68,
+  "Valor": 161490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_M_04",
+  "Nome": "02-Quadra M- Lote 04",
+  "Area": 319.68,
+  "Valor": 161490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_M_05",
+  "Nome": "02-Quadra M- Lote 05",
+  "Area": 319.68,
+  "Valor": 161490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_M_06",
+  "Nome": "02-Quadra M- Lote 06",
+  "Area": 319.68,
+  "Valor": 161490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_M_07",
+  "Nome": "02-Quadra M- Lote 07",
+  "Area": 319.68,
+  "Valor": 161490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_M_08",
+  "Nome": "02-Quadra M- Lote 08",
+  "Area": 319.68,
+  "Valor": 161490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_M_09",
+  "Nome": "02-Quadra M- Lote 09",
+  "Area": 319.68,
+  "Valor": 161490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_M_10",
+  "Nome": "02-Quadra M- Lote 10",
+  "Area": 319.68,
+  "Valor": 161490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_M_11",
+  "Nome": "02-Quadra M- Lote 11",
+  "Area": 319.68,
+  "Valor": 161490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_M_12",
+  "Nome": "02-Quadra M- Lote 12",
+  "Area": 319.68,
+  "Valor": 161490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_M_13",
+  "Nome": "02-Quadra M- Lote 13",
+  "Area": 301.17,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_M_14",
+  "Nome": "02-Quadra M- Lote 14",
+  "Area": 414.91,
+  "Valor": 190990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_M_15",
+  "Nome": "02-Quadra M- Lote 15",
+  "Area": 324.6,
+  "Valor": 161490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_M_16",
+  "Nome": "02-Quadra M- Lote 16",
+  "Area": 386.81,
+  "Valor": 184490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_M_17",
+  "Nome": "02-Quadra M- Lote 17",
+  "Area": 302.88,
+  "Valor": 153990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_M_18",
+  "Nome": "02-Quadra M- Lote 18",
+  "Area": 302.88,
+  "Valor": 153990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_M_19",
+  "Nome": "02-Quadra M- Lote 19",
+  "Area": 302.88,
+  "Valor": 153990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_M_20",
+  "Nome": "02-Quadra M- Lote 20",
+  "Area": 302.88,
+  "Valor": 153990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_M_21",
+  "Nome": "02-Quadra M- Lote 21",
+  "Area": 302.88,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_M_22",
+  "Nome": "02-Quadra M- Lote 22",
+  "Area": 302.88,
+  "Valor": 153990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_M_23",
+  "Nome": "02-Quadra M- Lote 23",
+  "Area": 302.88,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_M_24",
+  "Nome": "02-Quadra M- Lote 24",
+  "Area": 302.88,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_M_25",
+  "Nome": "02-Quadra M- Lote 25",
+  "Area": 302.88,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_M_26",
+  "Nome": "02-Quadra M- Lote 26",
+  "Area": 302.88,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_M_27",
+  "Nome": "02-Quadra M- Lote 27",
+  "Area": 303.6,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_M_28",
+  "Nome": "02-Quadra M- Lote 28",
+  "Area": 381.52,
+  "Valor": 181490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_N_01",
+  "Nome": "02-Quadra N- Lote 01",
+  "Area": 375,
+  "Valor": 178490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_N_02",
+  "Nome": "02-Quadra N- Lote 02",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_N_03",
+  "Nome": "02-Quadra N- Lote 03",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_N_04",
+  "Nome": "02-Quadra N- Lote 04",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_N_05",
+  "Nome": "02-Quadra N- Lote 05",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_N_06",
+  "Nome": "02-Quadra N- Lote 06",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_N_07",
+  "Nome": "02-Quadra N- Lote 07",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_N_08",
+  "Nome": "02-Quadra N- Lote 08",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_N_09",
+  "Nome": "02-Quadra N- Lote 09",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_N_10",
+  "Nome": "02-Quadra N- Lote 10",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_N_11",
+  "Nome": "02-Quadra N- Lote 11",
+  "Area": 300,
+  "Valor": 153990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_N_12",
+  "Nome": "02-Quadra N- Lote 12",
+  "Area": 300,
+  "Valor": 153990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_N_13",
+  "Nome": "02-Quadra N- Lote 13",
+  "Area": 336.92,
+  "Valor": 164490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_N_14",
+  "Nome": "02-Quadra N- Lote 14",
+  "Area": 388.96,
+  "Valor": 184490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_N_15",
+  "Nome": "02-Quadra N- Lote 15",
+  "Area": 346.14,
+  "Valor": 169490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_N_16",
+  "Nome": "02-Quadra N- Lote 16",
+  "Area": 300,
+  "Valor": 153990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_N_17",
+  "Nome": "02-Quadra N- Lote 17",
+  "Area": 300,
+  "Valor": 153990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_N_18_19",
+  "Nome": "02-Quadra N- Lote 18_19",
+  "Area": 600,
+  "Valor": 237930,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_N_20_21",
+  "Nome": "02-Quadra N- Lote 20_21",
+  "Area": 600,
+  "Valor": 237930,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_N_22",
+  "Nome": "02-Quadra N- Lote 22",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_N_23",
+  "Nome": "02-Quadra N- Lote 23",
+  "Area": 300,
+  "Valor": 153990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_N_24",
+  "Nome": "02-Quadra N- Lote 24",
+  "Area": 300,
+  "Valor": 153990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_N_25",
+  "Nome": "02-Quadra N- Lote 25",
+  "Area": 300,
+  "Valor": 153990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_N_26",
+  "Nome": "02-Quadra N- Lote 26",
+  "Area": 300,
+  "Valor": 153990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_N_27",
+  "Nome": "02-Quadra N- Lote 27",
+  "Area": 375,
+  "Valor": 177990,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_O_01",
+  "Nome": "02-Quadra O- Lote 01",
+  "Area": 375,
+  "Valor": 159490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_O_02",
+  "Nome": "02-Quadra O- Lote 02",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_O_03",
+  "Nome": "02-Quadra O- Lote 03",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_O_04",
+  "Nome": "02-Quadra O- Lote 04",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_O_05",
+  "Nome": "02-Quadra O- Lote 05",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_O_06",
+  "Nome": "02-Quadra O- Lote 06",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_O_07",
+  "Nome": "02-Quadra O- Lote 07",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_O_08",
+  "Nome": "02-Quadra O- Lote 08",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_O_09",
+  "Nome": "02-Quadra O- Lote 09",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_O_10",
+  "Nome": "02-Quadra O- Lote 10",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_O_11",
+  "Nome": "02-Quadra O- Lote 11",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_O_12",
+  "Nome": "02-Quadra O- Lote 12",
+  "Area": 387.33,
+  "Valor": 164490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_O_13",
+  "Nome": "02-Quadra O- Lote 13",
+  "Area": 325.01,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_O_14",
+  "Nome": "02-Quadra O- Lote 14",
+  "Area": 350.06,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_O_15",
+  "Nome": "02-Quadra O- Lote 15",
+  "Area": 310.5,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_O_16",
+  "Nome": "02-Quadra O- Lote 16",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_O_17",
+  "Nome": "02-Quadra O- Lote 17",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_O_18",
+  "Nome": "02-Quadra O- Lote 18",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_O_19",
+  "Nome": "02-Quadra O- Lote 19",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_O_20",
+  "Nome": "02-Quadra O- Lote 20",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_O_21",
+  "Nome": "02-Quadra O- Lote 21",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_O_22",
+  "Nome": "02-Quadra O- Lote 22",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_O_23",
+  "Nome": "02-Quadra O- Lote 23",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_O_24",
+  "Nome": "02-Quadra O- Lote 24",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_O_25",
+  "Nome": "02-Quadra O- Lote 25",
+  "Area": 300,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_O_26",
+  "Nome": "02-Quadra O- Lote 26",
+  "Area": 375,
+  "Valor": 159490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_P_01",
+  "Nome": "02-Quadra P- Lote 01",
+  "Area": 0,
+  "Valor": 0,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_P_02",
+  "Nome": "02-Quadra P- Lote 02",
+  "Area": 0,
+  "Valor": 0,
+  "Vendido": "TRUE"
+ },
+ {
+  "ID": "_2_P_03",
+  "Nome": "02-Quadra P- Lote 03",
+  "Area": 9329.62,
+  "Valor": 938490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_P_04",
+  "Nome": "02-Quadra P- Lote 04",
+  "Area": 391.68,
+  "Valor": 169490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_P_05",
+  "Nome": "02-Quadra P- Lote 05",
+  "Area": 416.16,
+  "Valor": 171490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_P_06",
+  "Nome": "02-Quadra P- Lote 06",
+  "Area": 330,
+  "Valor": 151490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_P_07",
+  "Nome": "02-Quadra P- Lote 07",
+  "Area": 330,
+  "Valor": 151490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_P_08",
+  "Nome": "02-Quadra P- Lote 08",
+  "Area": 308.18,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_P_09",
+  "Nome": "02-Quadra P- Lote 09",
+  "Area": 302.1,
+  "Valor": 144490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_Q_12",
+  "Nome": "02-Quadra Q- Lote 12",
+  "Area": 385.87,
+  "Valor": 184490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_Q_13",
+  "Nome": "02-Quadra Q- Lote 13",
+  "Area": 310.32,
+  "Valor": 156990,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_Q_14",
+  "Nome": "02-Quadra Q- Lote 14",
+  "Area": 311.76,
+  "Valor": 156990,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_Q_15",
+  "Nome": "02-Quadra Q- Lote 15",
+  "Area": 313.2,
+  "Valor": 156990,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_Q_16",
+  "Nome": "02-Quadra Q- Lote 16",
+  "Area": 314.64,
+  "Valor": 156990,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_Q_17",
+  "Nome": "02-Quadra Q- Lote 17",
+  "Area": 440.47,
+  "Valor": 199490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_R_01",
+  "Nome": "02-Quadra R- Lote 01",
+  "Area": 329.82,
+  "Valor": 159490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_R_02",
+  "Nome": "02-Quadra R- Lote 02",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_R_03",
+  "Nome": "02-Quadra R- Lote 03",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_R_04",
+  "Nome": "02-Quadra R- Lote 04",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_R_05",
+  "Nome": "02-Quadra R- Lote 05",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_R_06",
+  "Nome": "02-Quadra R- Lote 06",
+  "Area": 464.5,
+  "Valor": 194490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_R_07",
+  "Nome": "02-Quadra R- Lote 07",
+  "Area": 464.5,
+  "Valor": 194490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_R_08",
+  "Nome": "02-Quadra R- Lote 08",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_R_09",
+  "Nome": "02-Quadra R- Lote 09",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_R_10",
+  "Nome": "02-Quadra R- Lote 10",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_R_11",
+  "Nome": "02-Quadra R- Lote 11",
+  "Area": 300,
+  "Valor": 154490,
+  "Vendido": "FALSE"
+ },
+ {
+  "ID": "_2_R_12",
+  "Nome": "02-Quadra R- Lote 12",
+  "Area": 389.46,
+  "Valor": 192490,
+  "Vendido": "FALSE"
+ }
 ]
