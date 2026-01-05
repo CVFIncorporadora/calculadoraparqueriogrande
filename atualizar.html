@@ -1,94 +1,122 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Atualizar Lotes</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Atualizar Lotes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            background: #f7f7f7;
-        }
-
-        h2 {
-            margin-bottom: 10px;
-        }
-
-        input[type="file"] {
-            margin-bottom: 15px;
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            background: #fff;
-            font-size: 13px;
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            padding: 6px;
-            text-align: center;
-        }
-
-        th {
-            background: #f0f0f0;
-        }
-
-        tr.vendido {
-            background-color: #ffd6d6;
-        }
-
-        tr.livre {
-            background-color: #d6ffd6;
-        }
-
-        input[type="number"] {
-            width: 110px;
-            padding: 4px;
-        }
-
-        select {
-            padding: 4px;
-        }
-
-        button {
-            margin-top: 15px;
-            padding: 10px 20px;
-            font-size: 14px;
-            cursor: pointer;
-        }
-
-        @media (max-width: 768px) {
-            table {
-                font-size: 11px;
-            }
-
-            input[type="number"] {
-                width: 90px;
-            }
-        }
-    </style>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #f7f7f7;
+}
+h2 { margin-bottom: 10px; }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background: #fff;
+  font-size: 13px;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 6px;
+  text-align: center;
+}
+th { background: #f0f0f0; }
+tr.vendido { background-color: #ffd6d6; }
+tr.livre { background-color: #d6ffd6; }
+input[type="number"] {
+  width: 110px;
+  padding: 4px;
+}
+select {
+  padding: 4px;
+}
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+</style>
 </head>
+
 <body>
 
 <h2>Atualização de Lotes</h2>
 
-<input type="file" id="upload" accept=".json">
-
 <table id="tabela">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Nome</th>
-            <th>Área</th>
-            <th>Valor</th>
-            <th>Vendido</th>
-        </tr>
-    </thead>
-    <tbody></tbody>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Área</th>
+      <th>Valor</th>
+      <th>Vendido</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
 </table>
 
-<button onclick="salvar()">Salvar JSON
+<button onclick="salvar()">💾 Salvar Alterações</button>
+
+<script>
+const API_BASE = "https://SEU-BACKEND.onrender.com";
+
+let lotes = [];
+
+async function carregar() {
+  const res = await fetch(`${API_BASE}/lotes`);
+  lotes = await res.json();
+
+  const tbody = document.querySelector("#tabela tbody");
+  tbody.innerHTML = "";
+
+  lotes.forEach((lote, index) => {
+    const tr = document.createElement("tr");
+    tr.className = lote.Vendido ? "vendido" : "livre";
+
+    tr.innerHTML = `
+      <td>${lote.ID}</td>
+      <td>${lote.Nome}</td>
+      <td>${lote.Area}</td>
+      <td>
+        <input type="number" value="${lote.Valor}"
+          onchange="lotes[${index}].Valor = Number(this.value)">
+      </td>
+      <td>
+        <select onchange="lotes[${index}].Vendido = this.value === 'true'">
+          <option value="false" ${!lote.Vendido ? "selected" : ""}>Não</option>
+          <option value="true" ${lote.Vendido ? "selected" : ""}>Sim</option>
+        </select>
+      </td>
+    `;
+
+    tbody.appendChild(tr);
+  });
+}
+
+async function salvar() {
+  for (const lote of lotes) {
+    await fetch(`${API_BASE}/lotes/${lote.ID}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        Valor: lote.Valor,
+        Vendido: lote.Vendido
+      })
+    });
+  }
+
+  alert("Alterações salvas com sucesso!");
+  carregar();
+}
+
+window.onload = carregar;
+</script>
+
+</body>
+</html>
+
+
