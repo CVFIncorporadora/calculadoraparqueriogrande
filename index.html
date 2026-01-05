@@ -735,8 +735,9 @@ let loteSelecionadoId = null;
 let loteAtual = null;
 
 async function carregarJSON() {
-  const resposta = await fetch('Lotes.json');
-  const dados = await resposta.json();
+  try {
+    const resposta = await fetch("http://localhost:3000/lotes");
+    const dados = await resposta.json();
 
   dadosLotes = {};
 
@@ -861,6 +862,7 @@ window.onload = carregarJSON;
 
 </body>
 </html>
+
 
 
 
