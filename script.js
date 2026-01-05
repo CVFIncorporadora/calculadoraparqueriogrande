@@ -4,16 +4,26 @@ const API_BASE = "https://backend-parque-riogrande.onrender.com";
 let lotes = [];
 
 // 🔹 CARREGA DO BACKEND (Render)
-fetch(`${API_BASE}/lotes`)
-  .then(res => res.json())
-  .then(data => {
-    lotes = data;
+async function carregarLotes() {
+  try {
+    const res = await fetch(`${API_BASE}/lotes`);
+    if (!res.ok) throw new Error("Erro ao buscar lotes");
+
+    const data = await res.json();
+
+    // 🔹 Normaliza dados
+    lotes = data.map(l => ({
+      ...l,
+      Valor: Number(l.Valor),
+      Vendido: l.Vendido === true || l.Vendido === "TRUE"
+    }));
+
     montarTabela();
-  })
-  .catch(err => {
-    alert("Erro ao carregar lotes");
+  } catch (err) {
+    alert("Erro ao carregar lotes do servidor");
     console.error(err);
-  });
+  }
+}
 
 function montarTabela() {
   const tbody = document.querySelector("#tabela tbody");
@@ -21,9 +31,7 @@ function montarTabela() {
 
   lotes.forEach((lote, index) => {
     const tr = document.createElement("tr");
-    tr.className = lote.Vendido === true || lote.Vendido === "TRUE"
-      ? "vendido"
-      : "livre";
+    tr.className = lote.Vendido ? "vendido" : "livre";
 
     tr.innerHTML = `
       <td>${lote.ID}</td>
@@ -41,8 +49,8 @@ function montarTabela() {
 
       <td>
         <select onchange="alterarVendido(${index}, this.value)">
-          <option value="FALSE" ${!lote.Vendido || lote.Vendido === "FALSE" ? "selected" : ""}>Disponível</option>
-          <option value="TRUE" ${lote.Vendido === true || lote.Vendido === "TRUE" ? "selected" : ""}>Vendido</option>
+          <option value="false" ${!lote.Vendido ? "selected" : ""}>Disponível</option>
+          <option value="true" ${lote.Vendido ? "selected" : ""}>Vendido</option>
         </select>
       </td>
     `;
@@ -54,32 +62,9 @@ function alterarValor(index, novoValor) {
   lotes[index].Valor = Number(novoValor);
 }
 
-function alterarVendido(index, valor) {
-  lotes[index].Vendido = valor === "TRUE";
-  montarTabela();
-}
+funct
 
-// 🔹 SALVA NO BACKEND (Render)
-async function salvar() {
-  try {
-    for (const lote of lotes) {
-      await fetch(`${API_BASE}/lotes/${lote.ID}`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          Valor: lote.Valor,
-          Vendido: lote.Vendido
-        })
-      });
-    }
 
-    alert("Lotes atualizados com sucesso!");
-  } catch (err) {
-    alert("Erro ao salvar dados");
-    console.error(err);
-  }
-}
-</script>
 
 
 
