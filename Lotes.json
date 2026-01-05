@@ -186,7 +186,7 @@
   "Nome": "01-Quadra B- Lote 02",
   "Area": 302.13,
   "Valor": 191489,
-  "Vendido": "FALSE"
+  "Vendido": "TRUE"
  },
  {
   "ID": "_1_B_03",
@@ -508,7 +508,7 @@
   "Nome": "01-Quadra E- Lote 16",
   "Area": 300,
   "Valor": 169489,
-  "Vendido": "FALSE"
+  "Vendido": "TRUE"
  },
  {
   "ID": "_1_E_17",
