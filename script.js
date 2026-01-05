@@ -1,5 +1,5 @@
 <script>
-const API_BASE = "https://SEU-BACKEND.onrender.com";
+const API_BASE = "https://backend-parque-riogrande.onrender.com";
 
 let lotes = [];
 
@@ -80,6 +80,7 @@ async function salvar() {
   }
 }
 </script>
+
 
 
 
