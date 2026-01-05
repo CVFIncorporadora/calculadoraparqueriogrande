@@ -2775,8 +2775,8 @@
   "ID": "_2_F_22",
   "Nome": "02-Quadra F- Lote 22",
   "Area": 300,
-  "Valor": 159490,
-  "Vendido": "FALSE"
+  "Valor": 159490,  
+  "Vendido": "TRUE"
  },
  {
   "ID": "_2_F_23",
