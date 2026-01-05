@@ -748,8 +748,10 @@ async function carregarJSON() {
       area: linha.Area,
       valor: Number(linha.Valor),
       vendido: linha.Vendido === true || linha.Vendido === "TRUE",
-    };
-  });
+    }
+  })} catch {
+    console.log("erro")
+  };
 
   Object.keys(dadosLotes).forEach(id => {
     const lote = dadosLotes[id];
@@ -761,13 +763,16 @@ async function carregarJSON() {
 }
 
 function selecionarLote(id) {
-  if (!dadosLotes[id]) return;
+  if (!dadosLotes || !dadosLotes[id]) return;
 
-  if (loteSelecionadoId) {
+  if (loteSelecionadoId && loteSelecionadoId !== id) {
     const anterior = document.getElementById("lote-" + loteSelecionadoId);
+
     if (anterior) {
-      const vendidoAntes = dadosLotes[loteSelecionadoId].vendido;
-      anterior.setAttribute("fill", vendidoAntes ? "#ff000088" : "transparent");
+      anterior.setAttribute(
+        "fill",
+        dadosLotes[loteSelecionadoId].vendido ? "#ff000088" : "transparent"
+      );
       anterior.setAttribute("stroke", "transparent");
     }
   }
@@ -862,6 +867,7 @@ window.onload = carregarJSON;
 
 </body>
 </html>
+
 
 
 
