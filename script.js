@@ -1,11 +1,16 @@
 let lotes = [];
 
-fetch("Lotes.json")
-    .then(res => res.json())
-    .then(data => {
-        lotes = data;
+document.getElementById("upload").addEventListener("change", function (e) {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function (event) {
+        lotes = JSON.parse(event.target.result);
         montarTabela();
-    });
+    };
+    reader.readAsText(file);
+});
 
 function montarTabela() {
     const tbody = document.querySelector("#tabela tbody");
@@ -61,5 +66,6 @@ function salvar() {
 
     URL.revokeObjectURL(url);
 }
+
 
 
