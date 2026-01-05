@@ -1,71 +1,86 @@
+<script>
+const API_BASE = "https://SEU-BACKEND.onrender.com";
+
 let lotes = [];
 
-document.getElementById("upload").addEventListener("change", function (e) {
-    const file = e.target.files[0];
-    if (!file) return;
-
-    const reader = new FileReader();
-    reader.onload = function (event) {
-        lotes = JSON.parse(event.target.result);
-        montarTabela();
-    };
-    reader.readAsText(file);
-});
+// 🔹 CARREGA DO BACKEND (Render)
+fetch(`${API_BASE}/lotes`)
+  .then(res => res.json())
+  .then(data => {
+    lotes = data;
+    montarTabela();
+  })
+  .catch(err => {
+    alert("Erro ao carregar lotes");
+    console.error(err);
+  });
 
 function montarTabela() {
-    const tbody = document.querySelector("#tabela tbody");
-    tbody.innerHTML = "";
+  const tbody = document.querySelector("#tabela tbody");
+  tbody.innerHTML = "";
 
-    lotes.forEach((lote, index) => {
-        const tr = document.createElement("tr");
-        tr.className = lote.Vendido === "TRUE" ? "vendido" : "livre";
+  lotes.forEach((lote, index) => {
+    const tr = document.createElement("tr");
+    tr.className = lote.Vendido === true || lote.Vendido === "TRUE"
+      ? "vendido"
+      : "livre";
 
-        tr.innerHTML = `
-            <td>${lote.ID}</td>
-            <td>${lote.Nome}</td>
-            <td>${lote.Area}</td>
+    tr.innerHTML = `
+      <td>${lote.ID}</td>
+      <td>${lote.Nome}</td>
+      <td>${lote.Area}</td>
 
-            <td>
-                <input 
-                    type="number" 
-                    value="${lote.Valor}"
-                    style="width:120px"
-                    onchange="alterarValor(${index}, this.value)"
-                >
-            </td>
+      <td>
+        <input 
+          type="number"
+          value="${lote.Valor}"
+          style="width:120px"
+          onchange="alterarValor(${index}, this.value)"
+        >
+      </td>
 
-            <td>
-                <select onchange="alterarVendido(${index}, this.value)">
-                    <option value="FALSE" ${lote.Vendido === "FALSE" ? "selected" : ""}>Disponível</option>
-                    <option value="TRUE" ${lote.Vendido === "TRUE" ? "selected" : ""}>Vendido</option>
-                </select>
-            </td>
-        `;
-        tbody.appendChild(tr);
-    });
+      <td>
+        <select onchange="alterarVendido(${index}, this.value)">
+          <option value="FALSE" ${!lote.Vendido || lote.Vendido === "FALSE" ? "selected" : ""}>Disponível</option>
+          <option value="TRUE" ${lote.Vendido === true || lote.Vendido === "TRUE" ? "selected" : ""}>Vendido</option>
+        </select>
+      </td>
+    `;
+    tbody.appendChild(tr);
+  });
 }
 
 function alterarValor(index, novoValor) {
-    lotes[index].Valor = Number(novoValor);
+  lotes[index].Valor = Number(novoValor);
 }
 
 function alterarVendido(index, valor) {
-    lotes[index].Vendido = valor;
-    montarTabela();
+  lotes[index].Vendido = valor === "TRUE";
+  montarTabela();
 }
 
-function salvar() {
-    const json = JSON.stringify(lotes, null, 2);
-    const blob = new Blob([json], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
+// 🔹 SALVA NO BACKEND (Render)
+async function salvar() {
+  try {
+    for (const lote of lotes) {
+      await fetch(`${API_BASE}/lotes/${lote.ID}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          Valor: lote.Valor,
+          Vendido: lote.Vendido
+        })
+      });
+    }
 
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "lotes_atualizado.json";
-    a.click();
-
-    URL.revokeObjectURL(url);
+    alert("Lotes atualizados com sucesso!");
+  } catch (err) {
+    alert("Erro ao salvar dados");
+    console.error(err);
+  }
 }
+</script>
+
 
 
 
