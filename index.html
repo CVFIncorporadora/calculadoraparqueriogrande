@@ -730,13 +730,14 @@
   </div>
 
 <script>
+const API_URL = "https://backend-parque-riogrande.onrender.com";
 let dadosLotes = {};
 let loteSelecionadoId = null;
 let loteAtual = null;
 
 async function carregarJSON() {
   try {
-    const resposta = await fetch("http://localhost:3000/lotes");
+    const resposta = await fetch(`${API_URL}/lotes`);
     const dados = await resposta.json();
 
   dadosLotes = {};
@@ -867,6 +868,7 @@ window.onload = carregarJSON;
 
 </body>
 </html>
+
 
 
 
