@@ -25,6 +25,7 @@ async function carregarLotes() {
   }
 }
 
+// 🔹 MONTA TABELA
 function montarTabela() {
   const tbody = document.querySelector("#tabela tbody");
   tbody.innerHTML = "";
@@ -58,11 +59,41 @@ function montarTabela() {
   });
 }
 
+// 🔹 ALTERA VALOR
 function alterarValor(index, novoValor) {
   lotes[index].Valor = Number(novoValor);
 }
 
-funct
+// 🔹 ALTERA STATUS
+function alterarVendido(index, valor) {
+  lotes[index].Vendido = valor === "true";
+  montarTabela();
+}
+
+// 🔹 SALVA NO BACKEND
+async function salvar() {
+  try {
+    for (const lote of lotes) {
+      await fetch(`${API_BASE}/lotes/${lote.ID}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          Valor: lote.Valor,
+          Vendido: lote.Vendido
+        })
+      });
+    }
+    alert("Lotes atualizados com sucesso!");
+  } catch (err) {
+    alert("Erro ao salvar dados");
+    console.error(err);
+  }
+}
+
+// 🔹 INICIALIZA
+document.addEventListener("DOMContentLoaded", carregarLotes);
+</script>
+
 
 
 
