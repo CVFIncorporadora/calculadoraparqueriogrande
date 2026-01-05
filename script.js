@@ -1,6 +1,6 @@
 let lotes = [];
 
-fetch("lotes.json")
+fetch("Lotes.json")
     .then(res => res.json())
     .then(data => {
         lotes = data;
@@ -61,4 +61,5 @@ function salvar() {
 
     URL.revokeObjectURL(url);
 }
+
 
