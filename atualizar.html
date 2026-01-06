@@ -133,7 +133,7 @@ function alterarVendido(index, valor) {
 async function salvar() {
   try {
     for (const lote of lotes) {
-      const response = await fetch(`${API_URL}/lotes/${lote.ID}`, {
+      const response = await fetch(`${API_BASE}/lotes/${lote.ID}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json"
@@ -160,6 +160,7 @@ document.addEventListener("DOMContentLoaded", carregarLotes);
 
 </body>
 </html>
+
 
 
 
