@@ -52,8 +52,8 @@ button {
 <h2>Atualização de Lotes</h2>
 
 <div class="filtro-container">
-  <!-- Filtro por quadra -->
-  <input type="text" id="filtroQuadra" placeholder="Filtrar por quadra...">
+  <!-- Filtro por Nome -->
+  <input type="text" id="filtroNome" placeholder="Filtrar por Nome ou número...">
 
   <!-- Correção de valores -->
   <input type="number" id="valorCorrecao" placeholder="Valor ou %" style="width:100px;">
@@ -83,7 +83,7 @@ button {
 const API_BASE = "https://backend-parque-riogrande.onrender.com";
 
 let lotes = [];
-let filtroQuadraValue = "";
+let filtroNomeValue = "";
 
 // 🔹 CARREGAR LOTES DO RENDER
 async function carregarLotes() {
@@ -98,7 +98,7 @@ async function carregarLotes() {
       ...l,
       Valor: Number(l.Valor),
       Vendido: l.Vendido === true || l.Vendido === "TRUE",
-      Quadra: l.Quadra || "" // caso não exista
+      Nome: l.Nome || ""
     }));
 
     montarTabela();
@@ -113,8 +113,8 @@ function montarTabela() {
   tbody.innerHTML = "";
 
   lotes.forEach((lote, index) => {
-    // Filtra pelo valor do campo filtro
-    if (lote.Quadra.toUpperCase().includes(filtroQuadraValue.toUpperCase())) {
+    // Filtra pelo valor do campo Nome
+    if (lote.Nome.toUpperCase().includes(filtroNomeValue.toUpperCase())) {
       const tr = document.createElement("tr");
       tr.className = lote.Vendido ? "vendido" : "livre";
 
@@ -177,9 +177,9 @@ async function salvar() {
   }
 }
 
-// 🔹 FILTRO POR QUADRA
-document.getElementById("filtroQuadra").addEventListener("input", (e) => {
-  filtroQuadraValue = e.target.value;
+// 🔹 FILTRO POR NOME
+document.getElementById("filtroNome").addEventListener("input", (e) => {
+  filtroNomeValue = e.target.value;
   montarTabela();
 });
 
@@ -194,7 +194,7 @@ document.getElementById("aplicarCorrecao").addEventListener("click", () => {
   }
 
   lotes.forEach((lote, index) => {
-    if (lote.Quadra.toUpperCase().includes(filtroQuadraValue.toUpperCase())) {
+    if (lote.Nome.toUpperCase().includes(filtroNomeValue.toUpperCase())) {
       if (tipo === "valor") {
         lote.Valor += valorCorrecao;
       } else if (tipo === "percentual") {
