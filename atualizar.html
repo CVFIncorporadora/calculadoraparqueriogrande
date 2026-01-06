@@ -133,23 +133,23 @@ function alterarVendido(index, valor) {
 async function salvar() {
   try {
     for (const lote of lotes) {
-      const res = await fetch(`${API_BASE}/lotes/${lote.ID}`, {
+      const response = await fetch(`${API_URL}/lotes/${lote.ID}`, {
         method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          Valor: lote.Valor,
-          Vendido: lote.Vendido
-        })
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(lote)
       });
 
-      const retorno = await res.json();
-      if (!retorno.success) throw new Error();
+      if (!response.ok) {
+        throw new Error("Erro ao salvar lote " + lote.ID);
+      }
     }
 
-    alert("✅ Dados salvos com sucesso no servidor!");
-    carregarLotes(); // sincroniza
+    alert("✅ Dados salvos com sucesso!");
 
-  } catch {
+  } catch (err) {
+    console.error(err);
     alert("❌ Erro ao salvar os dados");
   }
 }
@@ -160,6 +160,7 @@ document.addEventListener("DOMContentLoaded", carregarLotes);
 
 </body>
 </html>
+
 
 
 
