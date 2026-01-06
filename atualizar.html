@@ -5,7 +5,39 @@
 <title>Atualizar Lotes</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css"> <!-- opcional -->
+<style>
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #f7f7f7;
+}
+h2 { margin-bottom: 10px; }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background: #fff;
+  font-size: 13px;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 6px;
+  text-align: center;
+}
+th { background: #f0f0f0; }
+tr.vendido { background-color: #ffd6d6; }
+tr.livre { background-color: #d6ffd6; }
+input[type="number"] {
+  width: 110px;
+  padding: 4px;
+}
+select { padding: 4px; }
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+</style>
 </head>
 
 <body>
@@ -25,11 +57,110 @@
   <tbody></tbody>
 </table>
 
-<button id="btnSalvar">💾 Salvar Alterações</button>
+<button onclick="salvar()">💾 Salvar no Servidor</button>
 
-<script src="script.js"></script>
+<script>
+const API_BASE = "https://backend-parque-riogrande.onrender.com";
+
+let lotes = [];
+
+// 🔹 CARREGAR LOTES DO RENDER
+async function carregarLotes() {
+  try {
+    const res = await fetch(`${API_BASE}/lotes`);
+    if (!res.ok) throw new Error();
+
+    const data = await res.json();
+
+    // normaliza
+    lotes = data.map(l => ({
+      ...l,
+      Valor: Number(l.Valor),
+      Vendido: l.Vendido === true || l.Vendido === "TRUE"
+    }));
+
+    montarTabela();
+  } catch {
+    alert("❌ Erro ao carregar dados do servidor");
+  }
+}
+
+// 🔹 MONTA TABELA
+function montarTabela() {
+  const tbody = document.querySelector("#tabela tbody");
+  tbody.innerHTML = "";
+
+  lotes.forEach((lote, index) => {
+    const tr = document.createElement("tr");
+    tr.className = lote.Vendido ? "vendido" : "livre";
+
+    tr.innerHTML = `
+      <td>${lote.ID}</td>
+      <td>${lote.Nome}</td>
+      <td>${lote.Area}</td>
+
+      <td>
+        <input
+          type="number"
+          value="${lote.Valor}"
+          onchange="alterarValor(${index}, this.value)"
+        >
+      </td>
+
+      <td>
+        <select onchange="alterarVendido(${index}, this.value)">
+          <option value="false" ${!lote.Vendido ? "selected" : ""}>Disponível</option>
+          <option value="true" ${lote.Vendido ? "selected" : ""}>Vendido</option>
+        </select>
+      </td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+// 🔹 ALTERA VALOR
+function alterarValor(index, novoValor) {
+  lotes[index].Valor = Number(novoValor);
+}
+
+// 🔹 ALTERA STATUS
+function alterarVendido(index, valor) {
+  lotes[index].Vendido = valor === "true";
+  montarTabela();
+}
+
+// 🔹 SALVA NO BACKEND (Render)
+async function salvar() {
+  try {
+    for (const lote of lotes) {
+      const res = await fetch(`${API_BASE}/lotes/${lote.ID}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          Valor: lote.Valor,
+          Vendido: lote.Vendido
+        })
+      });
+
+      const retorno = await res.json();
+      if (!retorno.success) throw new Error();
+    }
+
+    alert("✅ Dados salvos com sucesso no servidor!");
+    carregarLotes(); // sincroniza
+
+  } catch {
+    alert("❌ Erro ao salvar os dados");
+  }
+}
+
+// 🔹 INICIALIZA
+document.addEventListener("DOMContentLoaded", carregarLotes);
+</script>
+
 </body>
 </html>
+
 
 
 
