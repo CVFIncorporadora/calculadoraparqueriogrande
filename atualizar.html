@@ -52,8 +52,8 @@ button {
 <h2>Atualização de Lotes</h2>
 
 <div class="filtro-container">
-  <!-- Filtro por Nome -->
-  <input type="text" id="filtroNome" placeholder="Filtrar por Nome ou número...">
+  <!-- Filtro por letra da Quadra -->
+  <input type="text" id="filtroQuadra" placeholder="Digite a letra da Quadra..." maxlength="1">
 
   <!-- Correção de valores -->
   <input type="number" id="valorCorrecao" placeholder="Valor ou %" style="width:100px;">
@@ -83,7 +83,7 @@ button {
 const API_BASE = "https://backend-parque-riogrande.onrender.com";
 
 let lotes = [];
-let filtroNomeValue = "";
+let filtroQuadraValue = "";
 
 // 🔹 CARREGAR LOTES DO RENDER
 async function carregarLotes() {
@@ -113,8 +113,8 @@ function montarTabela() {
   tbody.innerHTML = "";
 
   lotes.forEach((lote, index) => {
-    // Filtra pelo valor do campo Nome
-    if (lote.Nome.toUpperCase().includes(filtroNomeValue.toUpperCase())) {
+    // Filtra apenas pela primeira letra do Nome (Quadra)
+    if (lote.Nome.toUpperCase().startsWith(filtroQuadraValue.toUpperCase())) {
       const tr = document.createElement("tr");
       tr.className = lote.Vendido ? "vendido" : "livre";
 
@@ -177,9 +177,9 @@ async function salvar() {
   }
 }
 
-// 🔹 FILTRO POR NOME
-document.getElementById("filtroNome").addEventListener("input", (e) => {
-  filtroNomeValue = e.target.value;
+// 🔹 FILTRO POR LETRA DA QUADRA
+document.getElementById("filtroQuadra").addEventListener("input", (e) => {
+  filtroQuadraValue = e.target.value;
   montarTabela();
 });
 
@@ -194,7 +194,7 @@ document.getElementById("aplicarCorrecao").addEventListener("click", () => {
   }
 
   lotes.forEach((lote, index) => {
-    if (lote.Nome.toUpperCase().includes(filtroNomeValue.toUpperCase())) {
+    if (lote.Nome.toUpperCase().startsWith(filtroQuadraValue.toUpperCase())) {
       if (tipo === "valor") {
         lote.Valor += valorCorrecao;
       } else if (tipo === "percentual") {
@@ -212,6 +212,8 @@ document.addEventListener("DOMContentLoaded", carregarLotes);
 
 </body>
 </html>
+
+
 
 
 
