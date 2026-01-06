@@ -1,9 +1,8 @@
-<script>
 const API_BASE = "https://backend-parque-riogrande.onrender.com";
 
 let lotes = [];
 
-// 🔹 CARREGA DO BACKEND (Render)
+// 🔹 CARREGA DO BACKEND
 async function carregarLotes() {
   try {
     const res = await fetch(`${API_BASE}/lotes`);
@@ -11,7 +10,6 @@ async function carregarLotes() {
 
     const data = await res.json();
 
-    // 🔹 Normaliza dados
     lotes = data.map(l => ({
       ...l,
       Valor: Number(l.Valor),
@@ -25,9 +23,13 @@ async function carregarLotes() {
   }
 }
 
-// 🔹 MONTA TABELA
 function montarTabela() {
   const tbody = document.querySelector("#tabela tbody");
+  if (!tbody) {
+    console.error("Tabela não encontrada");
+    return;
+  }
+
   tbody.innerHTML = "";
 
   lotes.forEach((lote, index) => {
@@ -38,16 +40,11 @@ function montarTabela() {
       <td>${lote.ID}</td>
       <td>${lote.Nome}</td>
       <td>${lote.Area}</td>
-
       <td>
-        <input 
-          type="number"
-          value="${lote.Valor}"
-          style="width:120px"
-          onchange="alterarValor(${index}, this.value)"
-        >
+        <input type="number"
+               value="${lote.Valor}"
+               onchange="alterarValor(${index}, this.value)">
       </td>
-
       <td>
         <select onchange="alterarVendido(${index}, this.value)">
           <option value="false" ${!lote.Vendido ? "selected" : ""}>Disponível</option>
@@ -59,18 +56,15 @@ function montarTabela() {
   });
 }
 
-// 🔹 ALTERA VALOR
 function alterarValor(index, novoValor) {
   lotes[index].Valor = Number(novoValor);
 }
 
-// 🔹 ALTERA STATUS
 function alterarVendido(index, valor) {
   lotes[index].Vendido = valor === "true";
   montarTabela();
 }
 
-// 🔹 SALVA NO BACKEND
 async function salvar() {
   try {
     for (const lote of lotes) {
@@ -90,9 +84,8 @@ async function salvar() {
   }
 }
 
-// 🔹 INICIALIZA
 document.addEventListener("DOMContentLoaded", carregarLotes);
-</script>
+
 
 
 
