@@ -7,43 +7,110 @@
 
 <style>
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   padding: 20px;
   background: #f7f7f7;
 }
-h2 { margin-bottom: 10px; }
+
+h2 { 
+  text-align: center;
+  margin-bottom: 10px; 
+  font-size: xx-large;
+}
+.table-wrapper {
+  max-height: 1000px;          /* Altura máxima da tabela */
+  overflow-y: auto;           /* Habilita rolagem vertical */
+  border: 1px solid #ddd;     /* Borda ao redor da tabela */
+  border-radius: 8px;
+}
+
 table {
   border-collapse: collapse;
   width: 100%;
   background: #fff;
   font-size: 19px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
 }
+
 th, td {
   border: 1px solid #ddd;
-  padding: 6px;
+  padding: 8px;
   text-align: center;
 }
-th { background: #f0f0f0; }
-tr.vendido { background-color: #ffd6d6; }
-tr.livre { background-color: #d6ffd6; }
-input[type="number"] {
-  width: 110px;
-  padding: 4px;
-  font-size: 18px;
+
+th { 
+  background: #f0f0f0; 
+  font-weight: 600;
 }
-select { padding: 4px; font-size: 18px; }
+
+tr.vendido { 
+  background-color: #ffd6d6; 
+}
+
+tr.livre { 
+  background-color: #d6ffd6; 
+}
+thead{
+    position: sticky;           /* Deixa o cabeçalho fixo */
+  top: 0;
+  background: #f0f0f0;
+  z-index: 1;                 /* Garante que fique acima das linhas */
+}
+
+/* Campos de entrada e selects padronizados e modernos */
+input[type="text"],
+input[type="number"],
+select {
+  font-size: 16px;           /* Fonte uniforme e mais moderna */
+  height: 40px;              /* Altura consistente */
+  padding: 6px 12px;         /* Espaçamento interno */
+  border-radius: 8px;        /* Bordas arredondadas */
+  border: 1px solid #ccc;    /* Borda suave */
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.05); /* Leve sombra interna */
+  box-sizing: border-box;    /* Inclui padding na altura */
+  outline: none;             /* Remove contorno padrão */
+  transition: 0.2s all ease; /* Suaviza hover e foco */
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: #4a90e2;     /* Borda azul no foco */
+  box-shadow: 0 0 5px rgba(74,144,226,0.3);
+}
+
+/* Campos dentro de filtro-container */
+.filtro-container input,
+.filtro-container select {
+  margin-right: 10px;        /* Espaçamento entre campos */
+  vertical-align: middle;    /* Alinha perfeitamente */
+}
+
+/* Botão moderno */
 button {
   margin-top: 15px;
   padding: 10px 20px;
-  font-size: 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4a90e2;
+  color: #fff;
   cursor: pointer;
+  transition: 0.2s all ease;
 }
+
+button:hover {
+  background-color: #357ab8;
+}
+
+/* Filtro container */
 .filtro-container {
   margin-bottom: 10px;
 }
-.filtro-container input, .filtro-container select {
-  margin-right: 5px;
-}
+
 </style>
 </head>
 
@@ -52,21 +119,29 @@ button {
 <h2>Atualização de Lotes</h2>
 
 <div class="filtro-container">
+  <!-- Filtro por empreendimento -->
+  <select id="filtroEmpreendimento">
+    <option value="">Todos os empreendimentos</option>
+    <option value="01">Parque Rio Grande I</option>
+    <option value="02">Parque Rio Grande II</option>
+  </select>
+
   <!-- Filtro por letra da Quadra -->
-  <input type="text" id="filtroQuadra" placeholder="Digite a letra da Quadra..." maxlength="1">
+  <input type="text" id="filtroQuadra" placeholder="Digite a letra da Quadra..." maxlength="1" >
   
   <!-- Filtro por número do Lote -->
-  <input type="number" id="filtroLote" placeholder="Digite o número do Lote..." style="width:120px;">
+  <input type="number" id="filtroLote" placeholder="Digite o número do Lote..." >
 
   <!-- Correção de valores -->
-  <input type="number" id="valorCorrecao" placeholder="Valor ou %" style="width:100px;">
-  <select id="tipoCorrecao">
+  <input type="number" id="valorCorrecao" placeholder="Valor ou %" >
+  <select id="tipoCorrecao" >
     <option value="valor">Valor fixo</option>
     <option value="percentual">Percentual (%)</option>
   </select>
   <button id="aplicarCorrecao">Aplicar Correção</button>
+  <button onclick="salvar()">💾 Salvar Alterações </style></button>
 </div>
-
+<div class="table-wrapper">
 <table id="tabela">
   <thead>
     <tr>
@@ -79,13 +154,13 @@ button {
   </thead>
   <tbody></tbody>
 </table>
-
-<button onclick="salvar()">💾 Salvar no Servidor</button>
+</div>
 
 <script>
 const API_BASE = "https://backend-parque-riogrande.onrender.com";
 
 let lotes = [];
+let filtroEmpreendimentoValue = "";
 let filtroQuadraValue = "";
 let filtroLoteValue = "";
 
@@ -118,19 +193,21 @@ function montarTabela() {
   lotes.forEach((lote, index) => {
     const nomeUpper = lote.Nome.toUpperCase();
 
+    // Filtrar por empreendimento
+    const passaEmpreendimento = filtroEmpreendimentoValue === "" || nomeUpper.startsWith(filtroEmpreendimentoValue + "-");
+
     // Extrai letra da quadra
     const matchQuadra = nomeUpper.match(/QUADRA\s+([A-Z])/);
     const letraQuadra = matchQuadra ? matchQuadra[1] : "";
+    const passaQuadra = filtroQuadraValue === "" || letraQuadra === filtroQuadraValue.toUpperCase();
 
     // Extrai número do lote
     const matchLote = nomeUpper.match(/LOTE\s+(\d+)/);
     const numeroLote = matchLote ? matchLote[1] : "";
-
-    // Filtra pelos dois campos
-    const passaQuadra = filtroQuadraValue === "" || letraQuadra === filtroQuadraValue.toUpperCase();
     const passaLote = filtroLoteValue === "" || numeroLote.includes(filtroLoteValue);
 
-    if (passaQuadra && passaLote) {
+    // Só exibe se passar todos os filtros
+    if (passaEmpreendimento && passaQuadra && passaLote) {
       const tr = document.createElement("tr");
       tr.className = lote.Vendido ? "vendido" : "livre";
 
@@ -174,9 +251,7 @@ async function salvar() {
     for (const lote of lotes) {
       const response = await fetch(`${API_BASE}/lotes/${lote.ID}`, {
         method: "PUT",
-        headers: {
-          "Content-Type": "application/json"
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(lote)
       });
 
@@ -192,13 +267,15 @@ async function salvar() {
   }
 }
 
-// 🔹 FILTRO QUADRA
+// 🔹 EVENTOS DOS FILTROS
+document.getElementById("filtroEmpreendimento").addEventListener("change", (e) => {
+  filtroEmpreendimentoValue = e.target.value;
+  montarTabela();
+});
 document.getElementById("filtroQuadra").addEventListener("input", (e) => {
   filtroQuadraValue = e.target.value;
   montarTabela();
 });
-
-// 🔹 FILTRO LOTE
 document.getElementById("filtroLote").addEventListener("input", (e) => {
   filtroLoteValue = e.target.value;
   montarTabela();
@@ -216,15 +293,16 @@ document.getElementById("aplicarCorrecao").addEventListener("click", () => {
 
   lotes.forEach((lote, index) => {
     const nomeUpper = lote.Nome.toUpperCase();
+
+    const passaEmpreendimento = filtroEmpreendimentoValue === "" || nomeUpper.startsWith(filtroEmpreendimentoValue + "-");
     const matchQuadra = nomeUpper.match(/QUADRA\s+([A-Z])/);
     const letraQuadra = matchQuadra ? matchQuadra[1] : "";
+    const passaQuadra = filtroQuadraValue === "" || letraQuadra === filtroQuadraValue.toUpperCase();
     const matchLote = nomeUpper.match(/LOTE\s+(\d+)/);
     const numeroLote = matchLote ? matchLote[1] : "";
-
-    const passaQuadra = filtroQuadraValue === "" || letraQuadra === filtroQuadraValue.toUpperCase();
     const passaLote = filtroLoteValue === "" || numeroLote.includes(filtroLoteValue);
 
-    if (passaQuadra && passaLote) {
+    if (passaEmpreendimento && passaQuadra && passaLote) {
       if (tipo === "valor") {
         lote.Valor += valorCorrecao;
       } else if (tipo === "percentual") {
@@ -242,6 +320,8 @@ document.addEventListener("DOMContentLoaded", carregarLotes);
 
 </body>
 </html>
+
+
 
 
 
