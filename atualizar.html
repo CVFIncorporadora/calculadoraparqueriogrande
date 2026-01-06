@@ -54,6 +54,9 @@ button {
 <div class="filtro-container">
   <!-- Filtro por letra da Quadra -->
   <input type="text" id="filtroQuadra" placeholder="Digite a letra da Quadra..." maxlength="1">
+  
+  <!-- Filtro por número do Lote -->
+  <input type="number" id="filtroLote" placeholder="Digite o número do Lote..." style="width:120px;">
 
   <!-- Correção de valores -->
   <input type="number" id="valorCorrecao" placeholder="Valor ou %" style="width:100px;">
@@ -84,6 +87,7 @@ const API_BASE = "https://backend-parque-riogrande.onrender.com";
 
 let lotes = [];
 let filtroQuadraValue = "";
+let filtroLoteValue = "";
 
 // 🔹 CARREGAR LOTES DO RENDER
 async function carregarLotes() {
@@ -93,7 +97,6 @@ async function carregarLotes() {
 
     const data = await res.json();
 
-    // normaliza
     lotes = data.map(l => ({
       ...l,
       Valor: Number(l.Valor),
@@ -113,8 +116,21 @@ function montarTabela() {
   tbody.innerHTML = "";
 
   lotes.forEach((lote, index) => {
-    // Filtra apenas pela primeira letra do Nome (Quadra)
-    if (lote.Nome.toUpperCase().startsWith(filtroQuadraValue.toUpperCase())) {
+    const nomeUpper = lote.Nome.toUpperCase();
+
+    // Extrai letra da quadra
+    const matchQuadra = nomeUpper.match(/QUADRA\s+([A-Z])/);
+    const letraQuadra = matchQuadra ? matchQuadra[1] : "";
+
+    // Extrai número do lote
+    const matchLote = nomeUpper.match(/LOTE\s+(\d+)/);
+    const numeroLote = matchLote ? matchLote[1] : "";
+
+    // Filtra pelos dois campos
+    const passaQuadra = filtroQuadraValue === "" || letraQuadra === filtroQuadraValue.toUpperCase();
+    const passaLote = filtroLoteValue === "" || numeroLote.includes(filtroLoteValue);
+
+    if (passaQuadra && passaLote) {
       const tr = document.createElement("tr");
       tr.className = lote.Vendido ? "vendido" : "livre";
 
@@ -170,16 +186,21 @@ async function salvar() {
     }
 
     alert("✅ Dados salvos com sucesso!");
-
   } catch (err) {
     console.error(err);
     alert("❌ Erro ao salvar os dados");
   }
 }
 
-// 🔹 FILTRO POR LETRA DA QUADRA
+// 🔹 FILTRO QUADRA
 document.getElementById("filtroQuadra").addEventListener("input", (e) => {
   filtroQuadraValue = e.target.value;
+  montarTabela();
+});
+
+// 🔹 FILTRO LOTE
+document.getElementById("filtroLote").addEventListener("input", (e) => {
+  filtroLoteValue = e.target.value;
   montarTabela();
 });
 
@@ -194,7 +215,16 @@ document.getElementById("aplicarCorrecao").addEventListener("click", () => {
   }
 
   lotes.forEach((lote, index) => {
-    if (lote.Nome.toUpperCase().startsWith(filtroQuadraValue.toUpperCase())) {
+    const nomeUpper = lote.Nome.toUpperCase();
+    const matchQuadra = nomeUpper.match(/QUADRA\s+([A-Z])/);
+    const letraQuadra = matchQuadra ? matchQuadra[1] : "";
+    const matchLote = nomeUpper.match(/LOTE\s+(\d+)/);
+    const numeroLote = matchLote ? matchLote[1] : "";
+
+    const passaQuadra = filtroQuadraValue === "" || letraQuadra === filtroQuadraValue.toUpperCase();
+    const passaLote = filtroLoteValue === "" || numeroLote.includes(filtroLoteValue);
+
+    if (passaQuadra && passaLote) {
       if (tipo === "valor") {
         lote.Valor += valorCorrecao;
       } else if (tipo === "percentual") {
@@ -212,6 +242,8 @@ document.addEventListener("DOMContentLoaded", carregarLotes);
 
 </body>
 </html>
+
+
 
 
 
