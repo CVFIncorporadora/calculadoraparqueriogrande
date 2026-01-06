@@ -31,14 +31,18 @@ input[type="number"] {
   padding: 4px;
   font-size: 18px;
 }
-select { padding: 4px;
-       font-size: 18px;
-       }
+select { padding: 4px; font-size: 18px; }
 button {
   margin-top: 15px;
   padding: 10px 20px;
   font-size: 14px;
   cursor: pointer;
+}
+.filtro-container {
+  margin-bottom: 10px;
+}
+.filtro-container input, .filtro-container select {
+  margin-right: 5px;
 }
 </style>
 </head>
@@ -46,6 +50,19 @@ button {
 <body>
 
 <h2>Atualização de Lotes</h2>
+
+<div class="filtro-container">
+  <!-- Filtro por quadra -->
+  <input type="text" id="filtroQuadra" placeholder="Filtrar por quadra...">
+
+  <!-- Correção de valores -->
+  <input type="number" id="valorCorrecao" placeholder="Valor ou %" style="width:100px;">
+  <select id="tipoCorrecao">
+    <option value="valor">Valor fixo</option>
+    <option value="percentual">Percentual (%)</option>
+  </select>
+  <button id="aplicarCorrecao">Aplicar Correção</button>
+</div>
 
 <table id="tabela">
   <thead>
@@ -66,6 +83,7 @@ button {
 const API_BASE = "https://backend-parque-riogrande.onrender.com";
 
 let lotes = [];
+let filtroQuadraValue = "";
 
 // 🔹 CARREGAR LOTES DO RENDER
 async function carregarLotes() {
@@ -79,7 +97,8 @@ async function carregarLotes() {
     lotes = data.map(l => ({
       ...l,
       Valor: Number(l.Valor),
-      Vendido: l.Vendido === true || l.Vendido === "TRUE"
+      Vendido: l.Vendido === true || l.Vendido === "TRUE",
+      Quadra: l.Quadra || "" // caso não exista
     }));
 
     montarTabela();
@@ -94,30 +113,31 @@ function montarTabela() {
   tbody.innerHTML = "";
 
   lotes.forEach((lote, index) => {
-    const tr = document.createElement("tr");
-    tr.className = lote.Vendido ? "vendido" : "livre";
+    // Filtra pelo valor do campo filtro
+    if (lote.Quadra.toUpperCase().includes(filtroQuadraValue.toUpperCase())) {
+      const tr = document.createElement("tr");
+      tr.className = lote.Vendido ? "vendido" : "livre";
 
-    tr.innerHTML = `
-      <td>${lote.ID}</td>
-      <td>${lote.Nome}</td>
-      <td>${lote.Area}</td>
-
-      <td>
-        <input
-          type="number"
-          value="${lote.Valor}"
-          onchange="alterarValor(${index}, this.value)"
-        >
-      </td>
-
-      <td>
-        <select onchange="alterarVendido(${index}, this.value)">
-          <option value="false" ${!lote.Vendido ? "selected" : ""}>Disponível</option>
-          <option value="true" ${lote.Vendido ? "selected" : ""}>Vendido</option>
-        </select>
-      </td>
-    `;
-    tbody.appendChild(tr);
+      tr.innerHTML = `
+        <td>${lote.ID}</td>
+        <td>${lote.Nome}</td>
+        <td>${lote.Area}</td>
+        <td>
+          <input
+            type="number"
+            value="${lote.Valor.toFixed(2)}"
+            onchange="alterarValor(${index}, this.value)"
+          >
+        </td>
+        <td>
+          <select onchange="alterarVendido(${index}, this.value)">
+            <option value="false" ${!lote.Vendido ? "selected" : ""}>Disponível</option>
+            <option value="true" ${lote.Vendido ? "selected" : ""}>Vendido</option>
+          </select>
+        </td>
+      `;
+      tbody.appendChild(tr);
+    }
   });
 }
 
@@ -157,13 +177,41 @@ async function salvar() {
   }
 }
 
+// 🔹 FILTRO POR QUADRA
+document.getElementById("filtroQuadra").addEventListener("input", (e) => {
+  filtroQuadraValue = e.target.value;
+  montarTabela();
+});
+
+// 🔹 APLICAR CORREÇÃO AUTOMÁTICA
+document.getElementById("aplicarCorrecao").addEventListener("click", () => {
+  const valorCorrecao = parseFloat(document.getElementById("valorCorrecao").value);
+  const tipo = document.getElementById("tipoCorrecao").value;
+
+  if (isNaN(valorCorrecao)) {
+    alert("Digite um valor válido para correção");
+    return;
+  }
+
+  lotes.forEach((lote, index) => {
+    if (lote.Quadra.toUpperCase().includes(filtroQuadraValue.toUpperCase())) {
+      if (tipo === "valor") {
+        lote.Valor += valorCorrecao;
+      } else if (tipo === "percentual") {
+        lote.Valor += lote.Valor * (valorCorrecao / 100);
+      }
+    }
+  });
+
+  montarTabela();
+});
+
 // 🔹 INICIALIZA
 document.addEventListener("DOMContentLoaded", carregarLotes);
 </script>
 
 </body>
 </html>
-
 
 
 
