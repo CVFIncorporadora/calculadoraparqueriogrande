@@ -13,40 +13,36 @@
 
 
   <div class="filtro-container">
-    <!-- Filtro por empreendimento -->
-    <select id="filtroEmpreendimento">
-      <option value="">Todos os empreendimentos</option>
-      <option value="01">Parque Rio Grande I</option>
-      <option value="02">Parque Rio Grande II</option>
-    </select>
+    <input type="text" id="filtroEmpreendimento" placeholder="Filtrar Empreendimento (ex: I, II)">
+    <input type="text" id="filtroQuadra" placeholder="Filtrar Quadra (ex: A, B)">
+    <input type="text" id="filtroLote" placeholder="Filtrar Lote (ex: 01, 15)">
 
-    <!-- Filtro por letra da Quadra -->
-    <input type="text" id="filtroQuadra" placeholder="Digite a letra da Quadra..." maxlength="1">
+    <div style="display: flex; gap: 5px; align-items: center;">
+      <input type="number" id="valorCorrecao" placeholder="Valor" style="width: 80px;">
+      <select id="tipoCorrecao">
+        <option value="valor">R$ (Valor Fixo)</option>
+        <option value="percentual">% (Porcentagem)</option>
+      </select>
+      <button id="aplicarCorrecao" class="btn-cinza">Aplicar Correção</button>
+    </div>
 
-    <!-- Filtro por número do Lote -->
-    <input type="number" id="filtroLote" placeholder="Digite o número do Lote...">
-
-    <!-- Correção de valores -->
-    <input type="number" id="valorCorrecao" placeholder="Valor ou %">
-    <select id="tipoCorrecao">
-      <option value="valor">Valor fixo</option>
-      <option value="percentual">Percentual (%)</option>
-    </select>
-    <button id="aplicarCorrecao">Aplicar Correção</button>
-    <button onclick="salvar()">💾 Salvar Alterações</button>
+    <button onclick="salvar()" class="btn-verde">Salvar Alterações</button>
   </div>
-  <div class="table-wrapper">
+
+  <div class="table-container">
     <table id="tabela">
       <thead>
         <tr>
           <th>ID</th>
           <th>Nome</th>
-          <th>Área</th>
-          <th>Valor</th>
-          <th>Vendido</th>
+          <th>Área (m²)</th>
+          <th>Valor (R$)</th>
+          <th>Status</th>
         </tr>
       </thead>
-      <tbody></tbody>
+      <tbody>
+        <!-- Lotes serão carregados aqui via JavaScript -->
+      </tbody>
     </table>
   </div>
 
