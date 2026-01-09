@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Atualizar Lotes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+
+
+  <div class="filtro-container">
+    <!-- Filtro por empreendimento -->
+    <select id="filtroEmpreendimento">
+      <option value="">Todos os empreendimentos</option>
+      <option value="01">Parque Rio Grande I</option>
+      <option value="02">Parque Rio Grande II</option>
+    </select>
+
+    <!-- Filtro por letra da Quadra -->
+    <input type="text" id="filtroQuadra" placeholder="Digite a letra da Quadra..." maxlength="1">
+
+    <!-- Filtro por número do Lote -->
+    <input type="number" id="filtroLote" placeholder="Digite o número do Lote...">
+
+    <!-- Correção de valores -->
+    <input type="number" id="valorCorrecao" placeholder="Valor ou %">
+    <select id="tipoCorrecao">
+      <option value="valor">Valor fixo</option>
+      <option value="percentual">Percentual (%)</option>
+    </select>
+    <button id="aplicarCorrecao">Aplicar Correção</button>
+    <button onclick="salvar()">💾 Salvar Alterações</button>
+  </div>
+  <div class="table-wrapper">
+    <table id="tabela">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Área</th>
+          <th>Valor</th>
+          <th>Vendido</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
