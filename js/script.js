@@ -172,8 +172,10 @@ document.getElementById("aplicarCorrecao").addEventListener("click", () => {
     if (passaEmpreendimento && passaQuadra && passaLote) {
       if (tipo === "valor") {
         lote.Valor += valorCorrecao;
+        lote.modificado = true;
       } else if (tipo === "percentual") {
         lote.Valor += lote.Valor * (valorCorrecao / 100);
+        lote.modificado = true;
       }
     }
   });
