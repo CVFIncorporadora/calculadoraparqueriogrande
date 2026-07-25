@@ -921,7 +921,7 @@
         stroke-width="2" onclick="selecionarLote('_2_G_25')" />
       <polygon id="lote-_2_G_26" points="559,1707,584,1711,577,1754,552,1750" fill="transparent" stroke="transparent"
         stroke-width="2" onclick="selecionarLote('_2_G_26')" />
-      <polygon id="lote-_2_H_14" points="844,1635,868,1639,862,1682,837,1680'" fill="transparent" stroke="transparent"
+      <polygon id="lote-_2_H_14" points="844,1635,868,1639,862,1682,837,1680" fill="transparent" stroke="transparent"
         stroke-width="2" onclick="selecionarLote('_2_H_14')" />
       <polygon id="lote-_2_H_15" points="822,1632,841,1635,834,1677,816,1675" fill="transparent" stroke="transparent"
         stroke-width="2" onclick="selecionarLote('_2_H_15')" />
@@ -1370,8 +1370,8 @@
         const elem = document.getElementById("lote-" + id);
         console.log(`Processando lote ${id}: vendido=${lote.vendido}, elemento=${elem ? 'encontrado' : 'NÃO ENCONTRADO'}`);
         if (elem && lote.vendido) {
-          elem.setAttribute("fill", "#ff0000");
-          elem.setAttribute("stroke", "#ff0000");
+          elem.style.fill = "#ff0000";
+          elem.style.stroke = "#ff0000";
           console.log(`✅ Lote ${id} pintado de VERMELHO`);
         }
       });
@@ -1389,12 +1389,10 @@
         console.log(`Removendo seleção anterior de ${loteSelecionadoId}`);
 
         if (anterior) {
-          anterior.setAttribute(
-            "fill",
-            dadosLotes[loteSelecionadoId].vendido ? "#ff0000" : "transparent"
-          );
-          anterior.setAttribute("stroke", dadosLotes[loteSelecionadoId].vendido ? "#ff0000" : "transparent");
-          console.log(`✅ Anterior: fill=${dadosLotes[loteSelecionadoId].vendido ? "#ff0000" : "transparent"}`);
+          const corAnterior = dadosLotes[loteSelecionadoId].vendido ? "#ff0000" : "transparent";
+          anterior.style.fill = corAnterior;
+          anterior.style.stroke = corAnterior;
+          console.log(`✅ Anterior: fill=${corAnterior}`);
         }
       }
 
@@ -1402,12 +1400,12 @@
       const lote = dadosLotes[id];
       if (atual && lote) {
         if (lote.vendido) {
-          atual.setAttribute("fill", "#ff0000");
-          atual.setAttribute("stroke", "#ff0000");
+          atual.style.fill = "#ff0000";
+          atual.style.stroke = "#ff0000";
           console.log(`✅ Lote ${id} é VENDIDO - pintado VERMELHO`);
         } else {
-          atual.setAttribute("fill", "#00FFFFaa");
-          atual.setAttribute("stroke", "#00FFFF");
+          atual.style.fill = "#00FFFFaa";
+          atual.style.stroke = "#00FFFF";
           console.log(`✅ Lote ${id} é DISPONÍVEL - pintado AZUL CIANO`);
         }
       }
