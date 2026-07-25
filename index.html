@@ -1347,6 +1347,7 @@
         const resposta = await fetch(`${API_URL}/lotes`);
         const dados = await resposta.json();
 
+        console.log("✅ Dados carregados:", dados);
         dadosLotes = {};
 
         dados.forEach((linha) => {
@@ -1358,25 +1359,33 @@
             vendido: linha.Vendido === true || linha.Vendido === "TRUE",
           }
         })
-      } catch {
-        console.log("erro")
+        console.log("✅ dadosLotes:", dadosLotes);
+      } catch (err) {
+        console.error("❌ Erro ao carregar lotes:", err);
       };
 
       Object.keys(dadosLotes).forEach(id => {
         const lote = dadosLotes[id];
         const elem = document.getElementById("lote-" + id);
+        console.log(`Processando lote ${id}: vendido=${lote.vendido}, elemento=${elem ? 'encontrado' : 'NÃO ENCONTRADO'}`);
         if (elem && lote.vendido) {
           elem.setAttribute("fill", "#ff0000");
           elem.setAttribute("stroke", "#ff0000");
+          console.log(`✅ Lote ${id} pintado de VERMELHO`);
         }
       });
     }
 
     function selecionarLote(id) {
-      if (!dadosLotes || !dadosLotes[id]) return;
+      console.log(`🔵 Selecionando lote: ${id}`);
+      if (!dadosLotes || !dadosLotes[id]) {
+        console.error(`❌ Lote ${id} não encontrado em dadosLotes`);
+        return;
+      }
 
       if (loteSelecionadoId && loteSelecionadoId !== id) {
         const anterior = document.getElementById("lote-" + loteSelecionadoId);
+        console.log(`Removendo seleção anterior de ${loteSelecionadoId}`);
 
         if (anterior) {
           anterior.setAttribute(
@@ -1384,6 +1393,7 @@
             dadosLotes[loteSelecionadoId].vendido ? "#ff0000" : "transparent"
           );
           anterior.setAttribute("stroke", dadosLotes[loteSelecionadoId].vendido ? "#ff0000" : "transparent");
+          console.log(`✅ Anterior: fill=${dadosLotes[loteSelecionadoId].vendido ? "#ff0000" : "transparent"}`);
         }
       }
 
@@ -1393,9 +1403,11 @@
         if (lote.vendido) {
           atual.setAttribute("fill", "#ff0000");
           atual.setAttribute("stroke", "#ff0000");
+          console.log(`✅ Lote ${id} é VENDIDO - pintado VERMELHO`);
         } else {
           atual.setAttribute("fill", "#00FFFFaa");
           atual.setAttribute("stroke", "#00FFFF");
+          console.log(`✅ Lote ${id} é DISPONÍVEL - pintado AZUL CIANO`);
         }
       }
 
