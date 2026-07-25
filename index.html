@@ -1366,7 +1366,8 @@
         const lote = dadosLotes[id];
         const elem = document.getElementById("lote-" + id);
         if (elem && lote.vendido) {
-          elem.setAttribute("fill", "#ff000088");
+          elem.setAttribute("fill", "#ff0000");
+          elem.setAttribute("stroke", "#ff0000");
         }
       });
     }
@@ -1380,9 +1381,9 @@
         if (anterior) {
           anterior.setAttribute(
             "fill",
-            dadosLotes[loteSelecionadoId].vendido ? "#ff000088" : "transparent"
+            dadosLotes[loteSelecionadoId].vendido ? "#ff0000" : "transparent"
           );
-          anterior.setAttribute("stroke", "transparent");
+          anterior.setAttribute("stroke", dadosLotes[loteSelecionadoId].vendido ? "#ff0000" : "transparent");
         }
       }
 
@@ -1390,11 +1391,11 @@
       const lote = dadosLotes[id];
       if (atual && lote) {
         if (lote.vendido) {
-          atual.setAttribute("fill", "#ff0000aa");
+          atual.setAttribute("fill", "#ff0000");
           atual.setAttribute("stroke", "#ff0000");
         } else {
-          atual.setAttribute("fill", "#0096ff66");
-          atual.setAttribute("stroke", "#0096ff");
+          atual.setAttribute("fill", "#00FFFFaa");
+          atual.setAttribute("stroke", "#00FFFF");
         }
       }
 
