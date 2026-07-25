@@ -264,6 +264,99 @@ body {
   stroke-width: 2.5;
 }
 
+.dialog-proposta {
+  border: none;
+  border-radius: 20px;
+  padding: 0;
+  width: min(420px, 92vw);
+  box-shadow: var(--shadow);
+}
+
+.dialog-proposta::backdrop {
+  background: rgba(7, 25, 34, 0.55);
+  backdrop-filter: blur(2px);
+}
+
+.dialog-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 24px;
+}
+
+.dialog-form h3 {
+  margin: 0 0 4px;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.dialog-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dialog-field label {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.dialog-field input,
+.dialog-field textarea {
+  font-size: 14px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  font-family: inherit;
+  color: var(--text);
+  outline: none;
+}
+
+.dialog-field input:focus,
+.dialog-field textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(184, 135, 59, 0.15);
+}
+
+.dialog-field textarea {
+  resize: vertical;
+}
+
+.dialog-erro {
+  font-size: 0.78rem;
+  color: #c0392b;
+  min-height: 1em;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.dialog-actions button {
+  padding: 0 18px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-cancelar {
+  background: #eceff1;
+  color: var(--text);
+}
+
+.btn-confirmar {
+  background: var(--accent);
+  color: #fff;
+}
+
 @media (max-width: 980px) {
   body {
     overflow: auto;

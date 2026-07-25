@@ -1,4 +1,132 @@
+function validarCPF(cpf) {
+  cpf = (cpf || '').replace(/\D/g, '');
+  if (cpf.length !== 11 || /^(\d)\1{10}$/.test(cpf)) return false;
+
+  let soma = 0;
+  for (let i = 0; i < 9; i++) soma += parseInt(cpf[i], 10) * (10 - i);
+  let resto = (soma * 10) % 11;
+  if (resto === 10 || resto === 11) resto = 0;
+  if (resto !== parseInt(cpf[9], 10)) return false;
+
+  soma = 0;
+  for (let i = 0; i < 10; i++) soma += parseInt(cpf[i], 10) * (11 - i);
+  resto = (soma * 10) % 11;
+  if (resto === 10 || resto === 11) resto = 0;
+  return resto === parseInt(cpf[10], 10);
+}
+
+function formatarCPF(valor) {
+  return (valor || '').replace(/\D/g, '').slice(0, 11)
+    .replace(/(\d{3})(\d)/, '$1.$2')
+    .replace(/(\d{3})(\d)/, '$1.$2')
+    .replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+}
+
+function formatarDataBR(isoDate) {
+  if (!isoDate) return '';
+  const [ano, mes, dia] = isoDate.split('-');
+  return `${dia}/${mes}/${ano}`;
+}
+
+function escapeHtml(texto) {
+  const div = document.createElement('div');
+  div.textContent = texto || '';
+  return div.innerHTML;
+}
+
+// Abre a caixa de diálogo pedindo os dados da proposta antes de imprimir.
+// Resolve com os dados preenchidos, ou null se o usuário cancelar.
+function pedirDadosProposta() {
+  return new Promise((resolve) => {
+    const dialog = document.getElementById('dialogProposta');
+    const form = document.getElementById('formProposta');
+    const btnCancelar = document.getElementById('btnCancelarProposta');
+    const inputCpfCorretor = document.getElementById('inputCpfCorretor');
+    const inputCpfCliente = document.getElementById('inputCpfCliente');
+    const erroCpfCorretor = document.getElementById('erroCpfCorretor');
+    const erroCpfCliente = document.getElementById('erroCpfCliente');
+
+    form.reset();
+    erroCpfCorretor.textContent = '';
+    erroCpfCliente.textContent = '';
+
+    const aplicarMascara = (e) => { e.target.value = formatarCPF(e.target.value); };
+    inputCpfCorretor.addEventListener('input', aplicarMascara);
+    inputCpfCliente.addEventListener('input', aplicarMascara);
+
+    const limpar = () => {
+      inputCpfCorretor.removeEventListener('input', aplicarMascara);
+      inputCpfCliente.removeEventListener('input', aplicarMascara);
+      form.removeEventListener('submit', onSubmit);
+      btnCancelar.removeEventListener('click', onCancelar);
+      dialog.removeEventListener('cancel', onDialogCancel);
+      dialog.removeEventListener('click', onBackdropClick);
+    };
+
+    function onSubmit(e) {
+      e.preventDefault();
+      erroCpfCorretor.textContent = '';
+      erroCpfCliente.textContent = '';
+
+      let valido = true;
+      if (!validarCPF(inputCpfCorretor.value)) {
+        erroCpfCorretor.textContent = 'CPF inválido';
+        valido = false;
+      }
+      if (!validarCPF(inputCpfCliente.value)) {
+        erroCpfCliente.textContent = 'CPF inválido';
+        valido = false;
+      }
+      if (!valido) return;
+
+      const dados = {
+        dataEntrada: formatarDataBR(document.getElementById('inputDataEntrada').value),
+        dataVencimento: formatarDataBR(document.getElementById('inputDataVencimento').value),
+        observacoes: document.getElementById('inputObservacoes').value.trim(),
+        cpfCorretor: inputCpfCorretor.value,
+        cpfCliente: inputCpfCliente.value,
+      };
+
+      limpar();
+      dialog.close();
+      resolve(dados);
+    }
+
+    function onCancelar() {
+      limpar();
+      dialog.close();
+      resolve(null);
+    }
+
+    function onDialogCancel() {
+      limpar();
+      resolve(null);
+    }
+
+    function onBackdropClick(e) {
+      const rect = dialog.getBoundingClientRect();
+      const dentro = e.clientX >= rect.left && e.clientX <= rect.right &&
+        e.clientY >= rect.top && e.clientY <= rect.bottom;
+      if (!dentro) {
+        limpar();
+        dialog.close();
+        resolve(null);
+      }
+    }
+
+    form.addEventListener('submit', onSubmit);
+    btnCancelar.addEventListener('click', onCancelar);
+    dialog.addEventListener('cancel', onDialogCancel);
+    dialog.addEventListener('click', onBackdropClick);
+
+    dialog.showModal();
+  });
+}
+
 export async function imprimirMapa() {
+  const dadosProposta = await pedirDadosProposta();
+  if (!dadosProposta) return;
+
   // Captura dados do lote
   const nomeLote = document.getElementById("nomeLote")?.textContent || '---';
   const areaLote = document.getElementById("areaLote")?.textContent || '---';
@@ -170,9 +298,16 @@ export async function imprimirMapa() {
         letter-spacing: 0.5px;
       }
 
+      .mapa-section {
+        page-break-inside: avoid;
+      }
+
       .mapa-image {
         max-width: 100%;
+        max-height: 720px;
+        width: auto;
         height: auto;
+        object-fit: contain;
         border: 2px solid #b8873b;
         border-radius: 6px;
       }
@@ -223,6 +358,12 @@ export async function imprimirMapa() {
         border-bottom: 1px solid #183243;
         height: 25px;
         margin-bottom: 5px;
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: 4px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #183243;
       }
 
       /* Observações */
@@ -243,6 +384,7 @@ export async function imprimirMapa() {
         display: flex;
         justify-content: space-between;
         gap: 50px;
+        page-break-inside: avoid;
       }
 
       .signature-block {
@@ -340,12 +482,12 @@ export async function imprimirMapa() {
       <!-- Datas -->
       <div class="field-section">
         <div class="field-label">Data da Entrada:</div>
-        <div class="field-line"></div>
+        <div class="field-line">${escapeHtml(dadosProposta.dataEntrada)}</div>
       </div>
 
       <div class="field-section">
         <div class="field-label">Primeiro Vencimento:</div>
-        <div class="field-line"></div>
+        <div class="field-line">${escapeHtml(dadosProposta.dataVencimento)}</div>
         <p style="font-size: 11px; color: #67808b; margin-top: 5px;">
           *Os demais vencimentos serão no mesmo dia do mês subsequente
         </p>
@@ -355,20 +497,7 @@ export async function imprimirMapa() {
       <div class="observations">
         <strong style="display: block; margin-bottom: 10px; color: #183243;">Observações:</strong>
         <div style="border: 1px solid #ddd; padding: 15px; min-height: 80px; background: #fafafa;">
-        </div>
-      </div>
-
-      <!-- Assinaturas -->
-      <div class="signatures">
-        <div class="signature-block">
-          <div class="signature-line"></div>
-          <p>Corretor</p>
-          <p style="font-size: 10px; font-weight: normal; color: #67808b;">CPF: _________________</p>
-        </div>
-        <div class="signature-block">
-          <div class="signature-line"></div>
-          <p>Comprador</p>
-          <p style="font-size: 10px; font-weight: normal; color: #67808b;">CPF: _________________</p>
+          ${dadosProposta.observacoes ? escapeHtml(dadosProposta.observacoes).replace(/\n/g, '<br>') : ''}
         </div>
       </div>
 
@@ -379,6 +508,20 @@ export async function imprimirMapa() {
         <img src="${mapaImage}" alt="Mapa do Lote" class="mapa-image">
       </div>
       ` : ''}
+
+      <!-- Assinaturas -->
+      <div class="signatures">
+        <div class="signature-block">
+          <div class="signature-line"></div>
+          <p>Corretor</p>
+          <p style="font-size: 10px; font-weight: normal; color: #67808b;">CPF: ${escapeHtml(dadosProposta.cpfCorretor)}</p>
+        </div>
+        <div class="signature-block">
+          <div class="signature-line"></div>
+          <p>Comprador</p>
+          <p style="font-size: 10px; font-weight: normal; color: #67808b;">CPF: ${escapeHtml(dadosProposta.cpfCliente)}</p>
+        </div>
+      </div>
 
       <!-- Rodapé -->
       <div class="footer">

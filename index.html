@@ -1479,6 +1479,45 @@
 
     window.onload = carregarJSON;
   </script>
+
+  <dialog id="dialogProposta" class="dialog-proposta">
+    <form id="formProposta" class="dialog-form">
+      <h3>Dados da proposta</h3>
+
+      <div class="dialog-field">
+        <label for="inputDataEntrada">Data da entrada</label>
+        <input type="date" id="inputDataEntrada" required>
+      </div>
+
+      <div class="dialog-field">
+        <label for="inputDataVencimento">Vencimento da 1ª parcela</label>
+        <input type="date" id="inputDataVencimento" required>
+      </div>
+
+      <div class="dialog-field">
+        <label for="inputCpfCorretor">CPF do corretor</label>
+        <input type="text" id="inputCpfCorretor" placeholder="000.000.000-00" inputmode="numeric" maxlength="14" required>
+        <span class="dialog-erro" id="erroCpfCorretor"></span>
+      </div>
+
+      <div class="dialog-field">
+        <label for="inputCpfCliente">CPF do cliente</label>
+        <input type="text" id="inputCpfCliente" placeholder="000.000.000-00" inputmode="numeric" maxlength="14" required>
+        <span class="dialog-erro" id="erroCpfCliente"></span>
+      </div>
+
+      <div class="dialog-field">
+        <label for="inputObservacoes">Observações (opcional)</label>
+        <textarea id="inputObservacoes" rows="3"></textarea>
+      </div>
+
+      <div class="dialog-actions">
+        <button type="button" id="btnCancelarProposta" class="btn-cancelar">Cancelar</button>
+        <button type="submit" class="btn-confirmar">Gerar e imprimir</button>
+      </div>
+    </form>
+  </dialog>
+
   <script type="module">
     import { imprimirMapa } from './js/imprimir.js';
 
