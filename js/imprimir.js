@@ -157,6 +157,11 @@ export async function imprimirMapa() {
 
   const css = `
     <style>
+      @page {
+        size: A4;
+        margin: 12mm;
+      }
+
       * {
         margin: 0;
         padding: 0;
@@ -284,9 +289,10 @@ export async function imprimirMapa() {
 
       /* Seção do mapa */
       .mapa-section {
-        margin: 30px 0;
+        margin: 15px 0;
         text-align: center;
         page-break-before: always;
+        page-break-inside: avoid;
       }
 
       .mapa-section h3 {
@@ -294,17 +300,13 @@ export async function imprimirMapa() {
         font-weight: 700;
         color: #183243;
         text-transform: uppercase;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
         letter-spacing: 0.5px;
-      }
-
-      .mapa-section {
-        page-break-inside: avoid;
       }
 
       .mapa-image {
         max-width: 100%;
-        max-height: 720px;
+        max-height: 600px;
         width: auto;
         height: auto;
         object-fit: contain;
@@ -380,7 +382,7 @@ export async function imprimirMapa() {
 
       /* Assinaturas */
       .signatures {
-        margin-top: 50px;
+        margin-top: 25px;
         display: flex;
         justify-content: space-between;
         gap: 50px;
@@ -407,12 +409,13 @@ export async function imprimirMapa() {
 
       /* Rodapé */
       .footer {
-        margin-top: 40px;
-        padding-top: 20px;
+        margin-top: 20px;
+        padding-top: 12px;
         border-top: 2px solid #183243;
         text-align: center;
         font-size: 10px;
         color: #67808b;
+        page-break-inside: avoid;
       }
 
       /* Impressão */
