@@ -6,98 +6,67 @@
   <title>Mapa Interativo de Lotes</title>
   <link rel="stylesheet" href="css/index.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
-  <style>
-    html,
-    body {
-      margin: 0;
-      height: 100%;
-      font-family: Arial, sans-serif;
-    }
-
-    .painel {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 350px;
-      height: 100vh;
-      background-color: #f2f2f29c;
-      color: white;
-      padding: 20px;
-      box-sizing: border-box;
-      z-index: 10;
-    }
-
-    .painel h2 {
-      margin-top: 0;
-      font-size: 18px;
-    }
-
-    .painel .info {
-      margin-top: 10px;
-      font-size: 14px;
-    }
-
-    .conteudo {
-      margin-left: 400px;
-      height: 100vh;
-      overflow: auto;
-      position: relative;
-    }
-
-    .conteudo img {
-      width: 2000px;
-      height: auto;
-      display: block;
-    }
-
-    select {
-      margin-top: 10px;
-      padding: 5px;
-      width: 100%;
-      font-size: larger;
-    }
-  </style>
 </head>
 
 <body>
 
   <div class="painel">
-    <img src="assets/logo_parque_riogrande.png" alt="logo" style="max-width: 100%; height: auto; margin-bottom: 10px;">
+    <div class="painel-top">
+      <div class="logo-box">
+        <img class="logo" src="assets/logo_parque_riogrande.png" alt="Logo Parque Rio Grande">
+      </div>
+      <div class="painel-intro">
+        <h2>Parque Rio Grande</h2>
+        <p>Selecione um lote para visualizar área, valor e condições de pagamento com mais clareza.</p>
+      </div>
+    </div>
 
     <div class="info">
-      <div><strong>Nome:</strong> <span id="nomeLote">---</span></div>
-      <div><strong>Área:</strong> <span id="areaLote">---</span></div>
-      <div><strong>Valor:</strong> <span id="valorLote">---</span></div>
+      <div class="info-card">
+        <div class="info-row">
+          <span class="label">Nome</span>
+          <span class="value" id="nomeLote">---</span>
+        </div>
+        <div class="info-row">
+          <span class="label">Área</span>
+          <span class="value" id="areaLote">---</span>
+        </div>
+        <div class="info-row">
+          <span class="label">Valor</span>
+          <span class="value" id="valorLote">---</span>
+        </div>
+      </div>
 
-      <label for="formaPagamento"><strong>Forma de Pagamento:</strong></label>
+      <label class="field-label" for="formaPagamento">Forma de pagamento</label>
       <select id="formaPagamento" onchange="atualizarPagamento()">
-        <option value="avista">À vista (25% de desconto)</option>
-        <option value="100x">Parcelado em 100x</option>
-        <option value="36x">Parcelado em 36x</option>
-        <option  value="PromocionalEspecial"> Promoção 10k de entrada </option>
+        <option value="avista">À vista (25% de entrada)</option>
+        <option value="100x">20% de entrada e saldo em 100x</option>
+        <option value="36x">40% de entrada e saldo em 36x</option>
+        <option value="PromocionalEspecial">10k de entrada e saldo em 100x</option>
       </select>
 
-      <div style="margin-top: 10px;">
-        <strong>Resumo Pagamento:</strong>
+      <div class="resumo-box">
+        <div class="resumo-title">Resumo de pagamento</div>
         <div id="resumoPagamento">---</div>
       </div>
 
-      <!-- ⬇️ Observações -->
-      <div style="margin-top: 20px; font-size: 11px; line-height: 1.4; color: #000000;">
+      <div class="observacoes">
         <p>* Até a entrega das matrículas, as parcelas serão corrigidas mensalmente pelo INCC.</p>
         <p>** Após a entrega, as parcelas serão corrigidas mensalmente pela variação positiva do IGP-M + 1%.</p>
         <p>*** Caso o IGP-M seja negativo, será utilizado o valor do IPCA/IBGE + 1%.</p>
         <p>**** Se ambos forem negativos, será utilizado o valor do mês anterior para correção.</p>
       </div>
 
-      <button id="btnImprimir" type="button">🖨️ Imprimir</button>
+      <button id="btnImprimir" type="button">🖨️ Imprimir simulação</button>
     </div>
   </div>
 
   <div class="conteudo">
-    <img src="assets/mapa.jpeg" alt="Mapa" />
-    <svg width="2000" height="2584" style="position: absolute; top: 0; left: 0;">
+    <div class="mapa-wrapper">
+      <img class="mapa-img" src="assets/mapa.jpeg" alt="Mapa" />
+      <svg class="mapa-svg" viewBox="0 0 2000 2584">
       <polygon id="lote-_1_A_01" points="723,272,761,292,758,313,718,307" fill="transparent" stroke="transparent"
         stroke-width="2" onclick="selecionarLote('_1_A_01')" />
       <polygon id="lote-_1_A_02" points="716,311,756,318,754,334,716,328" fill="transparent" stroke="transparent"
@@ -1470,9 +1439,8 @@
       let texto = "";
 
       if (forma === "avista") {
-        desconto = valorBase * 0.25;
-        let valorFinal = valorBase - desconto;
-        texto = `Total com 25% de desconto: <strong>R$ ${valorFinal.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong><br>Pagamento à vista.`;
+        entrada = valorBase * 0.25;
+        texto = `Total: <strong>R$ ${valorBase.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong><br>Entrada de <strong>R$ ${entrada.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong><br>Pagamento à vista.`;
       } else if (forma === "100x") {
         entrada = valorBase * 0.20;
         let saldo = valorBase - entrada;
@@ -1480,19 +1448,17 @@
         parcelaValor = saldo / parcelas;
         texto = `Entrada de <strong>R$ ${entrada.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong><br>+ ${parcelas}x de <strong>R$ ${parcelaValor.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong>`;
       } else if (forma === "36x") {
-        desconto = valorBase * 0.10;
-        let valorComDesconto = valorBase - desconto;
-        entrada = valorComDesconto * 0.40;
-        let saldo = valorComDesconto - entrada;
+        entrada = valorBase * 0.40;
+        let saldo = valorBase - entrada;
         parcelas = 36;
         parcelaValor = saldo / parcelas;
-        texto = `Total com 10% de desconto: <strong>R$ ${valorComDesconto.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong><br>Entrada de <strong>R$ ${entrada.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong><br>+ ${parcelas}x de <strong>R$ ${parcelaValor.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong>`;
+        texto = `Entrada de <strong>R$ ${entrada.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong><br>+ ${parcelas}x de <strong>R$ ${parcelaValor.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong>`;
       } else if (forma === "PromocionalEspecial"){
         entrada = 10000;
         let saldo = valorBase - entrada;
         parcelas = 100;
         parcelaValor = saldo/parcelas;
-        texto = `Total : <strong>R$ ${valorBase.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong><br>Entrada de <strong>R$ ${entrada.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong><br>+ ${parcelas}x de <strong>R$ ${parcelaValor.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong>`;
+        texto = `Entrada de <strong>R$ ${entrada.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong><br>+ ${parcelas}x de <strong>R$ ${parcelaValor.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong>`;
       }
       resumo.innerHTML = texto;
     }
@@ -1504,8 +1470,8 @@
   <script type="module">
     import { imprimirMapa } from './js/imprimir.js';
 
-    document.getElementById('btnImprimir').addEventListener('click', () => {
-      imprimirMapa();
+    document.getElementById('btnImprimir').addEventListener('click', async () => {
+      await imprimirMapa();
     });
   </script>
 
