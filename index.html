@@ -1345,11 +1345,10 @@
 
     async function carregarJSON() {
       try {
-        // Tenta carregar do arquivo local primeiro
-        const resposta = await fetch('./server/lotes.json');
+        const resposta = await fetch(`${API_URL}/lotes`);
         const dados = await resposta.json();
 
-        console.log("✅ Dados carregados de ./server/lotes.json:", dados);
+        console.log("✅ Dados carregados de", `${API_URL}/lotes`, dados);
         dadosLotes = {};
 
         dados.forEach((linha) => {
