@@ -41,7 +41,7 @@
 
       <label class="field-label" for="formaPagamento">Forma de pagamento</label>
       <select id="formaPagamento" onchange="atualizarPagamento()">
-        <option value="avista">À vista (25% de entrada)</option>
+        <option value="avista">À vista (25% de desconto)</option>
         <option value="100x">20% de entrada e saldo em 100x</option>
         <option value="36x">40% de entrada e saldo em 36x</option>
         <option value="PromocionalEspecial">10k de entrada e saldo em 100x</option>
@@ -1451,8 +1451,9 @@
       let texto = "";
 
       if (forma === "avista") {
-        entrada = valorBase * 0.25;
-        texto = `Total: <strong>R$ ${valorBase.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong><br>Entrada de <strong>R$ ${entrada.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong><br>Pagamento à vista.`;
+        desconto = valorBase * 0.25;
+        let valorFinal = valorBase - desconto;
+        texto = `Total: <strong>R$ ${valorBase.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong><br>Desconto de 25%: <strong>R$ ${desconto.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong><br>Valor à vista (pago integralmente no ato): <strong>R$ ${valorFinal.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong>`;
       } else if (forma === "100x") {
         entrada = valorBase * 0.20;
         let saldo = valorBase - entrada;
