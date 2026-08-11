@@ -1461,8 +1461,9 @@
         parcelaValor = saldo / parcelas;
         texto = `Entrada de <strong>R$ ${entrada.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong><br>+ ${parcelas}x de <strong>R$ ${parcelaValor.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong>`;
       } else if (forma === "36x") {
-        entrada = valorBase * 0.40;
-        let saldo = valorBase - entrada;
+        let valorDesconto = valorBase - (valorBase * 0.10);
+        entrada = valorDesconto * 0.40;
+        let saldo = valorDesconto - entrada;
         parcelas = 36;
         parcelaValor = saldo / parcelas;
         texto = `Entrada de <strong>R$ ${entrada.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong><br>+ ${parcelas}x de <strong>R$ ${parcelaValor.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong>`;
