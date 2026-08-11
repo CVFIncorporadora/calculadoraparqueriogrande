@@ -1461,12 +1461,13 @@
         parcelaValor = saldo / parcelas;
         texto = `Entrada de <strong>R$ ${entrada.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong><br>+ ${parcelas}x de <strong>R$ ${parcelaValor.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong>`;
       } else if (forma === "36x") {
-        let valorDesconto = valorBase - (valorBase * 0.10);
+        desconto = valorBase * 0.10;
+        let valorDesconto = valorBase - desconto;
         entrada = valorDesconto * 0.40;
         let saldo = valorDesconto - entrada;
         parcelas = 36;
         parcelaValor = saldo / parcelas;
-        texto = `Entrada de <strong>R$ ${entrada.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong><br>+ ${parcelas}x de <strong>R$ ${parcelaValor.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong>`;
+        texto = `Desconto de 10%: <strong>R$ ${desconto.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong><br>Entrada de <strong>R$ ${entrada.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong><br>+ ${parcelas}x de <strong>R$ ${parcelaValor.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong>`;
       } else if (forma === "PromocionalEspecial"){
         entrada = 10000;
         let saldo = valorBase - entrada;
