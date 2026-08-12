@@ -49,11 +49,10 @@ body {
 }
 
 .logo-box {
-  background: rgba(255, 255, 255, 0.1);
+  background: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 16px;
   padding: 16px;
-  backdrop-filter: blur(10px);
   display: flex;
   justify-content: center;
   align-items: center;
