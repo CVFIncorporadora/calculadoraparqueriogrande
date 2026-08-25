@@ -1477,10 +1477,12 @@
         texto = `Entrada de <strong>R$ ${entrada.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong><br>+ ${parcelas}x de <strong>R$ ${parcelaValor.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong>`;
       } else if (forma === "Promocional5k"){
         entrada = 5000;
-        let saldo = valorBase - entrada;
+        let Percent = valorBase * 0.30;
+        let saldo = valorBase - entrada - Percent ;
+        let reforco = Percent/15
         parcelas = 100;
         parcelaValor = saldo/parcelas;
-        texto = `Entrada de <strong>R$ ${entrada.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong><br>+ ${parcelas}x de <strong>R$ ${parcelaValor.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong>`;
+        texto = `Entrada de <strong>R$ ${entrada.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong><br>+ ${parcelas}x de <strong>R$ ${parcelaValor.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong><br>+ 15 reforços semestrais de <strong>R$ ${reforco.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong>, iniciando em dezembro de 2026`;
       }
       resumo.innerHTML = texto;
     }
