@@ -18,12 +18,8 @@
         <img class="logo" src="assets/logo_parque_riogrande.png" alt="Logo Parque Rio Grande">
       </div>
       <div class="painel-intro">
-        <h2>Parque Rio Grande</h2>
-        <p>Selecione um lote para visualizar área, valor e condições de pagamento com mais clareza.</p>
-      </div>
-    </div>
-
-    <div class="info">
+      <div class="info">
+      <label class="field-label" for="informacoesLote">Informações do Lote</label>
       <div class="info-card">
         <div class="info-row">
           <span class="label">Nome</span>
@@ -62,9 +58,15 @@
 
       <button id="btnImprimir" type="button">🖨️ Imprimir simulação</button>
     </div>
+    </div>
+  </div>
   </div>
 
   <div class="conteudo">
+    <div class="mapa-toolbar">
+      <button id="btnZoomOut" type="button" aria-label="Diminuir zoom" onclick="zoomMapa(-1)">−</button>
+      <button id="btnZoomIn" type="button" aria-label="Aumentar zoom" onclick="zoomMapa(1)">+</button>
+    </div>
     <div class="mapa-wrapper">
       <img class="mapa-img" src="assets/mapa.jpeg" alt="Mapa" />
       <svg class="mapa-svg" viewBox="0 0 2000 2584">
@@ -1344,6 +1346,16 @@
     let loteAtual = null;
     const COR_VENDIDO = "rgba(123, 30, 42, 0.55)";
 
+    const ZOOM_STEP = 0.2;
+    const ZOOM_MIN = 0.6;
+    const ZOOM_MAX = 2.5;
+    let mapaZoom = 1;
+
+    function zoomMapa(direcao) {
+      mapaZoom = Math.min(ZOOM_MAX, Math.max(ZOOM_MIN, +(mapaZoom + direcao * ZOOM_STEP).toFixed(2)));
+      document.querySelector(".mapa-wrapper").style.setProperty("--zoom", mapaZoom);
+    }
+
     async function carregarJSON() {
       try {
         const resposta = await fetch(`${API_URL}/lotes`);
@@ -1492,6 +1504,36 @@
     window.onload = carregarJSON;
   </script>
 
+  <button id="btnWhatsapp" class="whatsapp-fab" type="button" aria-label="Falar com o comercial pelo WhatsApp">
+    <svg viewBox="0 0 32 32" width="30" height="30" fill="#ffffff" aria-hidden="true">
+      <path
+        d="M16.004 3C9.373 3 4 8.373 4 15.004c0 2.65.87 5.1 2.35 7.09L4.6 28.4l6.5-1.7a11.9 11.9 0 0 0 4.9 1.05h.004c6.63 0 12.004-5.373 12.004-12.004C28.008 8.373 22.635 3 16.004 3zm0 21.86h-.003a9.86 9.86 0 0 1-5.03-1.38l-.36-.213-3.86 1.01 1.03-3.76-.235-.386a9.86 9.86 0 0 1-1.51-5.13c0-5.45 4.44-9.89 9.9-9.89 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.9 6.99c0 5.45-4.44 9.86-9.83 9.86zm5.4-7.39c-.296-.148-1.75-.864-2.02-.963-.27-.099-.467-.148-.664.148-.198.296-.76.963-.932 1.161-.172.198-.344.223-.64.075-.297-.148-1.253-.462-2.386-1.472-.882-.787-1.478-1.76-1.65-2.057-.173-.297-.018-.457.13-.605.134-.133.297-.346.446-.52.148-.173.198-.297.297-.495.099-.198.05-.372-.025-.52-.074-.148-.664-1.6-.91-2.19-.24-.577-.484-.5-.664-.51l-.566-.01c-.198 0-.52.075-.792.372-.272.297-1.04 1.017-1.04 2.48s1.065 2.877 1.213 3.075c.148.198 2.096 3.2 5.078 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.872.118.571-.085 1.75-.715 1.998-1.406.247-.69.247-1.28.173-1.406-.074-.124-.27-.198-.567-.347z" />
+    </svg>
+  </button>
+
+  <dialog id="dialogWhatsapp" class="dialog-proposta">
+    <form id="formWhatsapp" class="dialog-form">
+      <h3>Falar com o comercial</h3>
+
+      <div class="dialog-field">
+        <label for="inputNomeWhats">Nome</label>
+        <input type="text" id="inputNomeWhats" placeholder="Seu nome" required>
+      </div>
+
+      <div class="dialog-field">
+        <label for="inputTelefoneWhats">Telefone</label>
+        <input type="tel" id="inputTelefoneWhats" placeholder="(00) 00000-0000" inputmode="numeric" maxlength="15"
+          required>
+        <span class="dialog-erro" id="erroTelefoneWhats"></span>
+      </div>
+
+      <div class="dialog-actions">
+        <button type="button" id="btnCancelarWhatsapp" class="btn-cancelar">Cancelar</button>
+        <button type="submit" class="btn-confirmar">Enviar</button>
+      </div>
+    </form>
+  </dialog>
+
   <dialog id="dialogProposta" class="dialog-proposta">
     <form id="formProposta" class="dialog-form">
       <h3>Dados da proposta</h3>
@@ -1536,6 +1578,12 @@
     document.getElementById('btnImprimir').addEventListener('click', async () => {
       await imprimirMapa();
     });
+  </script>
+
+  <script type="module">
+    import { initWhatsappFab } from './js/whatsapp.js';
+
+    initWhatsappFab();
   </script>
 
 

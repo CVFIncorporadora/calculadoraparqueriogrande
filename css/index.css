@@ -225,9 +225,46 @@ body {
   background: linear-gradient(135deg, #f7f5ef 0%, #edf5f8 100%);
 }
 
+.mapa-toolbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 12px 12px 0 0;
+  margin-bottom: -52px;
+  pointer-events: none;
+}
+
+.mapa-toolbar button {
+  pointer-events: auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: #ffffff;
+  color: var(--text);
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.mapa-toolbar button:hover {
+  background: var(--accent);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
 .mapa-wrapper {
+  --zoom: 1;
   position: relative;
-  max-width: 1600px;
+  width: calc(min(1600px, 100%) * var(--zoom));
   margin: 0 auto;
   border-radius: 28px;
   overflow: hidden;
@@ -328,6 +365,29 @@ body {
   font-size: 0.78rem;
   color: #c0392b;
   min-height: 1em;
+}
+
+.whatsapp-fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-fab:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
 }
 
 .dialog-actions {
