@@ -41,7 +41,7 @@
         <option value="100x">20% de entrada e saldo em 100x</option>
         <option value="36x">40% de entrada e saldo em 36x</option>
         <option value="PromocionalEspecial">10k de entrada e saldo em 100x</option>
-        <option value="Promocional5k">5k de entrada e saldo em 100x</option>
+        <option value="Promocional5%">5% de entrada e saldo em 100x</option>
       </select>
 
       <div class="resumo-box">
@@ -1487,14 +1487,17 @@
         parcelas = 100;
         parcelaValor = saldo/parcelas;
         texto = `Entrada de <strong>R$ ${entrada.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong><br>+ ${parcelas}x de <strong>R$ ${parcelaValor.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong>`;
-      } else if (forma === "Promocional5k"){
-        entrada = 5000;
-        let Percent = valorBase * 0.30;
-        let saldo = valorBase - entrada - Percent ;
-        let reforco = Percent/15
+      } else if (forma === "Promocional5%"){
+        const fmt = v => v.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        desconto = 10000;
+        let valorComDesconto = valorBase - desconto;
+        entrada = valorComDesconto * 0.05;
+        let totalReforcos = valorBase * 0.30;
+        let reforco = totalReforcos / 15;
+        let saldo = valorComDesconto - entrada - totalReforcos;
         parcelas = 100;
-        parcelaValor = saldo/parcelas;
-        texto = `Entrada de <strong>R$ ${entrada.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong><br>+ ${parcelas}x de <strong>R$ ${parcelaValor.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong><br>+ 15 reforços semestrais de <strong>R$ ${reforco.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</strong>, iniciando em dezembro de 2026`;
+        parcelaValor = saldo / parcelas;
+        texto = `Total do lote: <strong>R$ ${fmt(valorBase)}</strong><br>Desconto: <strong>R$ ${fmt(desconto)}</strong><br>Valor com desconto: <strong>R$ ${fmt(valorComDesconto)}</strong><br>Entrada (5%): <strong>R$ ${fmt(entrada)}</strong><br>+ ${parcelas} parcelas mensais de <strong>R$ ${fmt(parcelaValor)}</strong><br>+ 15 reforços semestrais de <strong>R$ ${fmt(reforco)}</strong>, iniciando em dezembro de 2026`;
       }
       resumo.innerHTML = texto;
     }
